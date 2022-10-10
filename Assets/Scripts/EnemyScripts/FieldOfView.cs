@@ -16,6 +16,7 @@ public class FieldOfView : MonoBehaviour
 
     public bool canSeePlayer;
 
+    public Vector3 targetDirection;
 
     public void Start()
     {
@@ -44,6 +45,8 @@ public class FieldOfView : MonoBehaviour
         {
             Transform target = rangeChecks[0].transform; //pillamos el transform del jugador
             Vector3 directionToTarget = (target.position - transform.position).normalized; //Miramos la dirección hacia el objetivo
+
+            targetDirection = directionToTarget; //Actualizamos la dirección
 
             if (Vector3.Angle(transform.forward, directionToTarget) < angle / 2) //Si el ángulo de visión del enemigo ve al jugador
             {
