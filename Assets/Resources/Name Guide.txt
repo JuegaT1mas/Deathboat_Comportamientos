@@ -1,0 +1,16 @@
+Partes del barco:
+
+Proa(ESP) 	/ Bow(ENG)		: Punta del barco
+Popa(ESP)	/ Stern(ENG)		: Parte trasera del barco
+Estribor(ESP) 	/ Starboard(ENG)	: Lado derecho del barco
+Babor(ESP)	/ Port(ENG)		: Lado izquierdo del barco
+
+
+
+
+Nombramiento de las paredes:		Lado - Numero Orientación - Que tiene relevante
+
+Lado: 		Starboard o Port
+Número: 	Cualquier entero positivo
+Orientación: 	Horizontal, Vertical o Diagonal
+Relevante:	La habitación
