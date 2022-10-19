@@ -703,7 +703,7 @@ GameObject:
   - component: {fileID: 7815153819401105825}
   - component: {fileID: 7815153819401105826}
   m_Layer: 0
-  m_Name: Tejado
+  m_Name: Roof
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2663,7 +2663,7 @@ GameObject:
   - component: {fileID: 7815153819454730844}
   - component: {fileID: 7815153819454730845}
   m_Layer: 0
-  m_Name: Tejadillo frente
+  m_Name: Floor-Over Command
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4399,7 +4399,7 @@ GameObject:
   - component: {fileID: 7815153819484907726}
   - component: {fileID: 7815153819484907727}
   m_Layer: 0
-  m_Name: Tejadillo
+  m_Name: Roof-diagonal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
