@@ -51,6 +51,18 @@ namespace StarterAssets
 		[Tooltip("How far in degrees can you move the camera down")]
 		public float BottomClamp = -90.0f;
 
+		//Agacharse
+		[Header("Crouching")]
+		[Tooltip("Crouch speed of the character in m/s")]
+		public float crouchSpeed = 0.3f;
+		[Tooltip("Crouching height of the character")]
+		public float crouchHeight = 1.0f;
+		[Tooltip("Standing height of the character")]
+		public float standHeight = 2.0f;
+		[Tooltip("Check if is in crouching animation")]
+		public bool duringCrouchAnimation;
+
+
 		// cinemachine
 		private float _cinemachineTargetPitch;
 
@@ -114,6 +126,7 @@ namespace StarterAssets
 		{
 			JumpAndGravity();
 			GroundedCheck();
+			CrouchCheck(); //Comprueba si estas agachado
 			Move();
 		}
 
@@ -264,5 +277,31 @@ namespace StarterAssets
 			// when selected, draw a gizmo in the position of, and matching radius of, the grounded collider
 			Gizmos.DrawSphere(new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z), GroundedRadius);
 		}
+
+		private void CrouchCheck()
+		{
+			var desiredHeight = _input.crouch ? crouchHeight : standHeight; //La altura deseada depende de si estamos agachados o no
+
+			if (_controller.height != desiredHeight)//Si la altura actual y la deseada no coinciden
+			{
+				AdjustHeight(desiredHeight); //Cambia la altura a la deseada
+
+				//Ajustamos tambien la altura de la camara
+				var camPos = CinemachineCameraTarget.transform.position;
+				camPos.y = _controller.height + this.transform.position.y;
+				CinemachineCameraTarget.transform.position = camPos;
+
+
+			}
+		}
+
+		private void AdjustHeight(float height)
+		{
+			float center = height / 2; //El centro esta a la mitad de la altura
+
+			_controller.height = Mathf.Lerp(_controller.height, height, crouchSpeed); //Descendemos la altura con interpolacion
+			_controller.center = Vector3.Lerp(_controller.center, new Vector3(0, center, 0), crouchSpeed); //Descendemos el centro con interpolacion
+		}
+
 	}
 }

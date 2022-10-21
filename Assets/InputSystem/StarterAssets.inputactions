@@ -49,6 +49,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Crouch",
+                    "type": "Value",
+                    "id": "8f7f8bc2-38cf-4e58-bf46-a048f247c52c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -242,11 +251,33 @@
                 {
                     "name": "",
                     "id": "0bb1f233-267e-41bf-b32d-7a6db5e3fb07",
-                    "path": "<Gamepad>/buttonEast",
+                    "path": "<Gamepad>/buttonWest",
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
                     "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1e05f83b-0972-46a4-afc7-1398c34ce6a7",
+                    "path": "<Keyboard>/ctrl",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyboardMouse",
+                    "action": "Crouch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a4ac7e50-bbef-481c-a3f1-ee1f2d61613d",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Crouch",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

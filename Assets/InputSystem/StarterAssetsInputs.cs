@@ -15,6 +15,7 @@ namespace StarterAssets
 
 		//Variables creadas por nosotros
 		public bool interact;
+		public bool crouch;
 
 		[Header("Movement Settings")]
 		public bool analogMovement;
@@ -52,6 +53,13 @@ namespace StarterAssets
         {
 			InteractInput(value.isPressed);
         }
+
+		//Agacharse
+		public void OnCrouch(InputValue value)
+		{
+			CrouchInput(value.isPressed);
+		}
+
 #endif
 
 
@@ -80,6 +88,12 @@ namespace StarterAssets
         {
 			interact = newInteractState;
         }
+
+		//Agacharse
+		public void CrouchInput(bool newCrouchState)
+		{
+			crouch = newCrouchState;
+		}
 
 		private void OnApplicationFocus(bool hasFocus)
 		{
