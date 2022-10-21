@@ -12,8 +12,10 @@ namespace StarterAssets
 		public Vector2 look;
 		public bool jump;
 		public bool sprint;
+
 		//Variables creadas por nosotros
 		public bool interact;
+
 		[Header("Movement Settings")]
 		public bool analogMovement;
 
@@ -78,6 +80,7 @@ namespace StarterAssets
         {
 			interact = newInteractState;
         }
+
 		private void OnApplicationFocus(bool hasFocus)
 		{
 			SetCursorState(cursorLocked);

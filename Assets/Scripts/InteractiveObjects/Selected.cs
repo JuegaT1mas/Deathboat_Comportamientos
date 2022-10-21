@@ -13,6 +13,8 @@ public class Selected : MonoBehaviour
     public GameObject TextDetect;
     GameObject ultimoReconocido=null;
 
+    public bool puzzleActivado = false;
+
     private void Awake()
     {
         _player = GameObject.Find("PlayerCapsule");
@@ -31,28 +33,26 @@ public class Selected : MonoBehaviour
         //Raycast(origen,dirección,out hit, distancia, máscara)
         RaycastHit hit;
 
-       
-        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, distancia, mask))
+        if (!puzzleActivado)
         {
-            Deselect();
-            SelectedObject(hit.transform);
-            if (hit.collider.tag == "Objeto Interactivo")
+            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, distancia, mask))
             {
-                if (_player.GetComponent<StarterAssetsInputs>().interact)
+                Deselect();
+                SelectedObject(hit.transform);
+                if (hit.collider.tag == "Objeto Interactivo")
                 {
-                    AbrirPuzzle(hit); 
-                
+                    if (_player.GetComponent<StarterAssetsInputs>().interact)
+                    {
+                        AbrirPuzzle(hit);
+                        puzzleActivado = true;
+                    }
                 }
-
-
+            }
+            else
+            {
+                Deselect();
             }
         }
-        else
-        {
-            Deselect();
-        }
-
-     
     }
     void SelectedObject(Transform transform)
     {
@@ -72,7 +72,6 @@ public class Selected : MonoBehaviour
         {
             ultimoReconocido.GetComponent<Renderer>().material.color = Color.white;
             ultimoReconocido = null;
-           
         }
     }
 
