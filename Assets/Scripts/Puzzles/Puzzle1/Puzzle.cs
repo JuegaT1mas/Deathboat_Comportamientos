@@ -19,7 +19,7 @@ public class Puzzle : MonoBehaviour
     GameObject[] fichas;
 
 
-    private void Awake()
+    public void IniciarPuzzle()
     {
         //recuperamos el padre de las fichas y de los bordes
         padreFichas = GameObject.Find("Fichas");

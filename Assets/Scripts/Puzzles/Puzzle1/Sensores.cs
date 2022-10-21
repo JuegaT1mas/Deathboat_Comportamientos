@@ -16,6 +16,7 @@ public class Sensores : MonoBehaviour
     }
     void Comprobar()
     {
+
         ocupadoLeft = Physics2D.OverlapCircle(sensorLeft.transform.position, radioSensor);
         ocupadoRight = Physics2D.OverlapCircle(sensorRight.transform.position, radioSensor);
         ocupadoUp = Physics2D.OverlapCircle(sensorUp.transform.position, radioSensor);

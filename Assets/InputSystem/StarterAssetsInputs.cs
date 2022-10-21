@@ -12,7 +12,8 @@ namespace StarterAssets
 		public Vector2 look;
 		public bool jump;
 		public bool sprint;
-
+		//Variables creadas por nosotros
+		public bool interact;
 		[Header("Movement Settings")]
 		public bool analogMovement;
 
@@ -43,6 +44,12 @@ namespace StarterAssets
 		{
 			SprintInput(value.isPressed);
 		}
+
+		//Interactuar con puzzles
+		public void OnInteract(InputValue value)
+        {
+			InteractInput(value.isPressed);
+        }
 #endif
 
 
@@ -66,6 +73,11 @@ namespace StarterAssets
 			sprint = newSprintState;
 		}
 		
+		//Interactuar con pussles
+		public void InteractInput(bool newInteractState)
+        {
+			interact = newInteractState;
+        }
 		private void OnApplicationFocus(bool hasFocus)
 		{
 			SetCursorState(cursorLocked);
