@@ -5,18 +5,18 @@ using UnityEngine;
 
 public class FieldOfView : MonoBehaviour
 {
-    public float radius;
+    public float radius; //El radio del campo de visión
     [Range(0, 360)]
-    public float angle;
+    public float angle; //El rango del ángulo de visión
 
-    public GameObject playerRef;
+    public GameObject playerRef; //Referencia al jugador
 
-    public LayerMask targetMask;
-    public LayerMask obstructionMask;
+    public LayerMask targetMask; //La capa que observa 
+    public LayerMask obstructionMask; //Las capas que van a actuar de obstáculos
 
-    public bool canSeePlayer;
+    public bool canSeePlayer; //Booleano si puede ver al jugador
 
-    public Vector3 targetDirection;
+    public Vector3 targetDirection;  //La dirección a mirar
 
     public void Start()
     {

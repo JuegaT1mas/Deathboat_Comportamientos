@@ -62,6 +62,9 @@ namespace StarterAssets
 		[Tooltip("Check if is in crouching animation")]
 		public bool duringCrouchAnimation;
 
+		//Agacharse
+		[Header("Lives")]
+		public int lives = 3;
 
 		// cinemachine
 		private float _cinemachineTargetPitch;
