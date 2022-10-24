@@ -103,11 +103,4 @@ public class Puzzle : MonoBehaviour
         print("Puzzle resuelto");
 
     }
-
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }

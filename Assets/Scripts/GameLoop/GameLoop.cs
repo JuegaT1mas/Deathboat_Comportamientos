@@ -9,6 +9,10 @@ public class GameLoop : MonoBehaviour
 
     private GameObject playerRef; //La referencia al jugador
 
+    [Header("Escape")]
+    //El gameObject de la salida
+    public GameObject escape;
+
     [Header("Puzzles")]
     //Las referencias a los puzzles
     public List<GameObject> puzzles;
@@ -25,6 +29,10 @@ public class GameLoop : MonoBehaviour
     public TMP_Text lifeUI;
     //El texto de los puzzles
     public TMP_Text puzzleUI;
+    //El canvas del GameOver
+    public GameObject canvasGameOver;
+    //El canvas del GameOverVictory
+    public GameObject canvasGameOverVictory;
 
 
     private void Start()
@@ -33,11 +41,6 @@ public class GameLoop : MonoBehaviour
         GeneratePuzzles(); //Genera en el mapa los puzzles
         UpdatePuzzleUI(); //Actualiza el UI de los puzzles
         UpdateLivesUI(); //Actualiza el UI de las vidas
-    }
-
-    private void Update()
-    {
-        
     }
 
     public void GeneratePuzzles()
@@ -64,21 +67,59 @@ public class GameLoop : MonoBehaviour
         }
     }
 
-
-    public void PuzzleCompleted()
+    public void PuzzleCompleted()//No se si es mas efectivo dividir esto en 2 metodos o no (de momento lo divido)
     {
-
+        bool terminado = true;
+        for (int i = 0; i < finalPuzzles.Length; i++)
+        {
+            /*
+            //Que los puzzles tengan herencia de una clase que indique por lo menos si el puzzle esta completado o no
+            if(puzzles[i].booleano == false){ //Si no hemos terminado todos los puzzles no ha acabado el juego
+                terminado = false;
+            };
+            puzzlesCompleted[i] = puzzles[i].booleano //Actualizamos el array
+            */
+        }
+        if (!terminado) //Si no se han terminado todos los puzzles
+        {
+            UpdatePuzzleUI(); //Actualiza la UI de los que te quedan
+        }
+        else
+        {
+            ActivateEscape(); //Si has terminado los puzzles activa la salida
+        }
     }
 
-    public void GameOver()
+    public void GameOver() //Función que pasa cuando pierdes
     {
-
+        //Desbloqueamos el ratón para poder clickear
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        //Ponemos el timeScale al 0 para que las cosas que dependan del tiempo no se actualicen
+        Time.timeScale = 0;
+        canvasGameOver.SetActive(true); //Activamos el canvas del GameOver
     }
 
-    public void UpdatePuzzleUI()
+    public void GameOverVictory() //Función que pasa cuando ganas
     {
-        //Por terminar
-        string text = "Puzzles completados:\n"; //Creamos el string previamente
+        //Desbloqueamos el ratón para poder clickear
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        //Ponemos el timeScale al 0 para que las cosas que dependan del tiempo no se actualicen
+        Time.timeScale = 0;
+        canvasGameOverVictory.SetActive(true);//Activamos el canvas del GameOverVictory
+    }
+
+    public void ActivateEscape() //Activar la salida
+    {
+        escape.gameObject.SetActive(true); //Activamos la salida
+        puzzleUI.text = "Escape boat unlocked\n¡Find it!"; //Cambiamos el texto en pantalla
+        //Cambiar música
+    }
+
+    public void UpdatePuzzleUI()//Actualizar el UI de los puzzles
+    {
+        string text = "Completed Puzzles:\n"; //Creamos el string previamente
         for (int i = 0; i < finalPuzzles.Length; i++)
         {
             if(puzzlesCompleted[i] == true) //Dependiendo de si el puzzle se ha completado o no 
@@ -91,12 +132,19 @@ public class GameLoop : MonoBehaviour
             }
             
         }
-        lifeUI.text = text; //Se le aplica el texto a la UI
+        puzzleUI.text = text; //Se le aplica el texto a la UI
     }
 
     public void UpdateLivesUI()//Se le actualiza el texto con la variable vidas del jugador actualizadas
     {
-        lifeUI.text = string.Format("Vidas restantes: {0}", playerRef.GetComponent<FirstPersonController>().lives);
+        if(playerRef.GetComponent<FirstPersonController>().lives > 0) //Si quedan vidas se actualiza la pantalla
+        {
+            lifeUI.text = string.Format("Remaining Lives: {0}", playerRef.GetComponent<FirstPersonController>().lives);
+        }
+        else //Si no quedan vidas
+        {
+            GameOver(); //Se llama al final de la partida
+        }
     }
 
 }
