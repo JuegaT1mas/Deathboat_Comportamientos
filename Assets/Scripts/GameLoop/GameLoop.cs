@@ -30,6 +30,8 @@ public class GameLoop : MonoBehaviour
     public TMP_Text lifeUI;
     //El texto de los puzzles
     public TMP_Text puzzleUI;
+    //El texto de la confimación visual
+    public TMP_Text visualUI;
     //El canvas del GameOver
     public GameObject canvasGameOver;
     //El canvas del GameOverVictory
@@ -49,6 +51,11 @@ public class GameLoop : MonoBehaviour
         GeneratePuzzles(); //Genera en el mapa los puzzles
         UpdatePuzzleUI(); //Actualiza el UI de los puzzles
         UpdateLivesUI(); //Actualiza el UI de las vidas
+    }
+
+    private void Update()
+    {
+        UpdateVisualConfirmation();
     }
 
     public void GeneratePuzzles()
@@ -153,6 +160,18 @@ public class GameLoop : MonoBehaviour
         else //Si no quedan vidas
         {
             GameOver(); //Se llama al final de la partida
+        }
+    }
+
+    public void UpdateVisualConfirmation()
+    {
+        if (enemyRef.GetComponent<FieldOfView>().canSeePlayer)
+        {
+            visualUI.text = "!";
+        }
+        else
+        {
+            visualUI.text = "O";
         }
     }
 
