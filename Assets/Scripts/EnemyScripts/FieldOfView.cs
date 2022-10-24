@@ -18,6 +18,8 @@ public class FieldOfView : MonoBehaviour
 
     public Vector3 targetDirection;  //La dirección a mirar
 
+    public float checkDelay = 0.2f; //Cada cuanto va a ejecutar la corrutina
+
     public void Start()
     {
         playerRef = GameObject.FindGameObjectWithTag("Player"); //Encontrar la referencia al jugador al empezar
@@ -26,7 +28,7 @@ public class FieldOfView : MonoBehaviour
 
     private IEnumerator FOVRoutine() //Crear una corrutina para buscar al jugador
     {
-        WaitForSeconds wait = new WaitForSeconds(0.2f);//El delay de cada cuanto va a comprobar la corrutina que se busque al jugador
+        WaitForSeconds wait = new WaitForSeconds(checkDelay);//El delay de cada cuanto va a comprobar la corrutina que se busque al jugador
 
         while (true) //El true se puede cambiar por una variable para decidir si se quiere buscar o no
         {

@@ -8,6 +8,7 @@ TagManager:
   - Ficha
   - Objeto Interactivo
   - DamageSource
+  - Enemy
   layers:
   - Default
   - TransparentFX

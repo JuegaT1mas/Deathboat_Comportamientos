@@ -6,8 +6,9 @@ using StarterAssets;
 
 public class GameLoop : MonoBehaviour
 {
-
+    [Header("References")]
     private GameObject playerRef; //La referencia al jugador
+    private GameObject enemyRef; //la referencia al enemigo
 
     [Header("Escape")]
     //El gameObject de la salida
@@ -37,7 +38,14 @@ public class GameLoop : MonoBehaviour
 
     private void Start()
     {
+        //Deshacer los cambios en caso de que terminemos una partida y le demos a jugar otra vez
+        Time.timeScale = 1; //Reanudamos por si acaso el timeScale
+        Cursor.lockState = CursorLockMode.Locked; //Bloqueamos el cursor
+        Cursor.visible = false; //Lo hacemos invisible
+
+
         playerRef = GameObject.FindGameObjectWithTag("Player"); //Encontrar la referencia al jugador al empezar
+        enemyRef = GameObject.FindGameObjectWithTag("Enemy"); //Encontrar la referencia al enemigo al empezar
         GeneratePuzzles(); //Genera en el mapa los puzzles
         UpdatePuzzleUI(); //Actualiza el UI de los puzzles
         UpdateLivesUI(); //Actualiza el UI de las vidas
@@ -137,6 +145,7 @@ public class GameLoop : MonoBehaviour
 
     public void UpdateLivesUI()//Se le actualiza el texto con la variable vidas del jugador actualizadas
     {
+        enemyRef.GetComponent<EnemyManager>().Rest();
         if(playerRef.GetComponent<FirstPersonController>().lives > 0) //Si quedan vidas se actualiza la pantalla
         {
             lifeUI.text = string.Format("Remaining Lives: {0}", playerRef.GetComponent<FirstPersonController>().lives);

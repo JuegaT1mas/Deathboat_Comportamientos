@@ -62,9 +62,12 @@ namespace StarterAssets
 		[Tooltip("Check if is in crouching animation")]
 		public bool duringCrouchAnimation;
 
-		//Agacharse
+		//vidas
 		[Header("Lives")]
 		public int lives = 3;
+
+		[Header("References")]
+		public GameLoop gameLoop; //Referencia al gameloop para llamar a UpdateLifeUI
 
 		// cinemachine
 		private float _cinemachineTargetPitch;
@@ -306,13 +309,14 @@ namespace StarterAssets
 			_controller.center = Vector3.Lerp(_controller.center, new Vector3(0, center, 0), crouchSpeed); //Descendemos el centro con interpolacion
 		}
 
-        private void OnCollisionEnter(Collision collision)
+        private void OnTriggerEnter(Collider other)
         {
-            if(collision.gameObject.tag == "DamageSource")
-            {
+			if (other.gameObject.tag == "DamageSource")
+			{
 				lives--;
-            }
-        }
+				gameLoop.UpdateLivesUI();
+			}
+		}
 
     }
 }

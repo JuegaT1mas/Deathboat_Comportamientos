@@ -30,6 +30,9 @@ public class EnemyManager : MonoBehaviour
     public float initialTimer; //El tiempo inicial
     public float attackDistance; //La distancia a partir de la cual te ataca
 
+    [Header("Rest")]
+    public float restTime; //El tiempo que espera después de haber propinado un golpe al jugador
+
     private void Awake()
     {
         anim = GetComponent<Animator>();
@@ -135,5 +138,18 @@ public class EnemyManager : MonoBehaviour
     public void TriggerCooling()//Función que activa el animator tras acabar un ataque
     {
         cooling = true; //Pone en cooldown el ataque
+    }
+
+    private IEnumerator RestRoutine()
+    {
+        this.enabled = false;
+        WaitForSeconds wait = new WaitForSeconds(restTime);
+        yield return wait;
+        this.enabled = true;
+    }
+
+    public void Rest()
+    {
+        StartCoroutine(RestRoutine());
     }
 }
