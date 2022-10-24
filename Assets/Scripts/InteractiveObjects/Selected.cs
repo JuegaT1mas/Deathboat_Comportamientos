@@ -13,11 +13,12 @@ public class Selected : MonoBehaviour
     public GameObject TextDetect;
     GameObject ultimoReconocido=null;
 
-    public bool puzzleActivado = false;
+    public bool puzzleActivado;
 
     private void Awake()
     {
         _player = GameObject.Find("PlayerCapsule");
+        puzzleActivado = false;
     }
     // Start is called before the first frame update
     void Start()
@@ -43,7 +44,7 @@ public class Selected : MonoBehaviour
                 {
                     if (_player.GetComponent<StarterAssetsInputs>().interact)
                     {
-                        AbrirPuzzle(hit);
+                        InteractObject(hit);
                         puzzleActivado = true;
                     }
                 }
@@ -61,9 +62,9 @@ public class Selected : MonoBehaviour
         
     }
 
-    void AbrirPuzzle(RaycastHit hit)
+    void InteractObject(RaycastHit hit)
     {
-        hit.collider.transform.GetComponent<InteractiveObject>().ActivarObjeto();
+        hit.collider.transform.GetComponent<InteractiveObject>().Decide();
         Deselect();
     }
     void Deselect()
