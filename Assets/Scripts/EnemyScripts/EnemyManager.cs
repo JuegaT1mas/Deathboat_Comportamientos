@@ -5,26 +5,42 @@ using UnityEngine.AI;
 
 public class EnemyManager : MonoBehaviour
 {
+    [Header("FOV")]
     public FieldOfView fov; //El script del cono de visión
 
+    [Header("Variables")]
     public float chaseSpeed; //La velocidad a la que te sigue
-    public float minimumDistance; //La distancia mínima a la que queremos que este el monstruo
+    public float minimumDistance; //La distancia mínima a la que gira una vez cerca del punto
     //public float rotateSpeed;
 
-    private Vector3 lastPlayerPosition; //La última posición del jugador
 
-    public bool playerDetected = false; //Si el jugador esta detectado
 
+    [Header("Navigation")]
     public Transform[] points; //Los puntos del mapa donde va a patrullar el enemigo
     private NavMeshAgent agent; //El NavMesh del enemigo
     private int destPoint = 0; //Un integer para navegar el array de puntos
+    private Vector3 lastPlayerPosition; //La última posición del jugador
+    public bool playerDetected = false; //Si el jugador esta detectado
+    private bool checkForNear = false;
 
+    [Header("Attack")]
+    public Animator anim; //El animator del enemigo
+    public float attackTimer; //El tiempo entre ataques
+    public bool cooling; //Si esta descansando después de un ataque
+    public float initialTimer; //El tiempo inicial
+    public float attackDistance; //La distancia a partir de la cual te ataca
+
+    private void Awake()
+    {
+        anim = GetComponent<Animator>();
+        attackTimer = initialTimer; //Igualamos el tiempo
+    }
 
     private void Start()
     {
-        agent = GetComponent<NavMeshAgent>();
-        agent.autoBraking = false;
-        GotoNextPoint();
+        agent = GetComponent<NavMeshAgent>(); //Pillar el componente
+        agent.autoBraking = false; //Para que cuando vaya a llegar al destino no frene bruscamente
+        GotoNextPoint(); //Ir al siguiente punto
     }
 
     private void Update()
@@ -33,12 +49,18 @@ public class EnemyManager : MonoBehaviour
 
         if (playerDetected) //Si se puede ver al jugador
         {
+            checkForNear = true;
             lastPlayerPosition = fov.playerRef.transform.position; //Actualizamos la posición  
             LookAt();
             ChasePlayer();
         }
         else if (!agent.pathPending && agent.remainingDistance < minimumDistance)
         {
+            if (checkForNear)
+            {
+                NearestPoint();
+                checkForNear = false;
+            }
             //Si no tiene un camino pendiente y esta cerca del punto
             GotoNextPoint(); //Ir al siguiente punto
         }
@@ -82,9 +104,36 @@ public class EnemyManager : MonoBehaviour
 
     private void ChasePlayer()
     {
-        if (Vector3.Distance(transform.position, lastPlayerPosition) > minimumDistance) //Comprobamos que no se acerque demasiado
+        agent.destination = lastPlayerPosition; //Le decimos donde esta el jugador
+        if (Vector3.Distance(transform.position, lastPlayerPosition) < attackDistance && cooling == false) //Si el monstruo esta cerca y no tiene cooldown
         {
-            agent.destination = lastPlayerPosition;
+            Attack(); //Ataca
         }
+        
+        if (cooling)//Si esta descansando entre ataques
+        {
+            anim.SetBool("Attack", false); //Para la animación de ataque
+            Cooldown(); //Pone en cooldown el ataque en sí
+        }
+    }
+
+    private void Attack() //Activa la animación de atacar
+    {
+        attackTimer = initialTimer;
+        anim.SetBool("Attack", true);//Comienza el ataque
+    }
+
+    private void Cooldown()//Recarga el tiempo de ataque
+    {
+        attackTimer -= Time.deltaTime; //Reduce el tiempo de cooldown
+        if(attackTimer <= 0 && cooling == true) //Si ha llegado a 0 el contador y cooling es true
+        {
+            cooling = false;//Lo pone a false, dejando así que pueda volver a atacar el bicho
+        }
+    }
+
+    public void TriggerCooling()//Función que activa el animator tras acabar un ataque
+    {
+        cooling = true; //Pone en cooldown el ataque
     }
 }
