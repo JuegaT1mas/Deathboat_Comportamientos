@@ -109,15 +109,15 @@ NavMeshSettings:
   m_BuildSettings:
     serializedVersion: 2
     agentTypeID: 0
-    agentRadius: 0.5
+    agentRadius: 1
     agentHeight: 2
     agentSlope: 45
-    agentClimb: 0.4
-    ledgeDropHeight: 0
-    maxJumpAcrossDistance: 0
+    agentClimb: 1
+    ledgeDropHeight: 5
+    maxJumpAcrossDistance: 3
     minRegionArea: 2
     manualCellSize: 0
-    cellSize: 0.16666667
+    cellSize: 0.33333334
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
@@ -2777,6 +2777,11 @@ PrefabInstance:
       propertyPath: points.Array.data[3]
       value: 
       objectReference: {fileID: 478051111}
+    - target: {fileID: 8214088660151567169, guid: 48b9373bb11c0d940977979ebe64aef2,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8214088660151567174, guid: 48b9373bb11c0d940977979ebe64aef2,
         type: 3}
       propertyPath: m_RootOrder
@@ -2848,6 +2853,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000,
         type: 0}
+    - target: {fileID: 8949682269311062454, guid: 48b9373bb11c0d940977979ebe64aef2,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 48b9373bb11c0d940977979ebe64aef2, type: 3}
 --- !u!1 &1350106955

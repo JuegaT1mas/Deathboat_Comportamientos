@@ -306,5 +306,13 @@ namespace StarterAssets
 			_controller.center = Vector3.Lerp(_controller.center, new Vector3(0, center, 0), crouchSpeed); //Descendemos el centro con interpolacion
 		}
 
-	}
+        private void OnCollisionEnter(Collision collision)
+        {
+            if(collision.gameObject.tag == "DamageSource")
+            {
+				lives--;
+            }
+        }
+
+    }
 }
