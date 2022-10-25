@@ -331,6 +331,17 @@
             "name": "PS4 Controller",
             "bindingGroup": "PS4 Controller",
             "devices": []
+        },
+        {
+            "name": "Touch",
+            "bindingGroup": "Touch",
+            "devices": [
+                {
+                    "devicePath": "<Touchscreen>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
         }
     ]
 }

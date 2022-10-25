@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using StarterAssets;
+using UnityEngine.InputSystem;
 
 public class GameLoop : MonoBehaviour
 {
@@ -36,7 +37,8 @@ public class GameLoop : MonoBehaviour
     public GameObject canvasGameOver;
     //El canvas del GameOverVictory
     public GameObject canvasGameOverVictory;
-
+    //El canvas de los controles de móvil
+    public GameObject canvasMobileUI;
 
     private void Start()
     {
@@ -51,6 +53,7 @@ public class GameLoop : MonoBehaviour
         GeneratePuzzles(); //Genera en el mapa los puzzles
         UpdatePuzzleUI(); //Actualiza el UI de los puzzles
         UpdateLivesUI(); //Actualiza el UI de las vidas
+        CheckDevice();
     }
 
     private void Update()
@@ -172,6 +175,14 @@ public class GameLoop : MonoBehaviour
         else
         {
             visualUI.text = "O";
+        }
+    }
+
+    private void CheckDevice()
+    {
+        if(playerRef.GetComponent<PlayerInput>().currentControlScheme == "Touch")
+        {
+            canvasMobileUI.SetActive(true);
         }
     }
 
