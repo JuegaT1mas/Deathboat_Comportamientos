@@ -10,7 +10,7 @@ public class Puzzle : MonoBehaviour
     public Sprite fichaEscondidaImg;//la ficha que falta en el puzle
 
 
-
+    int[,] puzzleMezclado;
     GameObject fichaEscondida;
     int numCostado = 3;//sera 3 porque es un puzle 3x3
     GameObject padreFichas;
@@ -25,6 +25,9 @@ public class Puzzle : MonoBehaviour
         padreFichas = GameObject.Find("Fichas");
         padreBordes = GameObject.Find("Bordes");
         CrearFichas();
+        transform.position = new Vector3(0, 2.78999996f, 0);
+
+
     }
 
     // Start is called before the first frame update
@@ -80,6 +83,7 @@ public class Puzzle : MonoBehaviour
 
     void MezclarFichas()
     {
+        puzzleMezclado = new int[3, 3] { { 0, 1, 2 }, { 3, 4, 5 }, { 6, 7, 8 } };
         int random;
         for (int i = 0; i < fichas.Length; i++)
         {
@@ -87,7 +91,29 @@ public class Puzzle : MonoBehaviour
             Vector3 pos = fichas[i].transform.position;
             fichas[i].transform.position = fichas[random].transform.position;
             fichas[random].transform.position = pos;
+
+            int aux = puzzleMezclado[i % 3, i / 3];
+            puzzleMezclado[i%3, i/3] = puzzleMezclado[random%3,random/3];
+            puzzleMezclado[random%3,random/3]=aux;
         }
+
+     
+
+
+    }
+
+
+    //https://www.geeksforgeeks.org/check-instance-8-puzzle-solvable/
+    static int getInvCount(int[] arr)
+    {
+        int inv_count = 0;
+        for (int i = 0; i < 9; i++)
+            for (int j = i + 1; j < 9; j++)
+
+                // Value 0 is used for empty space
+                if (arr[i] > 0 && arr[j] > 0 && arr[i] > arr[j])
+                    inv_count++;
+        return inv_count;
     }
 
     public void EsGanador()

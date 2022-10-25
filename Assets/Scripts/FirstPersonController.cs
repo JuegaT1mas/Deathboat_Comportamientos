@@ -72,6 +72,9 @@ namespace StarterAssets
 		private StarterAssetsInputs _input;
 		private GameObject _mainCamera;
 
+		private InputActionMap puzzleMapa;
+		private InputActionMap playerMapa;
+
 		private const float _threshold = 0.01f;
 
 		private bool IsCurrentDeviceMouse
@@ -104,13 +107,44 @@ namespace StarterAssets
 #else
 			Debug.LogError( "Starter Assets package is missing dependencies. Please use Tools/Starter Assets/Reinstall Dependencies to fix it");
 #endif
-
+			//cambiar mapa de acciones
+			puzzleMapa = _playerInput.actions.FindActionMap("Puzzle");
+			playerMapa = _playerInput.actions.FindActionMap("Player");
 			// reset our timeouts on start
 			_jumpTimeoutDelta = JumpTimeout;
 			_fallTimeoutDelta = FallTimeout;
 		}
 
-		private void Update()
+		//cambiar de mapa de acciones
+        private void OnEnable()
+        {
+			//Referenciando al script creado automaticamente StarterAssetsInput
+			//_input.Enable();
+			//______________________________________________________________________
+
+			//_playerInput.actions["Interact"].performed += SwitchActionMap;
+        }
+
+		private void OnDisable()
+		{
+			//Referenciando al script creado automaticamente StarterAssetsInput
+			//_input.Disable();
+			//____________________________________________________________________
+			//_playerInput.actions["Interact"].performed -= SwitchActionMap;
+		}
+
+		private void SwitchActionMap(InputAction.CallbackContext context)
+        {
+			//Generated c# script format
+			//_input.Puzzle.Enable();
+			//_input.Player.Enable();
+			//___________________________________________
+			//puzzleMapa.Enable();
+			//playerMapa.Disable();
+			//_playerInput.currentActionMap.Disable();
+        }
+
+        private void Update()
 		{
 			JumpAndGravity();
 			GroundedCheck();
