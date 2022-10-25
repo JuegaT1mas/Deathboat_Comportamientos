@@ -1,5 +1,201 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &391320963706696148
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3148764729174147285}
+  - component: {fileID: 7795668336564024140}
+  - component: {fileID: 4423185708536627814}
+  - component: {fileID: 1651873629162983698}
+  m_Layer: 9
+  m_Name: Stairs_650_400_300_Prefab (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 105
+  m_IsActive: 1
+--- !u!4 &3148764729174147285
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 391320963706696148}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 4.298, y: 0.24, z: 3.022}
+  m_LocalScale: {x: 0.62, y: 0.85, z: 0.48874}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2012288833710004525}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!33 &7795668336564024140
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 391320963706696148}
+  m_Mesh: {fileID: 5495454633994339055, guid: 7e0223e1d3e1733499accfa5ebffb67e, type: 3}
+--- !u!23 &4423185708536627814
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 391320963706696148}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: dbf898c9f9c4a2d46aa6336e23caeb61, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 2
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &1651873629162983698
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 391320963706696148}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -1974449766878446227, guid: 7e0223e1d3e1733499accfa5ebffb67e, type: 3}
+--- !u!1 &6450523504096666582
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5081688571723468807}
+  - component: {fileID: 8950285569764872515}
+  - component: {fileID: 7459363303082561628}
+  - component: {fileID: 6791062621383340228}
+  m_Layer: 9
+  m_Name: Stairs_650_400_300_Prefab
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 65
+  m_IsActive: 1
+--- !u!4 &5081688571723468807
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6450523504096666582}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0.33, y: -0.6300001, z: 6.905}
+  m_LocalScale: {x: 0.5, y: 0.5015, z: 0.48874}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2012288833710004525}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &8950285569764872515
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6450523504096666582}
+  m_Mesh: {fileID: 5495454633994339055, guid: 7e0223e1d3e1733499accfa5ebffb67e, type: 3}
+--- !u!23 &7459363303082561628
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6450523504096666582}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: dbf898c9f9c4a2d46aa6336e23caeb61, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 2
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &6791062621383340228
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6450523504096666582}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -1974449766878446227, guid: 7e0223e1d3e1733499accfa5ebffb67e, type: 3}
 --- !u!1 &7815153819330459956
 GameObject:
   m_ObjectHideFlags: 0
@@ -14,11 +210,11 @@ GameObject:
   - component: {fileID: 7815153819330459960}
   - component: {fileID: 7815153819330459961}
   - component: {fileID: 7815153819330459962}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Starboard - 1 V - Room III
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7815153819330459963
@@ -248,7 +444,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 553
+  m_VersionIndex: 676
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -358,11 +554,11 @@ GameObject:
   - component: {fileID: 7815153819401085415}
   - component: {fileID: 7815153819401085408}
   - component: {fileID: 7815153819401085409}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Port - 1 H - Room II-III I
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7815153819401085410
@@ -592,7 +788,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 439
+  m_VersionIndex: 562
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -702,12 +898,12 @@ GameObject:
   - component: {fileID: 7815153819401105824}
   - component: {fileID: 7815153819401105825}
   - component: {fileID: 7815153819401105826}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Roof
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7815153819401105827
 Transform:
@@ -1176,7 +1372,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 2214
+  m_VersionIndex: 2337
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -1286,12 +1482,12 @@ GameObject:
   - component: {fileID: 7815153819405265109}
   - component: {fileID: 7815153819405265110}
   - component: {fileID: 7815153819405265111}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Starboard - 1 H - RoomR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7815153819405265104
 Transform:
@@ -1520,7 +1716,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 271
+  m_VersionIndex: 394
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -1630,11 +1826,11 @@ GameObject:
   - component: {fileID: 7815153819411286332}
   - component: {fileID: 7815153819411286333}
   - component: {fileID: 7815153819411286334}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Starboard - 3 H - Room I
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7815153819411286335
@@ -1864,7 +2060,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 423
+  m_VersionIndex: 546
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -1974,12 +2170,12 @@ GameObject:
   - component: {fileID: 7815153819434727286}
   - component: {fileID: 7815153819434727287}
   - component: {fileID: 7815153819434727280}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Port - 1 H - Main lounge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7815153819434727281
 Transform:
@@ -2208,7 +2404,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 445
+  m_VersionIndex: 568
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -2318,12 +2514,12 @@ GameObject:
   - component: {fileID: 7815153819441827709}
   - component: {fileID: 7815153819441827710}
   - component: {fileID: 7815153819441827711}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Bow - 4 H
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7815153819441827704
 Transform:
@@ -2552,7 +2748,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 723
+  m_VersionIndex: 846
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -2662,12 +2858,12 @@ GameObject:
   - component: {fileID: 7815153819454730819}
   - component: {fileID: 7815153819454730844}
   - component: {fileID: 7815153819454730845}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Floor-Over Command
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7815153819454730846
 Transform:
@@ -3256,7 +3452,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 904
+  m_VersionIndex: 1027
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -3366,12 +3562,12 @@ GameObject:
   - component: {fileID: 7815153819458463379}
   - component: {fileID: 7815153819458463404}
   - component: {fileID: 7815153819458463405}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Starboard - 4 V - Stairs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7815153819458463406
 Transform:
@@ -3600,7 +3796,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 435
+  m_VersionIndex: 558
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -3710,12 +3906,12 @@ GameObject:
   - component: {fileID: 7815153819460573072}
   - component: {fileID: 7815153819460573073}
   - component: {fileID: 7815153819460573074}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Port - 1 V - Storehouse II
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7815153819460573075
 Transform:
@@ -3944,7 +4140,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 653
+  m_VersionIndex: 776
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -4054,12 +4250,12 @@ GameObject:
   - component: {fileID: 7815153819481153017}
   - component: {fileID: 7815153819481153018}
   - component: {fileID: 7815153819481153019}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Stern - 2 H - Main Wall C
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7815153819481153012
 Transform:
@@ -4288,7 +4484,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 356
+  m_VersionIndex: 479
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -4398,12 +4594,12 @@ GameObject:
   - component: {fileID: 7815153819484907725}
   - component: {fileID: 7815153819484907726}
   - component: {fileID: 7815153819484907727}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Roof-diagonal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7815153819484907698
 Transform:
@@ -4872,7 +5068,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 888
+  m_VersionIndex: 1011
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -4982,12 +5178,12 @@ GameObject:
   - component: {fileID: 7815153819504815704}
   - component: {fileID: 7815153819504815705}
   - component: {fileID: 7815153819504815706}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Bow - 12 D - Main Wall L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7815153819504815709
 Transform:
@@ -5216,7 +5412,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1074
+  m_VersionIndex: 1197
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -5326,11 +5522,11 @@ GameObject:
   - component: {fileID: 7815153819523971522}
   - component: {fileID: 7815153819523971523}
   - component: {fileID: 7815153819523971548}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Port - 2 V - Storeroom Engine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7815153819523971549
@@ -5560,7 +5756,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 537
+  m_VersionIndex: 660
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -5670,12 +5866,12 @@ GameObject:
   - component: {fileID: 7815153819535071061}
   - component: {fileID: 7815153819535071062}
   - component: {fileID: 7815153819535071063}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Port - 5 V - Steer Room
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7815153819535071056
 Transform:
@@ -6024,7 +6220,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 723
+  m_VersionIndex: 846
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -6134,11 +6330,11 @@ GameObject:
   - component: {fileID: 7815153819574365288}
   - component: {fileID: 7815153819574365289}
   - component: {fileID: 7815153819574365290}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: 1 H - Toilet Middle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7815153819574365291
@@ -6368,7 +6564,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 436
+  m_VersionIndex: 559
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -6478,11 +6674,11 @@ GameObject:
   - component: {fileID: 7815153819584329099}
   - component: {fileID: 7815153819584329092}
   - component: {fileID: 7815153819584329093}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Bow - 3 V - Room II-III
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7815153819584329094
@@ -6712,7 +6908,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 123
+  m_VersionIndex: 246
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -6822,12 +7018,12 @@ GameObject:
   - component: {fileID: 7815153819615967070}
   - component: {fileID: 7815153819615967071}
   - component: {fileID: 7815153819615967064}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Stern - 1 V - Main Wall Stair RR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7815153819615967065
 Transform:
@@ -7056,7 +7252,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 553
+  m_VersionIndex: 676
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -7161,7 +7357,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7815153819686061188}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: InnerWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7203,12 +7399,12 @@ GameObject:
   - component: {fileID: 7815153819695231577}
   - component: {fileID: 7815153819695231578}
   - component: {fileID: 7815153819695231579}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Port - 3 H - Steer Room
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7815153819695231572
 Transform:
@@ -7437,7 +7633,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 517
+  m_VersionIndex: 640
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -7547,12 +7743,12 @@ GameObject:
   - component: {fileID: 7815153819705371582}
   - component: {fileID: 7815153819705371583}
   - component: {fileID: 7815153819705371576}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Starboard - 2 D - Main lounge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7815153819705371577
 Transform:
@@ -7781,7 +7977,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 531
+  m_VersionIndex: 654
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -7891,12 +8087,12 @@ GameObject:
   - component: {fileID: 7815153819710376926}
   - component: {fileID: 7815153819710376927}
   - component: {fileID: 7815153819710376920}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Stern - 1 V - Main Wall Stair LR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7815153819710376921
 Transform:
@@ -8125,7 +8321,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 550
+  m_VersionIndex: 673
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -8235,11 +8431,11 @@ GameObject:
   - component: {fileID: 7815153819713693938}
   - component: {fileID: 7815153819713693939}
   - component: {fileID: 7815153819713693708}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Starboard - 2 V - Room I
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7815153819713693709
@@ -8469,7 +8665,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 540
+  m_VersionIndex: 663
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -8574,7 +8770,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7815153819757983791}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Ship
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8590,13 +8786,14 @@ Transform:
   m_GameObject: {fileID: 7815153819757983784}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7815153820076482340}
   - {fileID: 7815153819968245653}
   - {fileID: 7815153820533213495}
   - {fileID: 7815153819401105827}
+  - {fileID: 2012288833710004525}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8614,11 +8811,11 @@ GameObject:
   - component: {fileID: 7815153819770244029}
   - component: {fileID: 7815153819770244030}
   - component: {fileID: 7815153819770244031}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Port - 2 V - Room I
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7815153819770244024
@@ -8848,7 +9045,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 543
+  m_VersionIndex: 666
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -8958,11 +9155,11 @@ GameObject:
   - component: {fileID: 7815153819773732498}
   - component: {fileID: 7815153819773732499}
   - component: {fileID: 7815153819773732524}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Bow - 3 V - Room I-II
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7815153819773732525
@@ -9192,7 +9389,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 120
+  m_VersionIndex: 243
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -9297,11 +9494,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7815153819774280294}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bedroom R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7815153819774280294
@@ -9340,12 +9537,12 @@ GameObject:
   - component: {fileID: 7815153819822326385}
   - component: {fileID: 7815153819822326386}
   - component: {fileID: 7815153819822326387}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Stern - 2 V - RoomL Bathroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7815153819822327180
 Transform:
@@ -9574,7 +9771,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 531
+  m_VersionIndex: 654
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -9679,7 +9876,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7815153819928275854}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Entrance-Staff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9723,11 +9920,11 @@ GameObject:
   - component: {fileID: 7815153819933276308}
   - component: {fileID: 7815153819933276309}
   - component: {fileID: 7815153819933276310}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Starboard - 2 V - Room II
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7815153819933276311
@@ -9957,7 +10154,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 546
+  m_VersionIndex: 669
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -10067,12 +10264,12 @@ GameObject:
   - component: {fileID: 7815153819962540442}
   - component: {fileID: 7815153819962540443}
   - component: {fileID: 7815153819962540436}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Stern - 7 H - Engine Room
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7815153819962540437
 Transform:
@@ -10301,7 +10498,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 832
+  m_VersionIndex: 955
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -10411,12 +10608,12 @@ GameObject:
   - component: {fileID: 7815153819967798815}
   - component: {fileID: 7815153819967798808}
   - component: {fileID: 7815153819967798809}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Stern - 2 H - Main Wall R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7815153819967798810
 Transform:
@@ -10645,7 +10842,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 350
+  m_VersionIndex: 473
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -10750,7 +10947,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7815153819968245653}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: 1st Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10805,11 +11002,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7815153820066720034}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Toilet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7815153820066720034
@@ -10845,12 +11042,12 @@ GameObject:
   - component: {fileID: 7815153820072497206}
   - component: {fileID: 7815153820072497207}
   - component: {fileID: 7815153820072497200}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Port - 4 V - Kitchen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7815153820072497201
 Transform:
@@ -11079,7 +11276,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 432
+  m_VersionIndex: 555
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -11184,7 +11381,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7815153820076482340}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Hull
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11223,12 +11420,12 @@ GameObject:
   - component: {fileID: 7815153820089021939}
   - component: {fileID: 7815153820089021708}
   - component: {fileID: 7815153820089021709}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Floor bow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7815153820089021710
 Transform:
@@ -11457,7 +11654,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 970
+  m_VersionIndex: 1093
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -11562,11 +11759,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7815153820099628322}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Storeroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7815153820099628322
@@ -11602,12 +11799,12 @@ GameObject:
   - component: {fileID: 7815153820100659865}
   - component: {fileID: 7815153820100659866}
   - component: {fileID: 7815153820100659867}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Stern - 1 H - Main Wall Stair R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7815153820100659860
 Transform:
@@ -11836,7 +12033,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 436
+  m_VersionIndex: 559
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -11946,12 +12143,12 @@ GameObject:
   - component: {fileID: 7815153820104258492}
   - component: {fileID: 7815153820104258493}
   - component: {fileID: 7815153820104258494}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Starboard - 2 H - Bow Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7815153820104258495
 Transform:
@@ -12180,7 +12377,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 526
+  m_VersionIndex: 649
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -12290,11 +12487,11 @@ GameObject:
   - component: {fileID: 7815153820108915707}
   - component: {fileID: 7815153820108915700}
   - component: {fileID: 7815153820108915701}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Starboard - 2 H - Room II-III
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7815153820108915702
@@ -12524,7 +12721,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 342
+  m_VersionIndex: 465
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -12634,12 +12831,12 @@ GameObject:
   - component: {fileID: 7815153820147934903}
   - component: {fileID: 7815153820147934896}
   - component: {fileID: 7815153820147934897}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Starboard - 6 V
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7815153820147934898
 Transform:
@@ -12868,7 +13065,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1180
+  m_VersionIndex: 1303
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -12978,11 +13175,11 @@ GameObject:
   - component: {fileID: 7815153820161080316}
   - component: {fileID: 7815153820161080317}
   - component: {fileID: 7815153820161080318}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: 2 V - Toilet Middle II
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7815153820161080319
@@ -13212,7 +13409,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 534
+  m_VersionIndex: 657
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -13322,11 +13519,11 @@ GameObject:
   - component: {fileID: 7815153820162978709}
   - component: {fileID: 7815153820162978710}
   - component: {fileID: 7815153820162978711}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Bow - 7 H - Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7815153820162978714
@@ -13556,7 +13753,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1435
+  m_VersionIndex: 1558
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -13666,12 +13863,12 @@ GameObject:
   - component: {fileID: 7815153820165555294}
   - component: {fileID: 7815153820165555295}
   - component: {fileID: 7815153820165555288}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Bow - 12 D - Main Wall R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7815153820165555267
 Transform:
@@ -13900,7 +14097,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 885
+  m_VersionIndex: 1008
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -14010,12 +14207,12 @@ GameObject:
   - component: {fileID: 7815153820170832792}
   - component: {fileID: 7815153820170832793}
   - component: {fileID: 7815153820170832794}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Port - 4 V - Entrance
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7815153820170832795
 Transform:
@@ -14244,7 +14441,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 332
+  m_VersionIndex: 455
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -14354,11 +14551,11 @@ GameObject:
   - component: {fileID: 7815153820179536212}
   - component: {fileID: 7815153820179536213}
   - component: {fileID: 7815153820179536214}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Port - 4 H - Storeroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7815153820179536215
@@ -14588,7 +14785,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1441
+  m_VersionIndex: 1564
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -14698,12 +14895,12 @@ GameObject:
   - component: {fileID: 7815153820193938404}
   - component: {fileID: 7815153820193938405}
   - component: {fileID: 7815153820193938406}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Starboard - 4 V
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7815153820193938407
 Transform:
@@ -14932,7 +15129,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 338
+  m_VersionIndex: 461
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -15042,11 +15239,11 @@ GameObject:
   - component: {fileID: 7815153820218514431}
   - component: {fileID: 7815153820218514424}
   - component: {fileID: 7815153820218514425}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Port - 1 H - Room I-II II
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7815153820218514426
@@ -15276,7 +15473,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 439
+  m_VersionIndex: 562
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -15386,12 +15583,12 @@ GameObject:
   - component: {fileID: 7815153820374566219}
   - component: {fileID: 7815153820374566212}
   - component: {fileID: 7815153820374566213}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Port - 2 D - Steer Room R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7815153820374566214
 Transform:
@@ -15620,7 +15817,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 588
+  m_VersionIndex: 711
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -15730,12 +15927,12 @@ GameObject:
   - component: {fileID: 7815153820396573826}
   - component: {fileID: 7815153820396573827}
   - component: {fileID: 7815153820396573852}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Stern - 2 H L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7815153820396573853
 Transform:
@@ -15964,7 +16161,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 365
+  m_VersionIndex: 488
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -16074,11 +16271,11 @@ GameObject:
   - component: {fileID: 7815153820406058261}
   - component: {fileID: 7815153820406058262}
   - component: {fileID: 7815153820406058263}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Port - 1 V - Room II
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7815153820406058256
@@ -16308,7 +16505,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 556
+  m_VersionIndex: 679
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -16413,11 +16610,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7815153820471776474}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bedroom Front
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7815153820471776474
@@ -16454,11 +16651,11 @@ GameObject:
   - component: {fileID: 7815153820472695286}
   - component: {fileID: 7815153820472695287}
   - component: {fileID: 7815153820472695280}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Port - 1 H - Room II-III II
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7815153820472695281
@@ -16688,7 +16885,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 445
+  m_VersionIndex: 568
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -16798,12 +16995,12 @@ GameObject:
   - component: {fileID: 7815153820475823202}
   - component: {fileID: 7815153820475823203}
   - component: {fileID: 7815153820475823228}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Port - 4 H - Kitchen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7815153820475823229
 Transform:
@@ -17032,7 +17229,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1541
+  m_VersionIndex: 1664
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -17142,11 +17339,11 @@ GameObject:
   - component: {fileID: 7815153820479362718}
   - component: {fileID: 7815153820479362719}
   - component: {fileID: 7815153820479362712}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Port - 4 H - Storeroom Engine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7815153820479362713
@@ -17376,7 +17573,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1444
+  m_VersionIndex: 1567
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -17486,12 +17683,12 @@ GameObject:
   - component: {fileID: 7815153820497010301}
   - component: {fileID: 7815153820497010302}
   - component: {fileID: 7815153820497010303}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Port - 2 D - Steer Room L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7815153820497010296
 Transform:
@@ -17720,7 +17917,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 587
+  m_VersionIndex: 710
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -17825,7 +18022,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7815153820533213495}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: 2nd Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17873,11 +18070,11 @@ GameObject:
   - component: {fileID: 7815153820559972148}
   - component: {fileID: 7815153820559972149}
   - component: {fileID: 7815153820559972150}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: 3 H - Toilet Middle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7815153820559972151
@@ -18107,7 +18304,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 420
+  m_VersionIndex: 543
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -18217,12 +18414,12 @@ GameObject:
   - component: {fileID: 7815153820574455315}
   - component: {fileID: 7815153820574455340}
   - component: {fileID: 7815153820574455341}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7815153820574455342
 Transform:
@@ -20629,7 +20826,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 2984
+  m_VersionIndex: 3107
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -20739,12 +20936,12 @@ GameObject:
   - component: {fileID: 7815153820593148756}
   - component: {fileID: 7815153820593148757}
   - component: {fileID: 7815153820593148758}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Port - 2 H - Steer Room
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7815153820593148759
 Transform:
@@ -20973,7 +21170,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 434
+  m_VersionIndex: 557
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -21083,11 +21280,11 @@ GameObject:
   - component: {fileID: 7815153820615007878}
   - component: {fileID: 7815153820615007879}
   - component: {fileID: 7815153820615007872}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Starboard - 3 H - Room III
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7815153820615007873
@@ -21317,7 +21514,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 429
+  m_VersionIndex: 552
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -21427,12 +21624,12 @@ GameObject:
   - component: {fileID: 7815153820638067839}
   - component: {fileID: 7815153820638067832}
   - component: {fileID: 7815153820638067833}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Starboard - 30 V - Main Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7815153820638067834
 Transform:
@@ -21661,7 +21858,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 247
+  m_VersionIndex: 370
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -21771,12 +21968,12 @@ GameObject:
   - component: {fileID: 7815153820689149820}
   - component: {fileID: 7815153820689149821}
   - component: {fileID: 7815153820689149822}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Starboard - 20 V - Main Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7815153820689149823
 Transform:
@@ -22125,7 +22322,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 965
+  m_VersionIndex: 1088
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -22235,12 +22432,12 @@ GameObject:
   - component: {fileID: 7815153820690385207}
   - component: {fileID: 7815153820690385200}
   - component: {fileID: 7815153820690385201}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Starboard - 2 D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7815153820690385202
 Transform:
@@ -22469,7 +22666,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 663
+  m_VersionIndex: 786
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -22579,12 +22776,12 @@ GameObject:
   - component: {fileID: 7815153820729049375}
   - component: {fileID: 7815153820729049368}
   - component: {fileID: 7815153820729049369}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Port - 2 D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7815153820729049370
 Transform:
@@ -22813,7 +23010,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 663
+  m_VersionIndex: 786
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -22923,12 +23120,12 @@ GameObject:
   - component: {fileID: 7815153820729319424}
   - component: {fileID: 7815153820729319425}
   - component: {fileID: 7815153820729319426}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Port - 1 H - Kitchen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7815153820729319427
 Transform:
@@ -23157,7 +23354,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 536
+  m_VersionIndex: 659
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -23267,12 +23464,12 @@ GameObject:
   - component: {fileID: 7815153820742797688}
   - component: {fileID: 7815153820742797689}
   - component: {fileID: 7815153820742797690}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Port - 1 V - Kitchen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7815153820742797691
 Transform:
@@ -23501,7 +23698,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 647
+  m_VersionIndex: 770
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -23611,11 +23808,11 @@ GameObject:
   - component: {fileID: 7815153820753769901}
   - component: {fileID: 7815153820753769902}
   - component: {fileID: 7815153820753769903}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: 2 V - Toilet Middle I
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7815153820753769896
@@ -23845,7 +24042,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 537
+  m_VersionIndex: 660
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -23955,12 +24152,12 @@ GameObject:
   - component: {fileID: 7815153820794737844}
   - component: {fileID: 7815153820794737845}
   - component: {fileID: 7815153820794737846}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Stern - 2H R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7815153820794737847
 Transform:
@@ -24189,7 +24386,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 362
+  m_VersionIndex: 485
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -24299,12 +24496,12 @@ GameObject:
   - component: {fileID: 7815153820795821858}
   - component: {fileID: 7815153820795821859}
   - component: {fileID: 7815153820795821884}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Starboard 2 H
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7815153820795821885
 Transform:
@@ -24533,7 +24730,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 362
+  m_VersionIndex: 485
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -24643,11 +24840,11 @@ GameObject:
   - component: {fileID: 7815153820830975955}
   - component: {fileID: 7815153820830975980}
   - component: {fileID: 7815153820830975981}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Bow - 1 H - Room III
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7815153820830975982
@@ -24877,7 +25074,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 439
+  m_VersionIndex: 562
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -24987,11 +25184,11 @@ GameObject:
   - component: {fileID: 7815153820845692672}
   - component: {fileID: 7815153820845692673}
   - component: {fileID: 7815153820845692674}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Bow - 2 H - Room II
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7815153820845692675
@@ -25221,7 +25418,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 345
+  m_VersionIndex: 468
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -25331,12 +25528,12 @@ GameObject:
   - component: {fileID: 7815153820858421201}
   - component: {fileID: 7815153820858421202}
   - component: {fileID: 7815153820858421203}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Port - 3 H - Kitchen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7815153820858421228
 Transform:
@@ -25565,7 +25762,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 523
+  m_VersionIndex: 646
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -25670,11 +25867,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7815153820869029669}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bedroom L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7815153820869029669
@@ -25714,12 +25911,12 @@ GameObject:
   - component: {fileID: 7815153820875343892}
   - component: {fileID: 7815153820875343893}
   - component: {fileID: 7815153820875343894}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Port - 2 D - Main lounge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7815153820875343895
 Transform:
@@ -25948,7 +26145,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 660
+  m_VersionIndex: 783
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -26058,11 +26255,11 @@ GameObject:
   - component: {fileID: 7815153820897757422}
   - component: {fileID: 7815153820897757423}
   - component: {fileID: 7815153820897757416}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Port - 1 H - Room I-II I
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7815153820897757417
@@ -26292,7 +26489,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 436
+  m_VersionIndex: 559
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -26402,12 +26599,12 @@ GameObject:
   - component: {fileID: 7815153820943110393}
   - component: {fileID: 7815153820943110394}
   - component: {fileID: 7815153820943110395}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Stern - 1 H - Main Wall L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7815153820943110388
 Transform:
@@ -26636,7 +26833,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 433
+  m_VersionIndex: 556
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -26746,12 +26943,12 @@ GameObject:
   - component: {fileID: 7815153820977583204}
   - component: {fileID: 7815153820977583205}
   - component: {fileID: 7815153820977583206}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Stern - 1 H - Main Wall Stair L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7815153820977583207
 Transform:
@@ -26980,7 +27177,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 430
+  m_VersionIndex: 553
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -27090,12 +27287,12 @@ GameObject:
   - component: {fileID: 7815153820981565905}
   - component: {fileID: 7815153820981565906}
   - component: {fileID: 7815153820981565907}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Starboard - 1 H - Main lounge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7815153820981565932
 Transform:
@@ -27324,7 +27521,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 442
+  m_VersionIndex: 565
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -27434,11 +27631,11 @@ GameObject:
   - component: {fileID: 7815153821004923108}
   - component: {fileID: 7815153821004923109}
   - component: {fileID: 7815153821004923110}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Port - 2 V - Storeroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7815153821004923111
@@ -27668,7 +27865,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 543
+  m_VersionIndex: 666
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -27778,12 +27975,12 @@ GameObject:
   - component: {fileID: 7815153821019996971}
   - component: {fileID: 7815153821019996964}
   - component: {fileID: 7815153821019996965}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Stern - 1 V - Main Wall Stair RL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7815153821019996966
 Transform:
@@ -28012,7 +28209,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 547
+  m_VersionIndex: 670
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -28122,11 +28319,11 @@ GameObject:
   - component: {fileID: 7815153821031852492}
   - component: {fileID: 7815153821031852493}
   - component: {fileID: 7815153821031852494}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Port - 3 H - Room III
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7815153821031852495
@@ -28356,7 +28553,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 429
+  m_VersionIndex: 552
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -28466,12 +28663,12 @@ GameObject:
   - component: {fileID: 7815153821042067267}
   - component: {fileID: 7815153821042067292}
   - component: {fileID: 7815153821042067293}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Port - 10 V
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7815153821042067294
 Transform:
@@ -28700,7 +28897,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 529
+  m_VersionIndex: 652
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -28810,12 +29007,12 @@ GameObject:
   - component: {fileID: 7815153821081314726}
   - component: {fileID: 7815153821081314727}
   - component: {fileID: 7815153821081314720}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7815153821081314721
 Transform:
@@ -33202,7 +33399,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1226
+  m_VersionIndex: 1349
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -33312,12 +33509,12 @@ GameObject:
   - component: {fileID: 7815153821081951985}
   - component: {fileID: 7815153821081951986}
   - component: {fileID: 7815153821081951987}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Starboard - 2 H - RoomR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7815153821081951756
 Transform:
@@ -33546,7 +33743,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 342
+  m_VersionIndex: 465
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -33651,7 +33848,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7815153821142366691}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Main Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33700,12 +33897,12 @@ GameObject:
   - component: {fileID: 7815153821186051741}
   - component: {fileID: 7815153821186051742}
   - component: {fileID: 7815153821186051743}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7815153821186051736
 Transform:
@@ -34075,7 +34272,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1537
+  m_VersionIndex: 1660
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -34185,12 +34382,12 @@ GameObject:
   - component: {fileID: 7815153821196194408}
   - component: {fileID: 7815153821196194409}
   - component: {fileID: 7815153821196194410}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Starboard - 3 V - RoomR Bahroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7815153821196194411
 Transform:
@@ -34419,7 +34616,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 123
+  m_VersionIndex: 246
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -34529,12 +34726,12 @@ GameObject:
   - component: {fileID: 7815153821234618931}
   - component: {fileID: 7815153821234618956}
   - component: {fileID: 7815153821234618957}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Stern - 1 V - Main Wall Stair LL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7815153821234618958
 Transform:
@@ -34763,7 +34960,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 547
+  m_VersionIndex: 670
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -34873,12 +35070,12 @@ GameObject:
   - component: {fileID: 7815153821269734262}
   - component: {fileID: 7815153821269734263}
   - component: {fileID: 7815153821269734256}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Port - 2 H - Kitchen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7815153821269734257
 Transform:
@@ -35107,7 +35304,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 456
+  m_VersionIndex: 579
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -35217,11 +35414,11 @@ GameObject:
   - component: {fileID: 7815153821288851941}
   - component: {fileID: 7815153821288851942}
   - component: {fileID: 7815153821288851943}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Port - 2 V - Room III
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7815153821288851936
@@ -35451,7 +35648,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 546
+  m_VersionIndex: 669
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -35561,12 +35758,12 @@ GameObject:
   - component: {fileID: 7815153821348253906}
   - component: {fileID: 7815153821348253907}
   - component: {fileID: 7815153821348253932}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Port - 1 V - Storehouse I
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7815153821348253933
 Transform:
@@ -35795,7 +35992,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 647
+  m_VersionIndex: 770
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -35905,12 +36102,12 @@ GameObject:
   - component: {fileID: 7815153821351305089}
   - component: {fileID: 7815153821351305090}
   - component: {fileID: 7815153821351305091}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Stern - 3 H - RoomL Bathroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7815153821351305116
 Transform:
@@ -36139,7 +36336,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 423
+  m_VersionIndex: 546
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -36249,12 +36446,12 @@ GameObject:
   - component: {fileID: 7815153821358737552}
   - component: {fileID: 7815153821358737553}
   - component: {fileID: 7815153821358737554}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Port - 22 V - Main Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7815153821358737555
 Transform:
@@ -36723,7 +36920,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 744
+  m_VersionIndex: 867
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -36833,12 +37030,12 @@ GameObject:
   - component: {fileID: 7815153821388111396}
   - component: {fileID: 7815153821388111397}
   - component: {fileID: 7815153821388111398}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Starboard - 2 H - Stairs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7815153821388111399
 Transform:
@@ -36848,7 +37045,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7815153821388111392}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 3, z: 3}
+  m_LocalPosition: {x: 0, y: 2.792, z: 3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -37067,7 +37264,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 459
+  m_VersionIndex: 579
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -37177,12 +37374,12 @@ GameObject:
   - component: {fileID: 7815153821396658125}
   - component: {fileID: 7815153821396658126}
   - component: {fileID: 7815153821396658127}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Stern - 5 H -  RoomL Bathroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7815153821396658120
 Transform:
@@ -37411,7 +37608,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 461
+  m_VersionIndex: 584
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -37521,11 +37718,11 @@ GameObject:
   - component: {fileID: 7815153821433954338}
   - component: {fileID: 7815153821433954339}
   - component: {fileID: 7815153821433954364}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Starboard - 3 H - Room I-II
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7815153821433954365
@@ -37755,7 +37952,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 429
+  m_VersionIndex: 552
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -37865,12 +38062,12 @@ GameObject:
   - component: {fileID: 7815153821435109366}
   - component: {fileID: 7815153821435109367}
   - component: {fileID: 7815153821435109360}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Port - 30 V - Main Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7815153821435109361
 Transform:
@@ -38099,7 +38296,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 250
+  m_VersionIndex: 373
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -38195,3 +38392,36 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!1 &9131699751357242489
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2012288833710004525}
+  m_Layer: 0
+  m_Name: Stairs
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2012288833710004525
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9131699751357242489}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -6, y: 3.3000002, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5081688571723468807}
+  - {fileID: 3148764729174147285}
+  m_Father: {fileID: 7815153819757983791}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
