@@ -9,7 +9,7 @@ public class Selected : MonoBehaviour
     LayerMask mask;
     public float distancia = 1.5f;
     private GameObject _player;
-
+    public bool rayCastActivo = false;
     public GameObject TextDetect;
     GameObject ultimoReconocido=null;
 
@@ -37,6 +37,7 @@ public class Selected : MonoBehaviour
         {
             if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, distancia, mask))
             {
+                rayCastActivo = true;
                 Deselect();
                 SelectedObject(hit.transform);
                 if (hit.collider.tag == "Objeto Interactivo")

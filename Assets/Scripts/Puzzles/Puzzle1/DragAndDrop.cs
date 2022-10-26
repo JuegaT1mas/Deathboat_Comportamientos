@@ -16,29 +16,33 @@ public class DragAndDrop : MonoBehaviour
 
     private void OnMouseDown()
     {
+        Vector3 posAux;
+        posAux = gameObject.transform.position;
         if (!sensores.ocupadoRight)
         {
+           
             gameObject.transform.position = gameObject.transform.position + new Vector3(1, 0, 0);
-            puzzle.EsGanador();
+           
+           
 
         }
         else if (!sensores.ocupadoLeft)
         {
             gameObject.transform.position = gameObject.transform.position + new Vector3(-1, 0, 0);
-            puzzle.EsGanador();
+       
         }
         else if (!sensores.ocupadoDown)
         {
             gameObject.transform.position = gameObject.transform.position + new Vector3(0, -1, 0);
-            puzzle.EsGanador();
+            
         }
         else if (!sensores.ocupadoUp)
         {
             gameObject.transform.position = gameObject.transform.position + new Vector3(0, 1, 0);
-            puzzle.EsGanador();
+            
         }
-
-
+        puzzle.fichaEscondida.transform.position = posAux;
+        puzzle.EsGanador();
     }
 
 }

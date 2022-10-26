@@ -64,6 +64,9 @@ namespace StarterAssets
 		private float _jumpTimeoutDelta;
 		private float _fallTimeoutDelta;
 
+
+		//Referencia al selected
+		public Selected camara;
 	
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
 		private PlayerInput _playerInput;
@@ -107,43 +110,25 @@ namespace StarterAssets
 #else
 			Debug.LogError( "Starter Assets package is missing dependencies. Please use Tools/Starter Assets/Reinstall Dependencies to fix it");
 #endif
-			//cambiar mapa de acciones
-			puzzleMapa = _playerInput.actions.FindActionMap("Puzzle");
-			playerMapa = _playerInput.actions.FindActionMap("Player");
+			
 			// reset our timeouts on start
 			_jumpTimeoutDelta = JumpTimeout;
 			_fallTimeoutDelta = FallTimeout;
 		}
 
 		//cambiar de mapa de acciones
-        private void OnEnable()
+        public void OnInteract()
         {
-			//Referenciando al script creado automaticamente StarterAssetsInput
-			//_input.Enable();
-			//______________________________________________________________________
-
-			//_playerInput.actions["Interact"].performed += SwitchActionMap;
-        }
-
-		private void OnDisable()
-		{
-			//Referenciando al script creado automaticamente StarterAssetsInput
-			//_input.Disable();
-			//____________________________________________________________________
-			//_playerInput.actions["Interact"].performed -= SwitchActionMap;
+			if (camara.rayCastActivo) {
+				print("OnInteract executed");
+				_playerInput.actions.FindActionMap("Player").Disable();
+				_playerInput.actions.FindActionMap("Puzzle").Enable();
+			}
 		}
 
-		private void SwitchActionMap(InputAction.CallbackContext context)
-        {
-			//Generated c# script format
-			//_input.Puzzle.Enable();
-			//_input.Player.Enable();
-			//___________________________________________
-			//puzzleMapa.Enable();
-			//playerMapa.Disable();
-			//_playerInput.currentActionMap.Disable();
-        }
+		
 
+	
         private void Update()
 		{
 			JumpAndGravity();

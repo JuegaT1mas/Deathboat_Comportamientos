@@ -8,14 +8,14 @@ public class Puzzle : MonoBehaviour
     public GameObject fichaPrefab;
     public GameObject bordePrefab;
     public Sprite fichaEscondidaImg;//la ficha que falta en el puzle
-
+    public bool resuelto = false;
 
     int[,] puzzleMezclado;
-    GameObject fichaEscondida;
+    public GameObject fichaEscondida;
     int numCostado = 3;//sera 3 porque es un puzle 3x3
     GameObject padreFichas;
     GameObject padreBordes;
-    List<Vector3> posicionesIniciales = new List<Vector3>();//para saber si el puzzle está bien resuelto
+    public List<Vector3> posicionesIniciales = new List<Vector3>();//para saber si el puzzle está bien resuelto
     GameObject[] fichas;
 
 
@@ -24,8 +24,9 @@ public class Puzzle : MonoBehaviour
         //recuperamos el padre de las fichas y de los bordes
         padreFichas = GameObject.Find("Fichas");
         padreBordes = GameObject.Find("Bordes");
-        CrearFichas();
         transform.position = new Vector3(0, 2.78999996f, 0);
+        CrearFichas();
+        
 
 
     }
@@ -69,15 +70,16 @@ public class Puzzle : MonoBehaviour
                 }
             }
         }
-        fichaEscondida.gameObject.SetActive(false);
+       
 
         fichas = GameObject.FindGameObjectsWithTag("Ficha");//metemos todos los gameobject de las fichas dentro de un array
         for (int i = 0; i < fichas.Length; i++)
         {
             posicionesIniciales.Add(fichas[i].transform.position);//guardamos la posicion correcta del puzzle
         }
+        fichaEscondida.gameObject.SetActive(false);
         //Mezclamos las fichas para que salgan desordenadas
-        MezclarFichas();
+       MezclarFichas();
     }
 
 
@@ -118,6 +120,7 @@ public class Puzzle : MonoBehaviour
 
     public void EsGanador()
     {
+        
         for (int i = 0; i < fichas.Length; i++)
         {
             if (posicionesIniciales[i] != fichas[i].transform.position)
@@ -127,6 +130,7 @@ public class Puzzle : MonoBehaviour
         }
         fichaEscondida.gameObject.SetActive(true);
         print("Puzzle resuelto");
+        resuelto = true;
 
     }
 
