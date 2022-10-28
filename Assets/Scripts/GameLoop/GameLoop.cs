@@ -53,7 +53,6 @@ public class GameLoop : MonoBehaviour
         GeneratePuzzles(); //Genera en el mapa los puzzles
         UpdatePuzzleUI(); //Actualiza el UI de los puzzles
         UpdateLivesUI(); //Actualiza el UI de las vidas
-        CheckDevice();
     }
 
     private void Update()
@@ -178,11 +177,15 @@ public class GameLoop : MonoBehaviour
         }
     }
 
-    private void CheckDevice()
+    public void CheckDevice(PlayerInput playerInput) //Comprobación de los controles para activar el móvil
     {
-        if(playerRef.GetComponent<PlayerInput>().currentControlScheme == "Touch")
+        if(playerInput.currentControlScheme == "Touch")
         {
             canvasMobileUI.SetActive(true);
+        }
+        else
+        {
+            canvasMobileUI.SetActive(false);
         }
     }
 

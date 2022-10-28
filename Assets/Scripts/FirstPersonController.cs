@@ -67,7 +67,7 @@ namespace StarterAssets
 		public int lives = 3;
 
 		[Header("References")]
-		public GameLoop gameLoop; //Referencia al gameloop para llamar a UpdateLifeUI
+		public GameLoop gameLoop; //Referencia al gameloop
 
 		// cinemachine
 		private float _cinemachineTargetPitch;
@@ -317,6 +317,11 @@ namespace StarterAssets
 				gameLoop.UpdateLivesUI();
 			}
 		}
+
+		public void OnControlsChanged()//Cuando cambien los controles comprueba si se tienen que activar los controles de móvil
+        {
+			gameLoop.CheckDevice(_playerInput);
+        }
 
     }
 }
