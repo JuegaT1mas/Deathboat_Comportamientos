@@ -9,6 +9,10 @@ namespace StarterAssets
         [Header("Output")]
         public StarterAssetsInputs starterAssetsInputs;
 
+        public FirstPersonController firstPersonController; //Referencia para el interact
+
+        public GameObject[] buttonsInteractAndExit; //Para activar y desactivar el salir y entrar al puzzle
+
         public void VirtualMoveInput(Vector2 virtualMoveDirection)
         {
             starterAssetsInputs.MoveInput(virtualMoveDirection);
@@ -37,6 +41,16 @@ namespace StarterAssets
         public void VirtualInteractInput(bool virtualInteractState)
         {
             starterAssetsInputs.InteractInput(virtualInteractState);
+            firstPersonController.OnInteract();
+            buttonsInteractAndExit[0].SetActive(false);
+            buttonsInteractAndExit[1].SetActive(true);
+        }
+        public void VirtualExitInput()
+        {
+            firstPersonController.OnLeavePuzzle(); //llamadas directas a los métodos
+            buttonsInteractAndExit[1].SetActive(false);
+            buttonsInteractAndExit[0].SetActive(true);
+
         }
     }
 
