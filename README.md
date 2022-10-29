@@ -1,6 +1,6 @@
 # <p align="center">JuegaT1mas</div>
 ## Deathboat
-
+![Titulo](doc/Imagenes/caratula v3.1 ZOOM.jpg)
 ## Descripción del Juego
 
 *Resuelve los puzzles mientras escapas del monstruo*
