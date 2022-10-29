@@ -10,6 +10,7 @@ public class GameLoop : MonoBehaviour
     [Header("References")]
     private GameObject playerRef; //La referencia al jugador
     private GameObject enemyRef; //la referencia al enemigo
+    private FirstPersonController firstPersonController; //La referencia al firstPersonController
 
     [Header("Escape")]
     //El gameObject de la salida
@@ -91,8 +92,10 @@ public class GameLoop : MonoBehaviour
         {
             /*
             //Que los puzzles tengan herencia de una clase que indique por lo menos si el puzzle esta completado o no
-            if(puzzles[i].booleano == false){ //Si no hemos terminado todos los puzzles no ha acabado el juego
+            if(finalPuzzles[i].booleano == false){ //Si no hemos terminado todos los puzzles no ha acabado el juego
                 terminado = false;
+            }else{
+                finalPuzzles[i].setActive(false);
             };
             puzzlesCompleted[i] = puzzles[i].booleano //Actualizamos el array
             */
@@ -105,6 +108,8 @@ public class GameLoop : MonoBehaviour
         {
             ActivateEscape(); //Si has terminado los puzzles activa la salida
         }
+
+        //firstPersonController.OnLeavePuzzle();
     }
 
     public void GameOver() //Función que pasa cuando pierdes
