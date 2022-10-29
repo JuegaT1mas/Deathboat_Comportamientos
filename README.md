@@ -60,4 +60,8 @@ El objetivo del juego es avanzar por el mapa resolviendo puzles para intentar es
 
 El mundo del juego se trata de un mapa 3D cerrado. El jugador tendrá una vista en primera persona durante la mayoría de la partida, exceptuando cuándo interactúe con los puzles, en los cuales la cámara cambiará a una vista cenital del puzle para mejorar la interacción con estos.
 
+* ###Controles del juego
 
+Respecto al movimiento, la cámara se mueve en el ordenador con el ratón y en móvil con un touchpad. De forma similar, el movimiento en móvil se realizará mediante otro touchpad en el lado contrario de la pantalla, mientras que en el ordenador se realiza con las teclas WASD. Para agacharse además se podrá usar un botón en el teclado del ordenador (Ctrl) y en el móvil será un botón de acción cercano al touchpad de movimiento.
+ 
+En cuanto a las acciones, para interactuar con los elementos del escenario se hará uso del botón E; mientras que en el móvil, al igual que al agacharse, se usará un botón de acción cercano a este. De manera similar para saltar se usará la Barra Espaciadora y en el móvil otro botón.
