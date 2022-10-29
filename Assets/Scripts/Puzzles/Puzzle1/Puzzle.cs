@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.InputSystem;
 public class Puzzle : MonoBehaviour
 {
     public List<Sprite> fichaImg = new List<Sprite>();//Lista de sprites del puzzle
@@ -26,7 +26,7 @@ public class Puzzle : MonoBehaviour
         padreBordes = GameObject.Find("Bordes");
         transform.position = new Vector3(0, 2.78999996f, 0);
         CrearFichas();
-        
+
 
 
     }
@@ -70,7 +70,7 @@ public class Puzzle : MonoBehaviour
                 }
             }
         }
-       
+
 
         fichas = GameObject.FindGameObjectsWithTag("Ficha");//metemos todos los gameobject de las fichas dentro de un array
         for (int i = 0; i < fichas.Length; i++)
@@ -78,8 +78,14 @@ public class Puzzle : MonoBehaviour
             posicionesIniciales.Add(fichas[i].transform.position);//guardamos la posicion correcta del puzzle
         }
         fichaEscondida.gameObject.SetActive(false);
+
         //Mezclamos las fichas para que salgan desordenadas
-       MezclarFichas();
+        do
+        {
+            MezclarFichas();
+        } while (!isSolvable(puzzleMezclado));
+
+
     }
 
 
@@ -95,13 +101,9 @@ public class Puzzle : MonoBehaviour
             fichas[random].transform.position = pos;
 
             int aux = puzzleMezclado[i % 3, i / 3];
-            puzzleMezclado[i%3, i/3] = puzzleMezclado[random%3,random/3];
-            puzzleMezclado[random%3,random/3]=aux;
+            puzzleMezclado[i % 3, i / 3] = puzzleMezclado[random % 3, random / 3];
+            puzzleMezclado[random % 3, random / 3] = aux;
         }
-
-     
-
-
     }
 
 
@@ -117,10 +119,26 @@ public class Puzzle : MonoBehaviour
                     inv_count++;
         return inv_count;
     }
+    static bool isSolvable(int[,] puzzle)
+    {
+        int[] linearForm;
+        linearForm = new int[9];
+        int k = 0;
+
+        for (int i = 0; i < 3; i++)
+            for (int j = 0; j < 3; j++)
+                linearForm[k++] = puzzle[i, j];
+
+        // Count inversions in given 8 puzzle
+        int invCount = getInvCount(linearForm);
+
+        // return true if inversion count is even.
+        return (invCount % 2 == 0);
+    }
 
     public void EsGanador()
     {
-        
+
         for (int i = 0; i < fichas.Length; i++)
         {
             if (posicionesIniciales[i] != fichas[i].transform.position)

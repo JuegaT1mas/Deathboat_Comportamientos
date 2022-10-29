@@ -43,7 +43,7 @@
                 },
                 {
                     "name": "Interact",
-                    "type": "Value",
+                    "type": "Button",
                     "id": "59c1ba70-9475-407e-90be-7f4abecb2179",
                     "expectedControlType": "Button",
                     "processors": "",

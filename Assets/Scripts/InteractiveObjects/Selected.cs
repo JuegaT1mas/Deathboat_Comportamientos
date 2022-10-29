@@ -11,7 +11,13 @@ public class Selected : MonoBehaviour
     private GameObject _player;
     public bool rayCastActivo = false;
     public GameObject TextDetect;
-    GameObject ultimoReconocido=null;
+    GameObject ultimoReconocido = null;
+
+    //Variable para comprobar el raycast
+    private bool estaCerca;
+    [HideInInspector]
+    public RaycastHit hit;
+ 
 
     public bool puzzleActivado = false;
 
@@ -23,6 +29,7 @@ public class Selected : MonoBehaviour
     void Start()
     {
         mask = LayerMask.GetMask("Raycast Detect");
+        
         //TextDetect.SetActive(false);
 
     }
@@ -30,39 +37,49 @@ public class Selected : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Raycast(origen,dirección,out hit, distancia, máscara)
-        RaycastHit hit;
 
-        if (!puzzleActivado)
+
+        //Raycast(origen,dirección,out hit, distancia, máscara)
+
+        estaCerca = Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, distancia, mask);
+        if (estaCerca)
         {
-            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, distancia, mask))
-            {
-                rayCastActivo = true;
-                Deselect();
-                SelectedObject(hit.transform);
-                if (hit.collider.tag == "Objeto Interactivo")
-                {
-                    if (_player.GetComponent<StarterAssetsInputs>().interact)
-                    {
-                        AbrirPuzzle(hit);
-                        puzzleActivado = true;
-                    }
-                }
-            }
-            else
-            {
-                Deselect();
-            }
+            rayCastActivo = true;
+            Deselect();
+            SelectedObject(hit.transform);
         }
+        else
+        {
+            rayCastActivo = false;
+            Deselect();
+        }
+
     }
+
+    //public void OnInteract()
+    //{
+    //    if (!puzzleActivado)
+    //    {
+    //        if (hit.collider.tag == "Objeto Interactivo")
+    //        {
+
+    //            AbrirPuzzle(hit);
+    //            puzzleActivado = true;
+
+    //        }
+    //    }
+
+    //}
+
+
     void SelectedObject(Transform transform)
     {
         transform.GetComponent<MeshRenderer>().material.color = Color.green;//cuando el rayo impacte con el objeto se cambiará el color del objeto
         ultimoReconocido = transform.gameObject;
-        
+
     }
 
-    void AbrirPuzzle(RaycastHit hit)
+    public void AbrirPuzzle(RaycastHit hit)
     {
         hit.collider.transform.GetComponent<InteractiveObject>().ActivarObjeto();
         Deselect();
@@ -76,9 +93,9 @@ public class Selected : MonoBehaviour
         }
     }
 
-     void OnGUI()
+    void OnGUI()
     {
-      
+
         //if (ultimoReconocido != null)
         //{
         //    TextDetect.SetActive(true);

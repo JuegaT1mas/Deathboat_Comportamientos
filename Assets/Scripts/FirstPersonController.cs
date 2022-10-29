@@ -64,9 +64,11 @@ namespace StarterAssets
 		private float _jumpTimeoutDelta;
 		private float _fallTimeoutDelta;
 
+		//Referencia al componente selected de la maincamera
+		Selected _mcSelected;
 
-		//Referencia al selected
-		public Selected camara;
+
+		
 	
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
 		private PlayerInput _playerInput;
@@ -114,21 +116,36 @@ namespace StarterAssets
 			// reset our timeouts on start
 			_jumpTimeoutDelta = JumpTimeout;
 			_fallTimeoutDelta = FallTimeout;
+
+			//Referencia selected main camera
+			_mcSelected = _mainCamera.GetComponent<Selected>();
 		}
 
-		//cambiar de mapa de acciones
+        //cambiar de mapa de acciones
         public void OnInteract()
         {
-			if (camara.rayCastActivo) {
-				print("OnInteract executed");
-				_playerInput.actions.FindActionMap("Player").Disable();
-				_playerInput.actions.FindActionMap("Puzzle").Enable();
-			}
-		}
 
-		
+            if (_mainCamera.GetComponent<Selected>().rayCastActivo)
+            {
+                print("OnInteract executed");
+                _playerInput.actions.FindActionMap("Player").Disable();
+                _playerInput.actions.FindActionMap("Puzzle").Enable();
+            }
 
-	
+            if (!_mcSelected.puzzleActivado)
+            {
+                if (_mcSelected.hit.collider.tag == "Objeto Interactivo")
+                {
+                    _mcSelected.AbrirPuzzle(_mcSelected.hit);
+                    _mcSelected.puzzleActivado = true;
+
+                }
+            }
+        }
+
+
+
+
         private void Update()
 		{
 			JumpAndGravity();
