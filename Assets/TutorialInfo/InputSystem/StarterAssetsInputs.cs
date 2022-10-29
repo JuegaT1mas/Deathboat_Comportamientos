@@ -14,8 +14,8 @@ namespace StarterAssets
 		public bool sprint;
 
 		//Variables creadas por nosotros
-		public bool interact;
-		public bool crouch;
+		public bool interact; //Para interactuar con objetos
+		public bool crouch; //Para agacharse
 
 		[Header("Movement Settings")]
 		public bool analogMovement;

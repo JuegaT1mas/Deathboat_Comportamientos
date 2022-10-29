@@ -34,12 +34,16 @@ public class GameLoop : MonoBehaviour
     public TMP_Text puzzleUI;
     //El texto de la confimación visual
     public TMP_Text visualUI;
+    //El canvas de todos los elementos a la vez de la UI ingame
+    public GameObject canvasUI_Ingame;
     //El canvas del GameOver
     public GameObject canvasGameOver;
     //El canvas del GameOverVictory
     public GameObject canvasGameOverVictory;
     //El canvas de los controles de móvil
     public GameObject canvasMobileUI;
+    //El canvas del menu de pausa
+    public GameObject canvasPauseMenu;
 
     private void Start()
     {
@@ -189,18 +193,26 @@ public class GameLoop : MonoBehaviour
         }
     }
 
-    public void ActivateMouse()
+    public void ActivateMouse() //Activar el mouse por pantalla
     {
         //Desbloqueamos el ratón para poder clickear
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
 
-    public void DeactivateMouse()
+    public void DeactivateMouse()//Desactivar el mouse por pantalla
     {
         //Quitamos el ratón 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+    }
+
+    public void ActivatePauseMenu()
+    {
+        Time.timeScale = 0;
+        canvasUI_Ingame.SetActive(false);
+        canvasPauseMenu.SetActive(true);
+        ActivateMouse();
     }
 
 }

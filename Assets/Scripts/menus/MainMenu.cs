@@ -18,4 +18,14 @@ public class MainMenu : MonoBehaviour
     {
         Application.OpenURL(url);
     }
+
+    public void Pause()
+    {
+        Time.timeScale = 0;
+    }
+
+    public void Resume()
+    {
+        Time.timeScale = 1;
+    }
 }

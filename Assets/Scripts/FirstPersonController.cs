@@ -396,5 +396,10 @@ namespace StarterAssets
 			Cursor.lockState = CursorLockMode.Locked;
 			Cursor.visible = false;
 		}
+
+		public void OnPause()
+        {
+			gameLoop.ActivatePauseMenu();
+		}
 	}
 }
