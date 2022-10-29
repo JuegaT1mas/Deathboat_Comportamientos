@@ -84,31 +84,31 @@ Sin embargo una vez que se accede al menú de Ajustes desde el menú de Pausa y 
 
 ## Interfaces
 
-* Nombre de la pantalla: Menú principal
-* Descripción de la Pantalla: Es la primera interfaz del juego y sirve para desplazarse entre los estados de juego iniciales.
-* Estados de Juego: Llama a los creditos (en Credits), a los ajustes (en Options) y a comenzar una (en Play). Es llamada por los créditos, los ajustes y por el menú de pausa una vez dentro de la partida. 
-* Otros: La opción de Quit cierra el juego.
+* Menú principal
+Descripción de la Pantalla: Es la primera interfaz del juego y sirve para desplazarse entre los estados de juego iniciales.
+Estados de Juego: Llama a los creditos (en Credits), a los ajustes (en Options) y a comenzar una (en Play). Es llamada por los créditos, los ajustes y por el menú de pausa una vez dentro de la partida. 
+Otros: La opción de Quit cierra el juego.
 
-* Nombre de la pantalla: Créditos
-* Descripción de la Pantalla: Es la interfaz en la que se va a mostrar a los creadores del juego.
-* Estados del Juego: Llama al menú principal (Back). Es llamada por el menú principal. 
-* Otros: Abre una ventana emergente con nuestro twitter
+* Créditos
+Descripción de la Pantalla: Es la interfaz en la que se va a mostrar a los creadores del juego.
+Estados del Juego: Llama al menú principal (Back). Es llamada por el menú principal. 
+Otros: Abre una ventana emergente con nuestro twitter
 
-* Nombre de la pantalla: Ajustes
-* Descripción de la Pantalla: Es la interfaz que permite modificar varios parámetros del juego como el volumen del audio, la resolución de la pantalla, si está en pantalla completa y el volumen.
-* Estados del Juego: Llama al menú principal y puede volver al menú de pausa. Es llamada por el menú principal y por el menú de pausa.
+* Ajustes
+Descripción de la Pantalla: Es la interfaz que permite modificar varios parámetros del juego como el volumen del audio, la resolución de la pantalla, si está en pantalla completa y el volumen.
+Estados del Juego: Llama al menú principal y puede volver al menú de pausa. Es llamada por el menú principal y por el menú de pausa.
 
-* Nombre de la pantalla: Menú de pausa
-* Descripción de la Pantalla: Es la interfaz a la que se accede en medio de la partida para acceder a los ajustes o salir al menú principal.
-* Estados del Juego: Llama al menú principal y a los créditos. Se accede a este menú volviendo desde los ajustes si previamente se ha accedido a ellos desde este menú y también se accede durante la partida.
+* Menú de pausa
+Descripción de la Pantalla: Es la interfaz a la que se accede en medio de la partida para acceder a los ajustes o salir al menú principal.
+Estados del Juego: Llama al menú principal y a los créditos. Se accede a este menú volviendo desde los ajustes si previamente se ha accedido a ellos desde este menú y también se accede durante la partida.
 
-* Nombre de la pantalla: HUD de la partida
-* Descripción de la Pantalla: Es la interfaz que indica el estado del jugador y del mapa.
-* Estados del Juego: Visible durante la partida.
+* HUD de la partida
+Descripción de la Pantalla: Es la interfaz que indica el estado del jugador y del mapa.
+Estados del Juego: Visible durante la partida.
 
-* Nombre de la pantalla: Game Over / Victory Screen
-* Descripción de la Pantalla: Es la interfaz que aparece una vez terminada la partida.
-* Estados del Juego: Visible al final de la partida.
+* Game Over / Victory Screen
+Descripción de la Pantalla: Es la interfaz que aparece una vez terminada la partida.
+Estados del Juego: Visible al final de la partida.
 
 ## Niveles
 
