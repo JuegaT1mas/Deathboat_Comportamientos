@@ -82,6 +82,11 @@ namespace StarterAssets
 		private float _jumpTimeoutDelta;
 		private float _fallTimeoutDelta;
 
+		//Referencia al componente selected de la maincamera
+		Selected _mcSelected;
+
+
+		
 	
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
 		private PlayerInput _playerInput;
@@ -89,6 +94,9 @@ namespace StarterAssets
 		private CharacterController _controller;
 		private StarterAssetsInputs _input;
 		private GameObject _mainCamera;
+
+		private InputActionMap puzzleMapa;
+		private InputActionMap playerMapa;
 
 		private const float _threshold = 0.01f;
 
@@ -122,13 +130,59 @@ namespace StarterAssets
 #else
 			Debug.LogError( "Starter Assets package is missing dependencies. Please use Tools/Starter Assets/Reinstall Dependencies to fix it");
 #endif
-
+			
 			// reset our timeouts on start
 			_jumpTimeoutDelta = JumpTimeout;
 			_fallTimeoutDelta = FallTimeout;
+
+			//Referencia selected main camera
+			_mcSelected = _mainCamera.GetComponent<Selected>();
 		}
 
-		private void Update()
+        //cambiar de mapa de acciones
+        public void OnInteract()
+        {
+
+            if (_mcSelected.rayCastActivo)
+            {
+                print("OnInteract executed");
+                _playerInput.actions.FindActionMap("Player").Disable();
+                _playerInput.actions.FindActionMap("Puzzle").Enable();
+				if (!_mcSelected.puzzleActivado)
+				{
+					if (_mcSelected.hit.collider.tag == "Objeto Interactivo")
+					{
+						_mcSelected.CrearPuzzle(_mcSelected.hit);
+						_mcSelected.puzzleActivado = true;
+
+					}
+				}
+				else
+				{
+
+					_mcSelected.puzzleActual.SetActive(true);
+					_mainCamera.SetActive(false);
+				}
+			}
+        
+
+        }
+
+		public void OnLeavePuzzle()
+        {
+						
+			_playerInput.actions.FindActionMap("Puzzle").Disable();
+			_playerInput.actions.FindActionMap("Player").Enable();
+			_mainCamera.SetActive(true);
+			print("OnLeavePuzzle executed");
+			_mcSelected.puzzleActual.SetActive(false);
+			
+		}
+
+
+
+
+        private void Update()
 		{
 			JumpAndGravity();
 			GroundedCheck();

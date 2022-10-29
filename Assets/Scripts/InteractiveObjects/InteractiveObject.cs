@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InteractiveObject : MonoBehaviour
 {
-    Puzzle puzzle1;
+    public GameObject puzzle1;
     public GameObject[] listaCamaras;
 
     public GameLoop gameLoop; //La referencia del gameLoop
@@ -35,5 +35,11 @@ public class InteractiveObject : MonoBehaviour
         {
             Victory();
         }
+    {
+        puzzle1.GetComponent<Puzzle1>().IniciarPuzzle();
+
+        listaCamaras[0].gameObject.SetActive(false);
+        listaCamaras[1].gameObject.SetActive(true);
+
     }
 }
