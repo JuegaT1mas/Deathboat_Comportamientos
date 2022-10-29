@@ -126,3 +126,37 @@ Para ayudar al jugador, por el mapa se repartirán varios objetos en los cuales 
 
 Sobre la música, se plantea usar una música ambiental tétrica apenas perceptible, acompañada de efectos sonoros típicos de un barco parado (olas chocando contra el casco, el crujir de la madera, la  humedad,...). Por otro lado, para los SFX se emplearán los fondos que haga nuestro monstruo (pisadas, gritos, arañazos,...) y los que haga el jugador (pisadas, quejidos de dolor, apertura de muebles,...).
 
+## Lore
+
+Todos conocemos las leyendas marinas de las que se hablan en los puertos de todo el mundo... Sirenas, tifones que llevan a otros mundos.... Nadie sabe si de verdad dichas historias son verdad o si son invención de algún marinero con ganas de ganarse a su audiencia.
+Pero toda historia oculta una parte de verdad, y todos lo saben en la ciudad de Santa Penélope, Venezuela. Cada navío que empieza su travesía en sus puertos hace el tradicional gesto de tirar algo por la borda como ofrenda a las aguas. Nadie sabe el por qué ni cuándo se originó esta costumbre, incluso algunos lo ven como un reclamo turístico de su antigua ciudad, pero nadie nunca sale sin al menos ofrecer su parte.
+
+Un día, un poderoso empresario decidió viajar con su familia a las costas americanas en un tour vacacional. Dichoso el destino que llevó al padre con su mujer y tres hijos al pequeño puerto de Santa Penélope.
+Terminada su visita, la familia estaba ya a bordo del Apóleia cuando un viejo marino local les avisó de la costumbre de su pueblo. Desgraciadamente no fue escuchado, tenían prisa por llegar al próximo pueblo, y el barco salió a las aguas de todas formas.
+Fue un inicio del viaje tranquilo, el agua estaba tranquila, el cielo claro. No se habían alejado mucho de la costa.
+
+Llegó la noche, el leal capitán que acompañaba a la familia estaba al timón cansado después de un largo día de trabajo... Para cuando quiso darse cuenta se encontraban muy lejos de tierra. Sobresaltado, miró a la brújula en busca de guía, pero sólo encontró un cachivache que daba vueltas y vueltas.
+Fue a avisar de esto a su jefe que estaba en los pisos inferiores. Buscó y buscó, pero no encontró a ninguno de los pasajeros, las habitaciones estaban vacías y la puerta del hijo mayor atascada.
+
+De repente pudo ver un movimiento al fondo del pasillo.
+Una larga figura se recorta en la oscuridad, ligeramente iluminada por una pequeña luz suspendida a dos metros de altura.
+La siniestra luz estaba acompañada por dos dorados orbes que analizaban cada uno de sus movimientos, cada uno de los temblores que recorrían su cuerpo. No acertó a decir nada, no pudo reaccionar, en cuestión de unos segundos el ser se abalanzó hacia él con garras y dientes, dispuesto a acabar con él mientras sólo podía pensar en una cosa... En las palabras del viejo marino de Santa Penélope.
+
+## Progreso
+
+El número de puzzles a resolver va a ser 3 y el número de vidas que va a tener el jugador también son 3. Sin embargo no se descarta que en algún momento de desarrollo por razones del equilibrio del juego o la jugabilidad estos valores se modifiquen.
+
+## Personajes
+
+### Diablo Negro
+
+El Diablo Negro es el enemigo principal en Deathboat y se caracteriza por tener un físico similar al de un hombre alto y delgado, cubierto completamente por escamas de un color oscuro. En su aspecto físico destaca su órgano bioluminiscente en la parte frontal de su cráneo (radio espinoso), sus manos y pies con dedos alargados unidos por finas membranas, teniendo los pies espolones en el talón, y una boca  llena de largos y afilados dientes.
+
+El jugador se encontrará al monstruo merodeando por el propio buque, en busca de más presas. En caso de localizar al jugador, ya sea porque le oye o porque le ve con su luz, se lanzará a por él, armado con sus garras y dientes.
+
+## Concept Art
+
+## Historial de Versiones
+
+* Versión 1.0.1: 		[ 2022/10/17 ]		Versión base con el esqueleto del mapa realizado
+* Versión 1.0.2:		[ 2022/10/23 ]		Versión base del mapa con assets sacados de librerías externas
