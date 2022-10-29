@@ -90,15 +90,14 @@ public class GameLoop : MonoBehaviour
         bool terminado = true;
         for (int i = 0; i < finalPuzzles.Length; i++)
         {
-            /*
+            PuzzlePadre p = finalPuzzles[i].GetComponent<InteractiveObject>().puzzle.GetComponent<PuzzlePadre>();
             //Que los puzzles tengan herencia de una clase que indique por lo menos si el puzzle esta completado o no
-            if(finalPuzzles[i].booleano == false){ //Si no hemos terminado todos los puzzles no ha acabado el juego
+            if(p.resuelto == false){ //Si no hemos terminado todos los puzzles no ha acabado el juego
                 terminado = false;
             }else{
-                finalPuzzles[i].setActive(false);
+                finalPuzzles[i].SetActive(false);
             };
-            puzzlesCompleted[i] = puzzles[i].booleano //Actualizamos el array
-            */
+            puzzlesCompleted[i] = p.resuelto; //Actualizamos el array
         }
         if (!terminado) //Si no se han terminado todos los puzzles
         {
@@ -114,9 +113,7 @@ public class GameLoop : MonoBehaviour
 
     public void GameOver() //Función que pasa cuando pierdes
     {
-        //Desbloqueamos el ratón para poder clickear
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
+        ActivateMouse();
         //Ponemos el timeScale al 0 para que las cosas que dependan del tiempo no se actualicen
         Time.timeScale = 0;
         canvasGameOver.SetActive(true); //Activamos el canvas del GameOver
@@ -124,9 +121,7 @@ public class GameLoop : MonoBehaviour
 
     public void GameOverVictory() //Función que pasa cuando ganas
     {
-        //Desbloqueamos el ratón para poder clickear
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
+        ActivateMouse();
         //Ponemos el timeScale al 0 para que las cosas que dependan del tiempo no se actualicen
         Time.timeScale = 0;
         canvasGameOverVictory.SetActive(true);//Activamos el canvas del GameOverVictory
@@ -192,6 +187,20 @@ public class GameLoop : MonoBehaviour
         {
             canvasMobileUI.SetActive(false);
         }
+    }
+
+    public void ActivateMouse()
+    {
+        //Desbloqueamos el ratón para poder clickear
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
+    public void DeactivateMouse()
+    {
+        //Quitamos el ratón 
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
 }

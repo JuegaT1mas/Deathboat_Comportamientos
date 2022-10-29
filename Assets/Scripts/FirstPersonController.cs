@@ -148,34 +148,40 @@ namespace StarterAssets
                 print("OnInteract executed");
                 _playerInput.actions.FindActionMap("Player").Disable();
                 _playerInput.actions.FindActionMap("Puzzle").Enable();
-				if (!_mcSelected.puzzleActivado)
+				ActivateMouse();
+				
+				if (_mcSelected.hit.collider.tag == "Objeto Interactivo")
 				{
-					if (_mcSelected.hit.collider.tag == "Objeto Interactivo")
+					if (!_mcSelected.puzzleActual.GetComponent<InteractiveObject>().isEscape)//comprueba que no es la salida
 					{
-						_mcSelected.CrearPuzzle(_mcSelected.hit);
-						_mcSelected.puzzleActivado = true;
-
+						if (!_mcSelected.puzzleActual.GetComponent<InteractiveObject>().puzzle.GetComponent<PuzzlePadre>().hasBeenCreated)//Comprueba que el puzzle no haya sido creado para no crearlo dos veces 
+						{
+							_mcSelected.CrearPuzzle(_mcSelected.hit);//Abre el puzzle (lo crea)
+							_mcSelected.puzzleActual.GetComponent<InteractiveObject>().puzzle.GetComponent<PuzzlePadre>().hasBeenCreated = true;//Indica que ya ha sido creado
+						}
+						else //Si ya ha sido creado simplementa activa el gameObject y cambia la cámara
+						{
+							_mcSelected.puzzleActual.GetComponent<InteractiveObject>().puzzle.SetActive(true);
+							_mainCamera.SetActive(false);
+						}
+					}
+					else
+					{
+						_mcSelected.CrearPuzzle(_mcSelected.hit); //Si es la salida activa el método sin más
 					}
 				}
-				else
-				{
-
-					_mcSelected.puzzleActual.SetActive(true);
-					_mainCamera.SetActive(false);
-				}
+				
 			}
-        
-
         }
 
 		public void OnLeavePuzzle()
         {
-						
+			DeactivateMouse();		
 			_playerInput.actions.FindActionMap("Puzzle").Disable();
 			_playerInput.actions.FindActionMap("Player").Enable();
 			_mainCamera.SetActive(true);
 			print("OnLeavePuzzle executed");
-			_mcSelected.puzzleActual.SetActive(false);
+			_mcSelected.puzzleActual.GetComponent<InteractiveObject>().puzzle.SetActive(false);
 			
 		}
 
@@ -377,5 +383,18 @@ namespace StarterAssets
 			gameLoop.CheckDevice(_playerInput);
         }
 
-    }
+		public void ActivateMouse()
+		{
+			//Desbloqueamos el ratón para poder clickear
+			Cursor.lockState = CursorLockMode.None;
+			Cursor.visible = true;
+		}
+
+		public void DeactivateMouse()
+		{
+			//Quitamos el ratón 
+			Cursor.lockState = CursorLockMode.Locked;
+			Cursor.visible = false;
+		}
+	}
 }

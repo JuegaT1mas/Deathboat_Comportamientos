@@ -8,7 +8,6 @@ public class Puzzle1 : PuzzlePadre
     public GameObject fichaPrefab;
     public GameObject bordePrefab;
     public Sprite fichaEscondidaImg;//la ficha que falta en el puzle
-    public bool resuelto = false;
 
     int[,] puzzleMezclado;
     public GameObject fichaEscondida;
@@ -25,11 +24,8 @@ public class Puzzle1 : PuzzlePadre
         //recuperamos el padre de las fichas y de los bordes
         padreFichas = GameObject.Find("Fichas");
         padreBordes = GameObject.Find("Bordes");
-        transform.position = new Vector3(0, 11.7799997f, 0);
+        transform.position = new Vector3(0, -7, -22); //Posición del puzzle puesta a mano
         CrearFichas();
-        
-
-
     }
 
     // Start is called before the first frame update
@@ -48,7 +44,7 @@ public class Puzzle1 : PuzzlePadre
 
             for (int ancho = 0; ancho <= numCostado + 1; ancho++)
             {
-                Vector3 posicion = new Vector3(ancho+transform.position.x, alto+transform.position.y, 0);//posición de cada ficha
+                Vector3 posicion = new Vector3(ancho+transform.position.x, alto+transform.position.y, transform.position.z);//posición de cada ficha
 
                 //Para ver si es un borde o no
                 if (alto == 0 || alto == numCostado + 1 || ancho == 0 || ancho == numCostado + 1) //Es parte del borde
@@ -112,7 +108,7 @@ public class Puzzle1 : PuzzlePadre
     static int getInvCount(int[] arr)
     {
         int inv_count = 0;
-        for (int i = 0; i < 9; i++)
+        for (int i = 0; i < 9 - 1; i++)
             for (int j = i + 1; j < 9; j++)
 
                 // Value 0 is used for empty space
@@ -132,14 +128,12 @@ public class Puzzle1 : PuzzlePadre
 
         // Count inversions in given 8 puzzle
         int invCount = getInvCount(linearForm);
-
         // return true if inversion count is even.
         return (invCount % 2 == 0);
     }
 
     public void EsGanador()
     {
-
         for (int i = 0; i < fichas.Length; i++)
         {
             if (posicionesIniciales[i] != fichas[i].transform.position)
@@ -147,11 +141,10 @@ public class Puzzle1 : PuzzlePadre
                 return;
             }
         }
+
         fichaEscondida.gameObject.SetActive(true);
         print("Puzzle resuelto");
         resuelto = true;
-
-     
-
+        Completed();
     }
 }

@@ -20,7 +20,7 @@ public class Selected : MonoBehaviour
     public RaycastHit hit;
  
 
-    public bool puzzleActivado = false;
+    //public bool puzzleActivado = false;
 
     private void Awake()
     {
@@ -30,7 +30,6 @@ public class Selected : MonoBehaviour
     void Start()
     {
         mask = LayerMask.GetMask("Raycast Detect");
-        puzzleActual = GameObject.Find("Puzzle1");
         //TextDetect.SetActive(false);
 
     }
@@ -45,6 +44,7 @@ public class Selected : MonoBehaviour
         estaCerca = Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, distancia, mask);
         if (estaCerca)
         {
+            puzzleActual = hit.collider.gameObject;
             rayCastActivo = true;
             Deselect();
             SelectedObject(hit.transform);
@@ -68,7 +68,7 @@ public class Selected : MonoBehaviour
 
     public void CrearPuzzle(RaycastHit hit)
     {
-        hit.collider.transform.GetComponent<InteractiveObject>().ActivarObjeto();
+        hit.collider.transform.GetComponent<InteractiveObject>().Decide();
         Deselect();
     }
     void Deselect()
