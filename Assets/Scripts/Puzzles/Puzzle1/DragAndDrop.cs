@@ -5,12 +5,12 @@ using UnityEngine;
 public class DragAndDrop : MonoBehaviour
 {
     Sensores sensores;
-    Puzzle puzzle;
+    Puzzle1 puzzle;
     Vector3 mousePositionOffset;
     void Awake()
     {
         sensores = GetComponentInChildren(typeof(Sensores)) as Sensores;
-        puzzle = GameObject.Find("Puzzle1").GetComponent(typeof(Puzzle)) as Puzzle;
+        puzzle = GameObject.Find("Puzzle1").GetComponent(typeof(Puzzle1)) as Puzzle1;
     }
 
 

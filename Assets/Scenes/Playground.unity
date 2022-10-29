@@ -1057,7 +1057,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1081591920}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 3.107, y: 1.87, z: 5.148}
+  m_LocalPosition: {x: 2.4, y: 13.6, z: 5.11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1458,6 +1458,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44a14dbdd5fd32f4fb68811655267482, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resulto: 0
   fichaImg:
   - {fileID: -1250790359, guid: 9f6c85bd53db2694caff698e490bfc84, type: 3}
   - {fileID: -1020069235, guid: 9f6c85bd53db2694caff698e490bfc84, type: 3}
@@ -2006,6 +2007,7 @@ MonoBehaviour:
   distancia: 1.5
   rayCastActivo: 0
   TextDetect: {fileID: 0}
+  puzzleActual: {fileID: 0}
   puzzleActivado: 0
 --- !u!114 &135756641613574975 stripped
 MonoBehaviour:

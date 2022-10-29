@@ -12,6 +12,7 @@ public class Selected : MonoBehaviour
     public bool rayCastActivo = false;
     public GameObject TextDetect;
     GameObject ultimoReconocido = null;
+    public GameObject puzzleActual;
 
     //Variable para comprobar el raycast
     private bool estaCerca;
@@ -29,7 +30,7 @@ public class Selected : MonoBehaviour
     void Start()
     {
         mask = LayerMask.GetMask("Raycast Detect");
-        
+        puzzleActual = GameObject.Find("Puzzle1");
         //TextDetect.SetActive(false);
 
     }
@@ -56,21 +57,7 @@ public class Selected : MonoBehaviour
 
     }
 
-    //public void OnInteract()
-    //{
-    //    if (!puzzleActivado)
-    //    {
-    //        if (hit.collider.tag == "Objeto Interactivo")
-    //        {
-
-    //            AbrirPuzzle(hit);
-    //            puzzleActivado = true;
-
-    //        }
-    //    }
-
-    //}
-
+ 
 
     void SelectedObject(Transform transform)
     {
@@ -79,7 +66,7 @@ public class Selected : MonoBehaviour
 
     }
 
-    public void AbrirPuzzle(RaycastHit hit)
+    public void CrearPuzzle(RaycastHit hit)
     {
         hit.collider.transform.GetComponent<InteractiveObject>().ActivarObjeto();
         Deselect();

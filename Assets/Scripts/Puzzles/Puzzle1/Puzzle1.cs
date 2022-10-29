@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-public class Puzzle : MonoBehaviour
+public class Puzzle1 : PuzzlePadre
 {
     public List<Sprite> fichaImg = new List<Sprite>();//Lista de sprites del puzzle
     public GameObject fichaPrefab;
@@ -19,14 +19,15 @@ public class Puzzle : MonoBehaviour
     GameObject[] fichas;
 
 
-    public void IniciarPuzzle()
+
+    public override void IniciarPuzzle()
     {
         //recuperamos el padre de las fichas y de los bordes
         padreFichas = GameObject.Find("Fichas");
         padreBordes = GameObject.Find("Bordes");
-        transform.position = new Vector3(0, 2.78999996f, 0);
+        transform.position = new Vector3(0, 11.7799997f, 0);
         CrearFichas();
-
+        
 
 
     }
@@ -34,7 +35,7 @@ public class Puzzle : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+      
     }
 
     void CrearFichas()
@@ -47,7 +48,7 @@ public class Puzzle : MonoBehaviour
 
             for (int ancho = 0; ancho <= numCostado + 1; ancho++)
             {
-                Vector3 posicion = new Vector3(ancho, alto, 0);//posición de cada ficha
+                Vector3 posicion = new Vector3(ancho+transform.position.x, alto+transform.position.y, 0);//posición de cada ficha
 
                 //Para ver si es un borde o no
                 if (alto == 0 || alto == numCostado + 1 || ancho == 0 || ancho == numCostado + 1) //Es parte del borde
@@ -149,6 +150,8 @@ public class Puzzle : MonoBehaviour
         fichaEscondida.gameObject.SetActive(true);
         print("Puzzle resuelto");
         resuelto = true;
+
+     
 
     }
 

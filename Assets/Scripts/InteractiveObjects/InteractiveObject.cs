@@ -9,7 +9,7 @@ public class InteractiveObject : MonoBehaviour
 
    public void ActivarObjeto()
     {
-        puzzle1.GetComponent<Puzzle>().IniciarPuzzle();
+        puzzle1.GetComponent<Puzzle1>().IniciarPuzzle();
        
         listaCamaras[0].gameObject.SetActive(false);
         listaCamaras[1].gameObject.SetActive(true);

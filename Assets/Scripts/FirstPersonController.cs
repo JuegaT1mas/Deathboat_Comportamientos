@@ -125,23 +125,41 @@ namespace StarterAssets
         public void OnInteract()
         {
 
-            if (_mainCamera.GetComponent<Selected>().rayCastActivo)
+            if (_mcSelected.rayCastActivo)
             {
                 print("OnInteract executed");
                 _playerInput.actions.FindActionMap("Player").Disable();
                 _playerInput.actions.FindActionMap("Puzzle").Enable();
-            }
+				if (!_mcSelected.puzzleActivado)
+				{
+					if (_mcSelected.hit.collider.tag == "Objeto Interactivo")
+					{
+						_mcSelected.CrearPuzzle(_mcSelected.hit);
+						_mcSelected.puzzleActivado = true;
 
-            if (!_mcSelected.puzzleActivado)
-            {
-                if (_mcSelected.hit.collider.tag == "Objeto Interactivo")
-                {
-                    _mcSelected.AbrirPuzzle(_mcSelected.hit);
-                    _mcSelected.puzzleActivado = true;
+					}
+				}
+				else
+				{
 
-                }
-            }
+					_mcSelected.puzzleActual.SetActive(true);
+					_mainCamera.SetActive(false);
+				}
+			}
+        
+
         }
+
+		public void OnLeavePuzzle()
+        {
+						
+			_playerInput.actions.FindActionMap("Puzzle").Disable();
+			_playerInput.actions.FindActionMap("Player").Enable();
+			_mainCamera.SetActive(true);
+			print("OnLeavePuzzle executed");
+			_mcSelected.puzzleActual.SetActive(false);
+			
+		}
 
 
 
