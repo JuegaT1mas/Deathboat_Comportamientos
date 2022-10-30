@@ -4,7 +4,7 @@
 
 ![Portada](Images/caratula%20v3.1%20ZOOM.jpg)
 
-## Descripción del Juego
+## Descripcion del Juego
 
 *Resuelve los puzzles mientras escapas del monstruo*
 
@@ -12,25 +12,37 @@
 
 ## Integrantes
 
-* Iván Gómez Ortega: Artista, Modelador 3D. Contacto: i.gomezo.2019@gmail.com , IvanGomezOrtega *
+* Iván Gómez Ortega: Artista, Modelador 3D. Contacto: i.gomezo.2019@gmail.com , IvanGomezOrtega 
 
-* Rodrigo García Suárez: Programador. Contacto: r.garciasu.2019@alumnos.urjc.es , Rogarsu2014 *
+* Rodrigo García Suárez: Programador. Contacto: r.garciasu.2019@alumnos.urjc.es , Rogarsu2014
 
-* Mariano Jesús De Biase: Artista, Modelador 3D, Scrum Master. Contacto: mj.debiase.2019@gmail.com , marianoj27 *
+* Mariano Jesús De Biase: Artista, Modelador 3D, Scrum Master. Contacto: mj.debiase.2019@gmail.com , marianoj27
 
-* Isabel Escudero Orden: Programador, Encargada de redes. Contacto: i.escudero.2019@alumnos.urjc.es , Isaeo22 *
+* Isabel Escudero Orden: Programador, Encargada de redes. Contacto: i.escudero.2019@alumnos.urjc.es , Isaeo22
 
-* Pablo Pomares Crespo: Game designer, Beta tester. Contacto: p.pomaresc.2018@alumnos.urjc.es , A6MFlygon *
+* Pablo Pomares Crespo: Game designer, Beta tester. Contacto: p.pomaresc.2018@alumnos.urjc.es , A6MFlygon
 
 ## Índice
 
-- [Concepto del Juego] (#concepto-del-juego)
-- [Características Principales] 
-  * [Objetivos sencillos]
-  * [Escenificación innovadora]
-  * [Partidas rápidas y rejugables]
-- [Estilo del Juego] 
-- [Mecánicas del Juego] 
+- [**Concepto del Juego**](#concepto-del-juego)
+- [**Caracteristicas Principales**](#caracteristicas-principales) 
+  * [***Objetivos sencillos***](#objetivos-sencillos)
+  * [***Escenificacion innovadora***](#escenificacion-innovadora)
+  * [***Partidas rapidas y rejugables***](#partidas-rapidas-y-rejugables)
+- [**Estilo del Juego**](#estilo-del-juego) 
+- [**Mecanicas del Juego**](#mecanicas-del-juego) 
+  * [***Controles de Juego***](#controles-de-juego)
+  * [***Puntuacion***](#puntuacion)
+  * [***Guardar y Cargar***](#guardar-y-cargar)
+- [**Diagrama de flujo de Pantallas**](#diagrama-de-flujo-de-pantallas)
+- [**Interfaces**](#interfaces)
+- [**Niveles**](#niveles)
+- [**Lore**](#lore)
+- [**Progreso**](#progreso)
+- [**Personajes**](#personajes)
+  * [***Diablo Negro***](#diablo-negro)
+- [**Concept Art**](#concept-art)
+- [**Historial de Versiones**](#historial-de-versiones)
 
 
 *Los acentos no están disponibles en el índice por el sistema de Markdown*
@@ -39,17 +51,17 @@
 
 En *Deathboat*, seremos el único superviviente del ataque del Diablo Negro, un monstruo marino, en alta mar. Nuestro objetivo será escapar del barco vivo, resolviendo los diversos puzzles que nos encontremos tras el desastre causado por el monstruo, mientras le vamos dando esquinazo.
 
-## Características Principales
+## Caracteristicas Principales
 
 * ### Objetivos sencillos
 
 El objetivo principal es lograr escapar del barco, como es típico en este género de juegos.
 
-* ### Escenificación innovadora
+* ### Escenificacion innovadora
 
 Siendo muchos de los escenarios empleados en los Survival-Horror hospitales, colegios, mansiones abandonados, naves espaciales... Deathboat pretende mostrar otra posible escenificación para estos juegos, siendo esta un crucero recreativo.
 
-* ### Partidas rápidas y rejugables
+* ### Partidas rapidas y rejugables
 
 En Deathboat es todo o nada. Aunque sea el mismo barco, lo que el jugador tendrá que realizar para huir cada vez será distinto y en caso de fracasar, el jugador tendrá que comenzar desde el principio.
 
@@ -61,7 +73,7 @@ El estilo de Deathboat es 3D realista con una temática oscura. El objetivo es q
 ![Ejemplo Barco](Images/symphony-seas_0.png)
 ![Concept interior](Images/pasted%20image%200.png)
 
-## Mecánicas del Juego
+## Mecanicas del Juego
 
 El objetivo del juego es avanzar por el mapa resolviendo puzles para intentar escapar de una criatura que vaga por el mapa acechando.
 
@@ -83,7 +95,7 @@ En cuanto a las acciones, para interactuar con los elementos del escenario se ha
 
 No está pensado incluirla en el juego, ya que no tiene mucho sentido andar puntuando al jugador en un juego de miedo, puesto que les saca de la inmersión. Como mucho sería planteado al final un timer de cuanto se ha tardado en completar el juego.
 
-* ### Guardar/Cargar:
+* ### Guardar y Cargar:
 
 En cuanto al guardado, ya que el juego no sigue una narrativa lineal y se basa en partidas relativamente cortas, no se le dará al jugador la posibilidad de guardar la partida. Por este motivo, actualmente no se tiene contemplada esta opción.
 
@@ -100,6 +112,7 @@ Sin embargo una vez que se accede al menú de Ajustes desde el menú de Pausa y 
 ## Interfaces
 
 * Menú principal
+
 Descripción de la Pantalla: Es la primera interfaz del juego y sirve para desplazarse entre los estados de juego iniciales.
 Estados de Juego: Llama a los creditos (en Credits), a los ajustes (en Options) y a comenzar una (en Play). Es llamada por los créditos, los ajustes y por el menú de pausa una vez dentro de la partida. 
 Otros: La opción de Quit cierra el juego.
@@ -107,6 +120,7 @@ Otros: La opción de Quit cierra el juego.
 ![Menú principal](Images/pasted%20image%205.png)
 
 * Créditos
+
 Descripción de la Pantalla: Es la interfaz en la que se va a mostrar a los creadores del juego.
 Estados del Juego: Llama al menú principal (Back). Es llamada por el menú principal. 
 Otros: Abre una ventana emergente con nuestro twitter
@@ -114,22 +128,26 @@ Otros: Abre una ventana emergente con nuestro twitter
 ![Créditos](Images/pasted%20image%206.png)
 
 * Ajustes
+
 Descripción de la Pantalla: Es la interfaz que permite modificar varios parámetros del juego como el volumen del audio, la resolución de la pantalla, si está en pantalla completa y el volumen.
 Estados del Juego: Llama al menú principal y puede volver al menú de pausa. Es llamada por el menú principal y por el menú de pausa.
 
 ![Ajustes](Images/pasted%20image%207.png)
 
 * Menú de pausa
+
 Descripción de la Pantalla: Es la interfaz a la que se accede en medio de la partida para acceder a los ajustes o salir al menú principal.
 Estados del Juego: Llama al menú principal y a los créditos. Se accede a este menú volviendo desde los ajustes si previamente se ha accedido a ellos desde este menú y también se accede durante la partida.
 
 * HUD de la partida
+
 Descripción de la Pantalla: Es la interfaz que indica el estado del jugador y del mapa.
 Estados del Juego: Visible durante la partida.
 
 ![HUD](Images/pasted%20image%208.png)
 
 * Game Over / Victory Screen
+
 Descripción de la Pantalla: Es la interfaz que aparece una vez terminada la partida.
 Estados del Juego: Visible al final de la partida.
 
@@ -145,7 +163,7 @@ Estados del Juego: Visible al final de la partida.
 * Música y Efectos de Sonido: Música solo ambiental, casi imperceptible, con efectos sonoros típicos  de un barco: agua goteando, la madera crujiendo, humedad. Pendiente de implementación.
 * Referencias de BGM y SFX: Concretamente, se implementarán los sonidos que cree el monstruo (pisadas, gritos) y los que cree el jugador (pisadas, puertas, saltos). Pendiente de implementación.
 
-![Ajustes](Images/barco.png)
+![Barco](Images/barco.png)
 
 El Apóleia es el barco en donde ocurre la aventura de Deathboat. Como tal, es el único nivel del juego, pero cambiará en cada partida el layout de los puzzles en el mapa (para la versión Alpha esta parte no será así); resolver estos puzzles es el método que tiene el jugador para ganar el juego, tras resolver los puzzles el jugador deberá escapar del mapa por el sitio que le sea indicado, sin embargo, si es atrapado por el Diablo Negro varias veces antes de su huida, perderá.
 
