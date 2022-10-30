@@ -1,6 +1,9 @@
 # <p align="center">JuegaT1mas</div>
+
 ## Deathboat
-![Portada](Images/caratula v3.1 ZOOM.jpg)
+
+![Portada](Images/caratula%20v3.1%20ZOOM.jpg)
+
 ## Descripción del Juego
 
 *Resuelve los puzzles mientras escapas del monstruo*
@@ -52,7 +55,11 @@ En Deathboat es todo o nada. Aunque sea el mismo barco, lo que el jugador tendr�
 
 ## Estilo del Juego
 
-El estilo de Deathboat es 3D realista con una temática oscura. El objetivo es que el escenario sea realista y tenebroso, dando así la sensación de inseguridad y miedo del género de terror. Al encontrarnos en un crucero podremos ver objetos relacionados con barcos, también veremos elementos del cine de terror como arañazos en las paredes del barco, marcas de sangre, así como muebles y objetos descolocados o dañados. El barco donde se desarrolla el juego será moderno con muebles de género minimalista.
+El estilo de Deathboat es 3D realista con una temática oscura. El objetivo es que el escenario sea realista y tenebroso, dando así la sensación de inseguridad y miedo del género de terror. Al encontrarnos en un crucero podremos ver objetos relacionados con barcos, también veremos elementos del cine de terror como arañazos en las paredes del barco, marcas de sangre, así como muebles y objetos descolocados o dañados. El barco donde se desarrolla el juego será moderno con muebles de estilo minimalista.
+
+![Estilo Minimalista](Images/1_Dm310YBfMPx2YNdZwFjdIw.png)
+![Ejemplo Barco](Images/symphony-seas_0.png)
+![Concept interior](Images/pasted%20image%200.png)
 
 ## Mecánicas del Juego
 
@@ -60,11 +67,17 @@ El objetivo del juego es avanzar por el mapa resolviendo puzles para intentar es
 
 El mundo del juego se trata de un mapa 3D cerrado. El jugador tendrá una vista en primera persona durante la mayoría de la partida, exceptuando cuándo interactúe con los puzles, en los cuales la cámara cambiará a una vista cenital del puzle para mejorar la interacción con estos.
 
+<img src="Images/pasted%20image%201.png" alt="Ejemplo El Profesor Layton y la Caja de Pandora]" style="width:1920px;"/>
+<img src="Images/pasted%20image%202.png" alt="Ejemplo Five Nights at Freddy's">
+
 * ### Controles de Juego:
 
 Respecto al movimiento, la cámara se mueve en el ordenador con el ratón y en móvil con un touchpad. De forma similar, el movimiento en móvil se realizará mediante otro touchpad en el lado contrario de la pantalla, mientras que en el ordenador se realiza con las teclas WASD. Para agacharse además se podrá usar un botón en el teclado del ordenador (Ctrl) y en el móvil será un botón de acción cercano al touchpad de movimiento.
  
 En cuanto a las acciones, para interactuar con los elementos del escenario se hará uso del botón E; mientras que en el móvil, al igual que al agacharse, se usará un botón de acción cercano a este. De manera similar para saltar se usará la Barra Espaciadora y en el móvil otro botón.
+
+![Ejemplo Slender: The arrival](Images/pasted%20image%203.png)
+![Interfaz Pre-alpha](Images/pasted%20image%204.png)
 
 * ### Puntuacion:
 
@@ -75,6 +88,8 @@ No está pensado incluirla en el juego, ya que no tiene mucho sentido andar punt
 En cuanto al guardado, ya que el juego no sigue una narrativa lineal y se basa en partidas relativamente cortas, no se le dará al jugador la posibilidad de guardar la partida. Por este motivo, actualmente no se tiene contemplada esta opción.
 
 ## Diagrama de flujo de Pantallas
+
+![UML Juego](Images/uml%20juego.png)
 
 Un punto a destacar del flujo de pantallas es la aparición del menú de ajustes dos veces. Esto se debe a que queremos mostrar la diferencia de relaciones entre los accesos al mismo:
 
@@ -89,14 +104,20 @@ Descripción de la Pantalla: Es la primera interfaz del juego y sirve para despl
 Estados de Juego: Llama a los creditos (en Credits), a los ajustes (en Options) y a comenzar una (en Play). Es llamada por los créditos, los ajustes y por el menú de pausa una vez dentro de la partida. 
 Otros: La opción de Quit cierra el juego.
 
+![Menú principal](Images/pasted%20image%205.png)
+
 * Créditos
 Descripción de la Pantalla: Es la interfaz en la que se va a mostrar a los creadores del juego.
 Estados del Juego: Llama al menú principal (Back). Es llamada por el menú principal. 
 Otros: Abre una ventana emergente con nuestro twitter
 
+![Créditos](Images/pasted%20image%206.png)
+
 * Ajustes
 Descripción de la Pantalla: Es la interfaz que permite modificar varios parámetros del juego como el volumen del audio, la resolución de la pantalla, si está en pantalla completa y el volumen.
 Estados del Juego: Llama al menú principal y puede volver al menú de pausa. Es llamada por el menú principal y por el menú de pausa.
+
+![Ajustes](Images/pasted%20image%207.png)
 
 * Menú de pausa
 Descripción de la Pantalla: Es la interfaz a la que se accede en medio de la partida para acceder a los ajustes o salir al menú principal.
@@ -106,9 +127,13 @@ Estados del Juego: Llama al menú principal y a los créditos. Se accede a este 
 Descripción de la Pantalla: Es la interfaz que indica el estado del jugador y del mapa.
 Estados del Juego: Visible durante la partida.
 
+![HUD](Images/pasted%20image%208.png)
+
 * Game Over / Victory Screen
 Descripción de la Pantalla: Es la interfaz que aparece una vez terminada la partida.
 Estados del Juego: Visible al final de la partida.
+
+![Menú derrota](Images/pasted%20image%209.png)
 
 ## Niveles
 
@@ -119,6 +144,9 @@ Estados del Juego: Visible al final de la partida.
 * Personajes: El enemigo y el protagonista
 * Música y Efectos de Sonido: Música solo ambiental, casi imperceptible, con efectos sonoros típicos  de un barco: agua goteando, la madera crujiendo, humedad. Pendiente de implementación.
 * Referencias de BGM y SFX: Concretamente, se implementarán los sonidos que cree el monstruo (pisadas, gritos) y los que cree el jugador (pisadas, puertas, saltos). Pendiente de implementación.
+
+
+![Ajustes](Images/barco.png)
 
 El Apóleia es el barco en donde ocurre la aventura de Deathboat. Como tal, es el único nivel del juego, pero cambiará en cada partida el layout de los puzzles en el mapa (para la versión Alpha esta parte no será así); resolver estos puzzles es el método que tiene el jugador para ganar el juego, tras resolver los puzzles el jugador deberá escapar del mapa por el sitio que le sea indicado, sin embargo, si es atrapado por el Diablo Negro varias veces antes de su huida, perderá.
 
