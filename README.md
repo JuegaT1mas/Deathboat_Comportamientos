@@ -189,8 +189,8 @@ El jugador se encontrará al monstruo merodeando por el propio buque, en busca d
 ## Concept Art
 
 ![Sombras personajes](Images/sombras%20art%20enemigo%20v4.jpg)
-![Paletas con modelo 2](Images/desarrollo%20sombras%20enemigo%202.jpg)
-![Paletas con modelo 1](Images/Paleta%20color%20enemigo.jpg)
+![Evolución sombras](Images/desarrollo%20sombras%20enemigo.jpg)
+![Paletas con modelo 1](Images/Paleta%20color%20enemigo%201.jpg)
 ![Paletas con modelo 2](Images/Paleta%20color%20enemigo%202.jpg)
 ![Paletas con modelo 3](Images/Paleta%20color%20enemigo%203.jpg)
 ![Paletas finales](Images/pasted%20image%2011.png)
