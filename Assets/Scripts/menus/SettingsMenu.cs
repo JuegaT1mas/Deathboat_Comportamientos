@@ -18,18 +18,22 @@ public class SettingsMenu : MonoBehaviour
     private bool initialized = false; //Para que no compruebe el valor inicial del slider
     public Slider mouseSensitivitySlider; //El slider de la sensibilidad
 
+    //El slider del volumen
+    public Slider volumeSlider;
+
+    //El toggle del fullscreen
+    public Toggle fullScreenToggle;
+
     private void Start()
     {
-        resolutions = Screen.resolutions; //LLenamos el array de las resoluciones con las de la pantalla de juego
+        InitialValues();//Comprobamos los valores iniciales
+    }
 
+    public void CheckResolutions()
+    {
+        resolutions = Screen.resolutions; //LLenamos el array de las resoluciones con las de la pantalla de juego
         resolutionDropdown.ClearOptions(); //Dejamos vacías las opciones del desplegable
         addResolutions(); //Rellenamos el desplegable
-
-        if (PlayerPrefs.HasKey("Sensitivity"))
-        {
-            mouseSensitivitySlider.value = PlayerPrefs.GetFloat("Sensitivity"); //Asignamos el valor por defecto que tenga el jugador
-        }
-        initialized = true; //Para que haga la función
     }
 
     public void addResolutions()
@@ -76,9 +80,39 @@ public class SettingsMenu : MonoBehaviour
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen); //Luego se lo notificamos al sistema
     }
 
-    public void SetMouseSensitivity(float val)
+    public void CheckSensitivity()//Comprobación inicial de la sensibilidad
+    {
+        if (PlayerPrefs.HasKey("Sensitivity"))
+        {
+            mouseSensitivitySlider.value = PlayerPrefs.GetFloat("Sensitivity"); //Asignamos el valor por defecto que tenga el jugador
+        }
+        initialized = true; //Para que haga la función
+    }
+
+    public void SetMouseSensitivity(float val) //Cambia la sensibilidad del ratón
     {
         if (!initialized) return; //Si no se ha inicializado (pasado por el Start) no se hace la funcion
         PlayerPrefs.SetFloat("Sensitivity", val); //Le ponemos el valor del slider
+    }
+
+    public void CheckVolume()
+    {
+        //Comprobación del valor del volumen
+        float val;
+        mainMixer.GetFloat("MasterVolume", out val);//Pillamos el valor del mixer
+        volumeSlider.value = val;
+    }
+
+    public void CheckFullScreen()
+    {
+        fullScreenToggle.isOn = Screen.fullScreen;
+    }
+
+    public void InitialValues()
+    {
+        CheckResolutions(); //Comprobamos las resoluciones
+        CheckVolume(); //Comprobamos el volumen
+        CheckSensitivity(); //Comprobamos la sensibilidad
+        CheckFullScreen(); //Comprobamos la pantalla completa
     }
 }

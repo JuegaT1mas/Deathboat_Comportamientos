@@ -754,6 +754,8 @@ MonoBehaviour:
   mainMixer: {fileID: 24100000, guid: c4448cfb5981bd2419531a6d6b03ddb1, type: 2}
   resolutionDropdown: {fileID: 648246642}
   mouseSensitivitySlider: {fileID: 1967285893}
+  volumeSlider: {fileID: 1731541048}
+  fullScreenToggle: {fileID: 517483116}
 --- !u!1 &180580268
 GameObject:
   m_ObjectHideFlags: 0
