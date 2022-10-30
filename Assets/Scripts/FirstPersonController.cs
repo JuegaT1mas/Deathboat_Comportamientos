@@ -137,6 +137,9 @@ namespace StarterAssets
 
 			//Referencia selected main camera
 			_mcSelected = _mainCamera.GetComponent<Selected>();
+
+			//comprobación inicial de la sesibilidad
+			RotationSpeed = PlayerPrefs.GetFloat("Sensitivity"); 
 		}
 
         //cambiar de mapa de acciones
@@ -401,5 +404,10 @@ namespace StarterAssets
         {
 			gameLoop.ActivatePauseMenu();
 		}
+
+		public void OnRotationChange() //Cuando cambie el valor del slider se cambia esto
+        {
+			RotationSpeed = PlayerPrefs.GetFloat("Sensitivity");
+        }
 	}
 }

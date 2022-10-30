@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using System.Collections.Generic;
 using TMPro;
 using System.Linq;
+using StarterAssets;
 
 public class SettingsMenu : MonoBehaviour
 {
@@ -13,12 +14,22 @@ public class SettingsMenu : MonoBehaviour
 
     public TMP_Dropdown resolutionDropdown; //El elemento de la UI que lleva la lista de las resoluciones
 
+    //Para cambiar la sensibilidad del ratón
+    private bool initialized = false; //Para que no compruebe el valor inicial del slider
+    public Slider mouseSensitivitySlider; //El slider de la sensibilidad
+
     private void Start()
     {
         resolutions = Screen.resolutions; //LLenamos el array de las resoluciones con las de la pantalla de juego
 
         resolutionDropdown.ClearOptions(); //Dejamos vacías las opciones del desplegable
         addResolutions(); //Rellenamos el desplegable
+
+        if (PlayerPrefs.HasKey("Sensitivity"))
+        {
+            mouseSensitivitySlider.value = PlayerPrefs.GetFloat("Sensitivity"); //Asignamos el valor por defecto que tenga el jugador
+        }
+        initialized = true; //Para que haga la función
     }
 
     public void addResolutions()
@@ -63,5 +74,11 @@ public class SettingsMenu : MonoBehaviour
     {
         Resolution resolution = resolutions[resolutionIndex]; //Primero creamos una resolución con los valores actuales seleccionados
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen); //Luego se lo notificamos al sistema
+    }
+
+    public void SetMouseSensitivity(float val)
+    {
+        if (!initialized) return; //Si no se ha inicializado (pasado por el Start) no se hace la funcion
+        PlayerPrefs.SetFloat("Sensitivity", val); //Le ponemos el valor del slider
     }
 }

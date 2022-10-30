@@ -52,6 +52,11 @@ namespace StarterAssets
             buttonsInteractAndExit[0].SetActive(true);
 
         }
+
+        public void VirtualPauseInput()
+        {
+            firstPersonController.OnPause();
+        }
     }
 
 }
