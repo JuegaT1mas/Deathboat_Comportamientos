@@ -216,9 +216,12 @@ El jugador se encontrará al monstruo merodeando por el propio buque, en busca d
 ![Paletas finales](Images/pasted%20image%2011.png)
 ![Versión anterior del modelo del enemigo](Images/pasted%20image%2012.png)
 ![Modelo del enemigo](Images/pasted%20image%2010.png)
+![Modelo actualizado Frente](Images/Version_6.PNG)
+![Modelo actualizado de Lado](Images/Version_6.2.PNG)
 
 ## Historial de Versiones
 
 * Versión 1.0.1: 		[ 2022/10/17 ]		Versión base con el esqueleto del mapa realizado
-* Versión 1.0.2:		[ 2022/10/23 ]		Versión base del mapa con assets sacados de librerías externas
-* Versión 1.0.2:		[ 2022/10/30 ]		Versión del juego pre-alpha en itch.io
+* Versión 1.0.2:		 [ 2022/10/23 ]		Versión base del mapa con assets sacados de librerías externas
+* Versión 1.0.2:		 [ 2022/10/30 ]		Versión del juego pre-alpha en itch.io
+* Versión 1.1.0:   [ 2022/10/31 ]  Versión alpha del juego
