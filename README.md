@@ -145,7 +145,6 @@ Estados del Juego: Visible al final de la partida.
 * Música y Efectos de Sonido: Música solo ambiental, casi imperceptible, con efectos sonoros típicos  de un barco: agua goteando, la madera crujiendo, humedad. Pendiente de implementación.
 * Referencias de BGM y SFX: Concretamente, se implementarán los sonidos que cree el monstruo (pisadas, gritos) y los que cree el jugador (pisadas, puertas, saltos). Pendiente de implementación.
 
-
 ![Ajustes](Images/barco.png)
 
 El Apóleia es el barco en donde ocurre la aventura de Deathboat. Como tal, es el único nivel del juego, pero cambiará en cada partida el layout de los puzzles en el mapa (para la versión Alpha esta parte no será así); resolver estos puzzles es el método que tiene el jugador para ganar el juego, tras resolver los puzzles el jugador deberá escapar del mapa por el sitio que le sea indicado, sin embargo, si es atrapado por el Diablo Negro varias veces antes de su huida, perderá.
@@ -172,11 +171,16 @@ La siniestra luz estaba acompañada por dos dorados orbes que analizaban cada un
 
 ## Progreso
 
+![Diagrama de Flujo del Juego](Images/Diagrama%20Flujo.png)
+
 El número de puzzles a resolver va a ser 3 y el número de vidas que va a tener el jugador también son 3. Sin embargo no se descarta que en algún momento de desarrollo por razones del equilibrio del juego o la jugabilidad estos valores se modifiquen.
 
 ## Personajes
 
 ### Diablo Negro
+
+![Concept del enemigo](Images/concept%20enemigo%20final.jpg)
+![Modelo del enemigo](Images/pasted%20image%2010.png)
 
 El Diablo Negro es el enemigo principal en Deathboat y se caracteriza por tener un físico similar al de un hombre alto y delgado, cubierto completamente por escamas de un color oscuro. En su aspecto físico destaca su órgano bioluminiscente en la parte frontal de su cráneo (radio espinoso), sus manos y pies con dedos alargados unidos por finas membranas, teniendo los pies espolones en el talón, y una boca  llena de largos y afilados dientes.
 
@@ -184,7 +188,17 @@ El jugador se encontrará al monstruo merodeando por el propio buque, en busca d
 
 ## Concept Art
 
+![Sombras personajes](Images/sombras%20art%20enemigo%20v4.jpg)
+![Paletas con modelo 2](Images/desarrollo%20sombras%20enemigo%202.jpg)
+![Paletas con modelo 1](Images/Paleta%20color%20enemigo.jpg)
+![Paletas con modelo 2](Images/Paleta%20color%20enemigo%202.jpg)
+![Paletas con modelo 3](Images/Paleta%20color%20enemigo%203.jpg)
+![Paletas finales](Images/pasted%20image%2011.png)
+![Versión anterior del modelo del enemigo](Images/pasted%20image%2012.png)
+![Modelo del enemigo](Images/pasted%20image%2010.png)
+
 ## Historial de Versiones
 
 * Versión 1.0.1: 		[ 2022/10/17 ]		Versión base con el esqueleto del mapa realizado
 * Versión 1.0.2:		[ 2022/10/23 ]		Versión base del mapa con assets sacados de librerías externas
+* Versión 1.0.2:		[ 2022/10/30 ]		Versión del juego pre-alpha en itch.io
