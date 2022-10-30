@@ -139,6 +139,8 @@ Estados del Juego: Llama al menú principal y puede volver al menú de pausa. Es
 Descripción de la Pantalla: Es la interfaz a la que se accede en medio de la partida para acceder a los ajustes o salir al menú principal.
 Estados del Juego: Llama al menú principal y a los créditos. Se accede a este menú volviendo desde los ajustes si previamente se ha accedido a ellos desde este menú y también se accede durante la partida.
 
+![Pausa](Images/game-paused.png)
+
 * HUD de la partida
 
 Descripción de la Pantalla: Es la interfaz que indica el estado del jugador y del mapa.
