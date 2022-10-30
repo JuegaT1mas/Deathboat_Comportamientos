@@ -89,7 +89,7 @@ En cuanto al guardado, ya que el juego no sigue una narrativa lineal y se basa e
 
 ## Diagrama de flujo de Pantallas
 
-![UML Juego](Images/uml%20juego.png)
+![UML Juego](Images/uml%20juego1.png)
 
 Un punto a destacar del flujo de pantallas es la aparición del menú de ajustes dos veces. Esto se debe a que queremos mostrar la diferencia de relaciones entre los accesos al mismo:
 
