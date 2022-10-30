@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - CinemachineTarget
+  - Ficha
+  - Objeto Interactivo
+  - DamageSource
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -12,14 +16,14 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Raycast Detect
   - 
   - Character
   - Ground
   - 
-  - 
-  - 
-  - 
+  - Hull
+  - Floor 1
+  - Floor 2
   - 
   - 
   - 

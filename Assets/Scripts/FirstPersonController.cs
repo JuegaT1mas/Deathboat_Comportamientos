@@ -51,6 +51,24 @@ namespace StarterAssets
 		[Tooltip("How far in degrees can you move the camera down")]
 		public float BottomClamp = -90.0f;
 
+		//Agacharse
+		[Header("Crouching")]
+		[Tooltip("Crouch speed of the character in m/s")]
+		public float crouchSpeed = 0.3f;
+		[Tooltip("Crouching height of the character")]
+		public float crouchHeight = 1.0f;
+		[Tooltip("Standing height of the character")]
+		public float standHeight = 2.0f;
+		[Tooltip("Check if is in crouching animation")]
+		public bool duringCrouchAnimation;
+
+		//vidas
+		[Header("Lives")]
+		public int lives = 3;
+
+		[Header("References")]
+		public GameLoop gameLoop; //Referencia al gameloop
+
 		// cinemachine
 		private float _cinemachineTargetPitch;
 
@@ -64,6 +82,11 @@ namespace StarterAssets
 		private float _jumpTimeoutDelta;
 		private float _fallTimeoutDelta;
 
+		//Referencia al componente selected de la maincamera
+		Selected _mcSelected;
+
+
+		
 	
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
 		private PlayerInput _playerInput;
@@ -71,6 +94,9 @@ namespace StarterAssets
 		private CharacterController _controller;
 		private StarterAssetsInputs _input;
 		private GameObject _mainCamera;
+
+		private InputActionMap puzzleMapa;
+		private InputActionMap playerMapa;
 
 		private const float _threshold = 0.01f;
 
@@ -104,16 +130,69 @@ namespace StarterAssets
 #else
 			Debug.LogError( "Starter Assets package is missing dependencies. Please use Tools/Starter Assets/Reinstall Dependencies to fix it");
 #endif
-
+			
 			// reset our timeouts on start
 			_jumpTimeoutDelta = JumpTimeout;
 			_fallTimeoutDelta = FallTimeout;
+
+			//Referencia selected main camera
+			_mcSelected = _mainCamera.GetComponent<Selected>();
 		}
 
-		private void Update()
+        //cambiar de mapa de acciones
+        public void OnInteract()
+        {
+
+            if (_mcSelected.rayCastActivo)
+            {
+                print("OnInteract executed");
+                _playerInput.actions.FindActionMap("Player").Disable();
+                _playerInput.actions.FindActionMap("Puzzle").Enable();
+				ActivateMouse();
+				
+				if (_mcSelected.hit.collider.tag == "Objeto Interactivo")
+				{
+					if (!_mcSelected.puzzleActual.GetComponent<InteractiveObject>().isEscape)//comprueba que no es la salida
+					{
+						if (!_mcSelected.puzzleActual.GetComponent<InteractiveObject>().puzzle.GetComponent<PuzzlePadre>().hasBeenCreated)//Comprueba que el puzzle no haya sido creado para no crearlo dos veces 
+						{
+							_mcSelected.CrearPuzzle(_mcSelected.hit);//Abre el puzzle (lo crea)
+							_mcSelected.puzzleActual.GetComponent<InteractiveObject>().puzzle.GetComponent<PuzzlePadre>().hasBeenCreated = true;//Indica que ya ha sido creado
+						}
+						else //Si ya ha sido creado simplementa activa el gameObject y cambia la cámara
+						{
+							_mcSelected.puzzleActual.GetComponent<InteractiveObject>().puzzle.SetActive(true);
+							_mainCamera.SetActive(false);
+						}
+					}
+					else
+					{
+						_mcSelected.CrearPuzzle(_mcSelected.hit); //Si es la salida activa el método sin más
+					}
+				}
+				
+			}
+        }
+
+		public void OnLeavePuzzle()
+        {
+			DeactivateMouse();		
+			_playerInput.actions.FindActionMap("Puzzle").Disable();
+			_playerInput.actions.FindActionMap("Player").Enable();
+			_mainCamera.SetActive(true);
+			print("OnLeavePuzzle executed");
+			_mcSelected.puzzleActual.GetComponent<InteractiveObject>().puzzle.SetActive(false);
+			
+		}
+
+
+
+
+        private void Update()
 		{
 			JumpAndGravity();
 			GroundedCheck();
+			CrouchCheck(); //Comprueba si estas agachado
 			Move();
 		}
 
@@ -264,5 +343,68 @@ namespace StarterAssets
 			// when selected, draw a gizmo in the position of, and matching radius of, the grounded collider
 			Gizmos.DrawSphere(new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z), GroundedRadius);
 		}
+
+		private void CrouchCheck()
+		{
+			var desiredHeight = _input.crouch ? crouchHeight : standHeight; //La altura deseada depende de si estamos agachados o no
+
+			if (_controller.height != desiredHeight)//Si la altura actual y la deseada no coinciden
+			{
+				AdjustHeight(desiredHeight); //Cambia la altura a la deseada
+
+				//Ajustamos tambien la altura de la camara
+				var camPos = CinemachineCameraTarget.transform.position;
+				camPos.y = _controller.height + this.transform.position.y;
+				CinemachineCameraTarget.transform.position = camPos;
+
+
+			}
+		}
+
+		private void AdjustHeight(float height)
+		{
+			float center = height / 2; //El centro esta a la mitad de la altura
+
+			_controller.height = Mathf.Lerp(_controller.height, height, crouchSpeed); //Descendemos la altura con interpolacion
+			_controller.center = Vector3.Lerp(_controller.center, new Vector3(0, center, 0), crouchSpeed); //Descendemos el centro con interpolacion
+		}
+
+        private void OnTriggerEnter(Collider other)
+        {
+			if (other.gameObject.tag == "DamageSource")
+			{
+				lives--;
+				gameLoop.UpdateLivesUI();
+			}
+		}
+
+		public void OnControlsChanged()//Cuando cambien los controles comprueba si se tienen que activar los controles de móvil
+        {
+			gameLoop.CheckDevice(_playerInput);
+        }
+
+		public void ActivateMouse()
+		{
+			//Desbloqueamos el ratón para poder clickear
+			Cursor.lockState = CursorLockMode.None;
+			Cursor.visible = true;
+		}
+
+		public void DeactivateMouse()
+		{
+			//Quitamos el ratón 
+			Cursor.lockState = CursorLockMode.Locked;
+			Cursor.visible = false;
+		}
+
+		public void OnPause()
+        {
+			gameLoop.ActivatePauseMenu();
+		}
+
+		public void OnRotationChange() //Cuando cambie el valor del slider se cambia esto
+        {
+			RotationSpeed = PlayerPrefs.GetFloat("Sensitivity");
+        }
 	}
 }
