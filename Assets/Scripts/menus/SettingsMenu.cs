@@ -82,11 +82,18 @@ public class SettingsMenu : MonoBehaviour
 
     public void CheckSensitivity()//Comprobación inicial de la sensibilidad
     {
+        SetInitialSensitivity();
         if (PlayerPrefs.HasKey("Sensitivity"))
         {
             mouseSensitivitySlider.value = PlayerPrefs.GetFloat("Sensitivity"); //Asignamos el valor por defecto que tenga el jugador
         }
         initialized = true; //Para que haga la función
+    }
+
+    public void SetInitialSensitivity()
+    {
+        PlayerPrefs.SetFloat("Sensitivity", 1f); //Le ponemos el valor inicial
+        mouseSensitivitySlider.value = 1f;
     }
 
     public void SetMouseSensitivity(float val) //Cambia la sensibilidad del ratón
@@ -112,7 +119,7 @@ public class SettingsMenu : MonoBehaviour
     {
         CheckResolutions(); //Comprobamos las resoluciones
         CheckVolume(); //Comprobamos el volumen
-        CheckSensitivity(); //Comprobamos la sensibilidad
+        CheckSensitivity();
         CheckFullScreen(); //Comprobamos la pantalla completa
     }
 }

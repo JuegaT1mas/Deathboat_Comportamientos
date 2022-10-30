@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3745218349445257403}
   - component: {fileID: 312555609200957214}
   - component: {fileID: 2572290832747619284}
-  - component: {fileID: 1165622710697942007}
+  - component: {fileID: 231863617896336828}
   m_Layer: 0
   m_Name: cheaper_sofa_full
   m_TagString: Untagged
@@ -84,8 +84,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1165622710697942007
-BoxCollider:
+--- !u!64 &231863617896336828
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -94,6 +94,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.68996, y: 1.034691, z: 2.68996}
-  m_Center: {x: -0.8249998, y: 0.51734537, z: 0.8249998}
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3502337076655417996, guid: a608fb00859e0a5478c270d75c3bcc14, type: 3}
