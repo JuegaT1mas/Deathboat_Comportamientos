@@ -16,7 +16,7 @@ public class Sensores : MonoBehaviour
     }
     void Comprobar()
     {
-
+        //Comprobamos si los sensores estan libres o no
         ocupadoLeft = Physics2D.OverlapCircle(sensorLeft.transform.position, radioSensor);
         ocupadoRight = Physics2D.OverlapCircle(sensorRight.transform.position, radioSensor);
         ocupadoUp = Physics2D.OverlapCircle(sensorUp.transform.position, radioSensor);

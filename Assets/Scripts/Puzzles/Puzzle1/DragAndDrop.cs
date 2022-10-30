@@ -6,16 +6,17 @@ public class DragAndDrop : MonoBehaviour
 {
     Sensores sensores;
     Puzzle1 puzzle;
-    Vector3 mousePositionOffset;
+    
     void Awake()
     {
-        sensores = GetComponentInChildren(typeof(Sensores)) as Sensores;
-        puzzle = GameObject.Find("Puzzle1").GetComponent(typeof(Puzzle1)) as Puzzle1;
+        sensores = GetComponentInChildren(typeof(Sensores)) as Sensores;//Almacenamos el componente de los sensores
+        puzzle = GameObject.Find("Puzzle1").GetComponent(typeof(Puzzle1)) as Puzzle1;//Almacenamos el componente Puzzle1
     }
 
 
     private void OnMouseDown()
     {
+        //dependiendo de que sensor este libre la ficha se mueve a ese hueco
         Vector3 posAux;
         posAux = gameObject.transform.position;
         if (!sensores.ocupadoRight)

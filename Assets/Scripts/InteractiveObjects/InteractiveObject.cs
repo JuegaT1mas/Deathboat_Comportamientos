@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class InteractiveObject : MonoBehaviour
 {
-    public GameObject puzzle;
+    public GameObject puzzle; 
     public GameObject[] listaCamaras;
 
     public GameLoop gameLoop; //La referencia del gameLoop
 
     public bool isEscape; //Si el objeto es salida o no
 
-   public void ActivarObjeto()
+   public void ActivarObjeto()//metodo para crear el puzzle por primera vez
    {
         puzzle.GetComponent<Puzzle1>().IniciarPuzzle();
         listaCamaras[0].gameObject.SetActive(false);
@@ -23,7 +23,7 @@ public class InteractiveObject : MonoBehaviour
         gameLoop.GameOverVictory();
     }
 
-    public void Decide()
+    public void Decide()//metodo para diferenciar si el objeto interactivo es la salida o un puzzle
     {
         if (!isEscape)
         {
