@@ -32,6 +32,7 @@ public class EnemyManager : MonoBehaviour
 
     [Header("Rest")]
     public float restTime; //El tiempo que espera después de haber propinado un golpe al jugador
+    public GameObject cubo; //El cubo que hace el daño
 
     private void Awake()
     {
@@ -142,10 +143,12 @@ public class EnemyManager : MonoBehaviour
 
     private IEnumerator RestRoutine()
     {
+        cubo.SetActive(false);
         this.enabled = false;
         WaitForSeconds wait = new WaitForSeconds(restTime);
         yield return wait;
         this.enabled = true;
+        cubo.SetActive(true);
     }
 
     public void Rest()
