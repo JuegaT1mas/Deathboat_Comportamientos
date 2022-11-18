@@ -13,10 +13,12 @@ public class SettingsMenu : MonoBehaviour
     public Resolution[] resolutions; //Lista de las resoluciones disponibles en la pantalla del jugador
 
     public TMP_Dropdown resolutionDropdown; //El elemento de la UI que lleva la lista de las resoluciones
+    public TMP_Dropdown graphicsDropdown; //El elemento de la UI que lleva la lista de los graficos
 
     //Para cambiar la sensibilidad del ratón
     private bool initialized = false; //Para que no compruebe el valor inicial del slider
     public Slider mouseSensitivitySlider; //El slider de la sensibilidad
+    public Slider brightnessSlider; //El slider del brillo
 
     //El slider del volumen
     public Slider volumeSlider;
@@ -27,13 +29,6 @@ public class SettingsMenu : MonoBehaviour
     private void Start()
     {
         InitialValues();//Comprobamos los valores iniciales
-    }
-
-    public void CheckResolutions()
-    {
-        resolutions = Screen.resolutions; //LLenamos el array de las resoluciones con las de la pantalla de juego
-        resolutionDropdown.ClearOptions(); //Dejamos vacías las opciones del desplegable
-        addResolutions(); //Rellenamos el desplegable
     }
 
     public void addResolutions()
@@ -59,6 +54,7 @@ public class SettingsMenu : MonoBehaviour
         resolutionDropdown.RefreshShownValue(); //Recarga el texto de la opción
     }
 
+    #region set
     public void SetVolume(float volume) //Cambia el volumen segun el float que le proporciona el slider
     {
         mainMixer.SetFloat("MasterVolume", volume);
@@ -80,27 +76,52 @@ public class SettingsMenu : MonoBehaviour
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen); //Luego se lo notificamos al sistema
     }
 
-    public void CheckSensitivity()//Comprobación inicial de la sensibilidad
-    {
-        SetInitialSensitivity();
-        if (PlayerPrefs.HasKey("Sensitivity"))
-        {
-            mouseSensitivitySlider.value = PlayerPrefs.GetFloat("Sensitivity"); //Asignamos el valor por defecto que tenga el jugador
-        }
-        initialized = true; //Para que haga la función
-    }
-
     public void SetInitialSensitivity()
     {
         PlayerPrefs.SetFloat("Sensitivity", 1f); //Le ponemos el valor inicial
         mouseSensitivitySlider.value = 1f;
+        PlayerPrefs.SetInt("SensitivityModified", 1);
     }
 
     public void SetMouseSensitivity(float val) //Cambia la sensibilidad del ratón
     {
         if (!initialized) return; //Si no se ha inicializado (pasado por el Start) no se hace la funcion
+        PlayerPrefs.SetInt("SensitivityModified", 1);
         PlayerPrefs.SetFloat("Sensitivity", val); //Le ponemos el valor del slider
     }
+
+    public void SetBrightness(float val)
+    {
+        RenderSettings.ambientIntensity = val;
+    }
+
+
+    #endregion
+
+
+    #region check
+
+    public void CheckResolutions()
+    {
+        resolutions = Screen.resolutions; //LLenamos el array de las resoluciones con las de la pantalla de juego
+        resolutionDropdown.ClearOptions(); //Dejamos vacías las opciones del desplegable
+        addResolutions(); //Rellenamos el desplegable
+    }
+
+
+    public void CheckSensitivity()//Comprobación inicial de la sensibilidad
+    {
+        if (PlayerPrefs.HasKey("SensitivityModified") && PlayerPrefs.GetInt("SensitivityModified") == 1)
+        {
+            mouseSensitivitySlider.value = PlayerPrefs.GetFloat("Sensitivity"); //Asignamos el valor por defecto que tenga el jugador
+        }
+        else
+        {
+            SetInitialSensitivity();
+        }
+        initialized = true; //Para que haga la función
+    }
+
 
     public void CheckVolume()
     {
@@ -115,11 +136,24 @@ public class SettingsMenu : MonoBehaviour
         fullScreenToggle.isOn = Screen.fullScreen;
     }
 
+    public void CheckQuality()
+    {
+        graphicsDropdown.value = QualitySettings.GetQualityLevel();
+    }
+
+    public void CheckBrightness()
+    {
+        brightnessSlider.value = RenderSettings.ambientIntensity;
+    }
+
+    #endregion
+
     public void InitialValues()
     {
         CheckResolutions(); //Comprobamos las resoluciones
         CheckVolume(); //Comprobamos el volumen
-        CheckSensitivity();
+        CheckSensitivity(); //Comprobamos la sensibilidad
         CheckFullScreen(); //Comprobamos la pantalla completa
+        CheckQuality(); //Comprobamos los gráficos
     }
 }

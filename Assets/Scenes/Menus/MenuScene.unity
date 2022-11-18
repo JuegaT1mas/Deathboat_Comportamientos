@@ -753,7 +753,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainMixer: {fileID: 24100000, guid: c4448cfb5981bd2419531a6d6b03ddb1, type: 2}
   resolutionDropdown: {fileID: 648246642}
+  graphicsDropdown: {fileID: 169684}
   mouseSensitivitySlider: {fileID: 1967285893}
+  brightnessSlider: {fileID: 0}
   volumeSlider: {fileID: 1731541048}
   fullScreenToggle: {fileID: 517483116}
 --- !u!1 &180580268
@@ -7180,7 +7182,7 @@ MonoBehaviour:
   m_MinValue: 0.1
   m_MaxValue: 20
   m_WholeNumbers: 0
-  m_Value: 6
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
