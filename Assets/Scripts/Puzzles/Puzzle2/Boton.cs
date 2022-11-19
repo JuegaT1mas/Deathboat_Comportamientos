@@ -21,6 +21,7 @@ public class Boton : MonoBehaviour
             puzzle.aciertos++;
             puzzle.estaGirando=false;
             puzzle.esGanador();
+            puzzle.dirFlecha = -1; //Para evitar pulsar muchas veces en un boton
         }
 
 

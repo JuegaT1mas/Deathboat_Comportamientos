@@ -16,7 +16,7 @@ public class Puzzle2 : PuzzlePadre
     GameObject botonDown;
     GameObject brujula;
 
-    Vector3 posicion = new Vector3(0, -7, -22);
+    Vector3 posicion = new Vector3(2, -4, -20);
     GameObject puzzle;
     Rigidbody2D rbFlecha;
     public bool estaGirando = false;
@@ -50,6 +50,8 @@ public class Puzzle2 : PuzzlePadre
     public override void IniciarPuzzle()
     {
         puzzle.SetActive(true);
+        //puzzle.transform.position = new Vector3(2.1f, 2.7f, 2.06f);
+        //transform.position = new Vector3(0, -7, -22); //Posición del puzzle puesta a mano
         crearBotones();
     }
 
@@ -70,10 +72,6 @@ public class Puzzle2 : PuzzlePadre
         botonUp.transform.parent = puzzle.transform;
         botonLeft.transform.parent = puzzle.transform;
         botonDown.transform.parent = puzzle.transform;
-
-        puzzle.transform.position = new Vector3(28.1900005f, 17.6100006f, 0.400000006f);
-     
-
     }
     // Update is called once per frame
     void Update()
@@ -115,7 +113,7 @@ public class Puzzle2 : PuzzlePadre
                     }
                     rbFlecha.angularVelocity = 0;
                     botonPulsado = false;
-                    Invoke("ReinicioPuzzle", 0.5f);
+                    Invoke("ReinicioPuzzle", 1f);
 
                 }
             }

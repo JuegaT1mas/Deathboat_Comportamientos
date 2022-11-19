@@ -164,6 +164,7 @@ namespace StarterAssets
 						{
 							_mcSelected.puzzleActual.GetComponent<InteractiveObject>().puzzle.SetActive(true);
 							_mainCamera.SetActive(false);
+							camaraPuzzles.SetActive(true);
 						}
 					}
 					else
@@ -401,6 +402,7 @@ namespace StarterAssets
 
 		public void OnPause()
         {
+			gameLoop.ActivatePauseMenu();
 			gameLoop.ActivatePauseMenu();
 		}
 

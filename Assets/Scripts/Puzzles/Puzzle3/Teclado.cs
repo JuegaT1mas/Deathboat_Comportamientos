@@ -12,7 +12,7 @@ public class Teclado : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        puzzle3 = GameObject.Find("BotonPrefabW");
+        puzzle3 = GameObject.Find("Puzzle3");
         GenerarContraseña();
     }
 
