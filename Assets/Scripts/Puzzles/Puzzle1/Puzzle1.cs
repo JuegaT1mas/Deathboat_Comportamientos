@@ -11,6 +11,7 @@ public class Puzzle1 : PuzzlePadre
     public Sprite fichaEscondidaImg;//la ficha que falta en el puzle
 
     int[,] puzzleMezclado;//La variable para comprobar que el puzle sea resolvible
+    [HideInInspector]
     public GameObject fichaEscondida;//Separamos el gameObject de la ficha escondida para poder activarla y desactivarla
     int numCostado = 3;//sera 3 porque es un puzle 3x3
     //Los gameobjects que seran los padres de todos los gameobject ficha y borde
@@ -150,6 +151,8 @@ public class Puzzle1 : PuzzlePadre
         fichaEscondida.gameObject.SetActive(true);
         print("Puzzle resuelto");
         resuelto = true;
+       
         Completed();
+        
     }
 }

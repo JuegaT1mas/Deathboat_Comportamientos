@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9f6c85bd53db2694caff698e490bfc84
+guid: d8b8b0d10fb5c6a48ac4c0d62c19d55b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -141,7 +141,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Fichas_0
+      name: puzlemirror1000x1000bignumbers_0
       rect:
         serializedVersion: 2
         x: 0
@@ -155,14 +155,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 423cbc46405861c4aa77a66cbd3c7c07
-      internalID: -1250790359
+      spriteID: e4a890a9591d43040b30b2f1f7e34750
+      internalID: 441588276
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fichas_1
+      name: puzlemirror1000x1000bignumbers_1
       rect:
         serializedVersion: 2
         x: 333
@@ -176,14 +176,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e1c81305df22f24ebf49fa9504165c9
-      internalID: -1020069235
+      spriteID: ab12c046b0aede246a53f528293ff56f
+      internalID: 443406389
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fichas_2
+      name: puzlemirror1000x1000bignumbers_2
       rect:
         serializedVersion: 2
         x: 666
@@ -197,14 +197,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d90bd98de27369e4cb37e67f766b03ca
-      internalID: -1664655988
+      spriteID: eb0bf417e8571c8409c2c8be196cbce8
+      internalID: 181175849
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fichas_3
+      name: puzlemirror1000x1000bignumbers_3
       rect:
         serializedVersion: 2
         x: 0
@@ -218,14 +218,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 153864116b185674d9cb4c2255bd0e22
-      internalID: -1092764705
+      spriteID: df2bb2d9cc48cdc449949253918866ae
+      internalID: 2066096728
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fichas_4
+      name: puzlemirror1000x1000bignumbers_4
       rect:
         serializedVersion: 2
         x: 333
@@ -239,14 +239,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3fa874b6aa4fae9409c0d28c0114ebc7
-      internalID: -1353387739
+      spriteID: 9bfa502214dc6054db3182b526ea9ea1
+      internalID: 352825399
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fichas_5
+      name: puzlemirror1000x1000bignumbers_5
       rect:
         serializedVersion: 2
         x: 666
@@ -260,14 +260,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4612ba18e49d3984593e62440170e298
-      internalID: -505405749
+      spriteID: aadb2aeec6716fa4c82b5e159ff53886
+      internalID: 2134246475
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fichas_6
+      name: puzlemirror1000x1000bignumbers_6
       rect:
         serializedVersion: 2
         x: 0
@@ -281,14 +281,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9609840b34e39024f8c21995bdf7b42d
-      internalID: 122690950
+      spriteID: 4cdbc920f0615dd4285b33ed00ae82dc
+      internalID: -1867718375
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fichas_7
+      name: puzlemirror1000x1000bignumbers_7
       rect:
         serializedVersion: 2
         x: 333
@@ -302,14 +302,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a2a73c132138ba469942fe73ea3f150
-      internalID: 95669588
+      spriteID: f615349d2f2906042b989c997493599e
+      internalID: -851163100
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fichas_8
+      name: puzlemirror1000x1000bignumbers_8
       rect:
         serializedVersion: 2
         x: 666
@@ -323,8 +323,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 39978c8d2c4cb1a48989ab72feaa8a5c
-      internalID: 477818618
+      spriteID: a9e5aa450be269f4a92f449d5bd8b34c
+      internalID: 532840021
       vertices: []
       indices: 
       edges: []
@@ -332,7 +332,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: c29f30059dd8317469cd9cb2ffa57c98
+    spriteID: 17fa14439241bf344943e63e46100af9
     internalID: 0
     vertices: []
     indices: 
@@ -340,15 +340,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Fichas_8: 477818618
-      Fichas_6: 122690950
-      Fichas_3: -1092764705
-      Fichas_7: 95669588
-      Fichas_4: -1353387739
-      Fichas_2: -1664655988
-      Fichas_5: -505405749
-      Fichas_1: -1020069235
-      Fichas_0: -1250790359
+      puzlemirror1000x1000bignumbers_7: -851163100
+      puzlemirror1000x1000bignumbers_6: -1867718375
+      puzlemirror1000x1000bignumbers_3: 2066096728
+      puzlemirror1000x1000bignumbers_5: 2134246475
+      puzlemirror1000x1000bignumbers_8: 532840021
+      puzlemirror1000x1000bignumbers_0: 441588276
+      puzlemirror1000x1000bignumbers_2: 181175849
+      puzlemirror1000x1000bignumbers_1: 443406389
+      puzlemirror1000x1000bignumbers_4: 352825399
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

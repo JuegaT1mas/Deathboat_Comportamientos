@@ -138,8 +138,6 @@ namespace StarterAssets
 
 			//Referencia selected main camera
 			_mcSelected = _mainCamera.GetComponent<Selected>();
-
-			//OnRotationChange(); //Actualizar la sensibilidad al empezar por si se ha cambiado en el menú principal
 		}
 
         //cambiar de mapa de acciones

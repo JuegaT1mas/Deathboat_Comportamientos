@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PuzzlePadre : MonoBehaviour
 {
+ 
+
     // Start is called before the first frame update
     public bool resuelto = false;
     public GameLoop gameLoop; //Referencia al ejemplo
@@ -18,4 +20,7 @@ public class PuzzlePadre : MonoBehaviour
     {
         gameLoop.PuzzleCompleted();
     }
+
+
+  
 }
