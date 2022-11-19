@@ -116,7 +116,7 @@ public class EnemyManager : MonoBehaviour
         
         if (cooling)//Si esta descansando entre ataques
         {
-            anim.SetBool("Attack", false); //Para la animación de ataque
+            //anim.SetBool("Attack", false); //Para la animación de ataque
             Cooldown(); //Pone en cooldown el ataque en sí
         }
     }
@@ -124,7 +124,9 @@ public class EnemyManager : MonoBehaviour
     private void Attack() //Activa la animación de atacar
     {
         attackTimer = initialTimer;
-        anim.SetBool("Attack", true);//Comienza el ataque
+        //anim.SetBool("mixamo.com", false); //Para la animación de ataque
+        //anim.SetBool("Attack", true);//Comienza el ataque
+        anim.Play("Attack");//Comienza el ataque
     }
 
     private void Cooldown()//Recarga el tiempo de ataque

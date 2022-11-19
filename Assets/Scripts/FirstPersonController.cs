@@ -68,6 +68,7 @@ namespace StarterAssets
 
 		[Header("References")]
 		public GameLoop gameLoop; //Referencia al gameloop
+		public GameObject camaraPuzzles; //La camaras de los puzzles
 
 		// cinemachine
 		private float _cinemachineTargetPitch;
@@ -182,6 +183,7 @@ namespace StarterAssets
 			_playerInput.actions.FindActionMap("Puzzle").Disable();
 			_playerInput.actions.FindActionMap("Player").Enable();
 			_mainCamera.SetActive(true);
+			camaraPuzzles.SetActive(false);
 			print("OnLeavePuzzle executed");
 			_mcSelected.puzzleActual.GetComponent<InteractiveObject>().puzzle.SetActive(false);
 			
