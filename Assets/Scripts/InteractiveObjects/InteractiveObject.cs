@@ -13,7 +13,7 @@ public class InteractiveObject : MonoBehaviour
 
    public void ActivarObjeto()//metodo para crear el puzzle por primera vez
    {
-        puzzle.GetComponent<Puzzle1>().IniciarPuzzle();
+        puzzle.GetComponent<PuzzlePadre>().IniciarPuzzle();
         listaCamaras[0].gameObject.SetActive(false);
         listaCamaras[1].gameObject.SetActive(true);
    }
