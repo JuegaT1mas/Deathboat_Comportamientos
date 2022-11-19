@@ -94,6 +94,7 @@ namespace StarterAssets
 		private CharacterController _controller;
 		private StarterAssetsInputs _input;
 		private GameObject _mainCamera;
+		public GameObject _camaraPuzzle;
 
 		private InputActionMap puzzleMapa;
 		private InputActionMap playerMapa;
@@ -118,6 +119,7 @@ namespace StarterAssets
 			if (_mainCamera == null)
 			{
 				_mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
+				
 			}
 		}
 
@@ -180,6 +182,8 @@ namespace StarterAssets
 			_playerInput.actions.FindActionMap("Puzzle").Disable();
 			_playerInput.actions.FindActionMap("Player").Enable();
 			_mainCamera.SetActive(true);
+			_camaraPuzzle.SetActive(false);
+
 			print("OnLeavePuzzle executed");
 			_mcSelected.puzzleActual.GetComponent<InteractiveObject>().puzzle.SetActive(false);
 			

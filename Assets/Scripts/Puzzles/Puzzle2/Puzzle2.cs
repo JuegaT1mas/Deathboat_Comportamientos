@@ -5,13 +5,16 @@ using UnityEngine;
 public class Puzzle2 : PuzzlePadre
 {
     public GameObject flechaPrefab;
-    public GameObject botonPrefab;
     public GameObject textoPrefab;
+    public GameObject brujulaPrefab;
+    
+
     GameObject flecha;
     GameObject botonRight;
     GameObject botonUp;
     GameObject botonLeft;
     GameObject botonDown;
+    GameObject brujula;
 
     Vector3 posicion = new Vector3(0, -7, -22);
     GameObject puzzle;
@@ -30,9 +33,13 @@ public class Puzzle2 : PuzzlePadre
     private void Awake()
     {
         puzzle = GameObject.Find("Puzzle2");
+        brujula=Instantiate(brujulaPrefab, posicion, Quaternion.identity);
+     
 
+        brujula.transform.parent = puzzle.transform;
+      
 
-        flecha = Instantiate(flechaPrefab, posicion, Quaternion.identity);
+        flecha = GameObject.Find("FlechaPrefab");
         rbFlecha = flecha.GetComponent<Rigidbody2D>();
         flecha.transform.parent = puzzle.transform;
 
@@ -49,10 +56,10 @@ public class Puzzle2 : PuzzlePadre
 
     void crearBotones()
     {
-        botonRight = Instantiate(botonPrefab, new Vector3(posicion.x + 1, posicion.y, posicion.z), Quaternion.identity);
-        botonUp = Instantiate(botonPrefab, new Vector3(posicion.x, posicion.y + 1, posicion.z), Quaternion.identity);
-        botonLeft = Instantiate(botonPrefab, new Vector3(posicion.x - 1, posicion.y, posicion.z), Quaternion.identity);
-        botonDown = Instantiate(botonPrefab, new Vector3(posicion.x, posicion.y - 1, posicion.z), Quaternion.identity);
+        botonRight = GameObject.Find("BotonPrefabW");
+        botonUp = GameObject.Find("BotonPrefabN");
+        botonLeft =GameObject.Find("BotonPrefabE");
+        botonDown = GameObject.Find("BotonPrefabS");
 
         botonRight.GetComponent<Boton>().id = 1;
         botonUp.GetComponent<Boton>().id = 2;
@@ -65,6 +72,7 @@ public class Puzzle2 : PuzzlePadre
         botonDown.transform.parent = puzzle.transform;
 
         puzzle.transform.position = new Vector3(28.1900005f, 17.6100006f, 0.400000006f);
+     
 
     }
     // Update is called once per frame
@@ -120,6 +128,7 @@ public class Puzzle2 : PuzzlePadre
         if (!botonPulsado)
         {
             aciertos = 0;
+
         }
     }
     void girarFlecha()
@@ -141,6 +150,7 @@ public class Puzzle2 : PuzzlePadre
             botonUp.SetActive(false);
             botonLeft.SetActive(false);
             botonDown.SetActive(false);
+            brujula.SetActive(false);
             flecha.SetActive(false);
 
             resuelto = true;
