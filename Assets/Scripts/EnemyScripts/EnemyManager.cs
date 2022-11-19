@@ -126,7 +126,7 @@ public class EnemyManager : MonoBehaviour
         attackTimer = initialTimer;
         //anim.SetBool("mixamo.com", false); //Para la animación de ataque
         //anim.SetBool("Attack", true);//Comienza el ataque
-        anim.Play("Attack");//Comienza el ataque
+        anim.Play("Attack_Walking");//Comienza el ataque
     }
 
     private void Cooldown()//Recarga el tiempo de ataque
