@@ -102,11 +102,13 @@ public class Puzzle1 : PuzzlePadre
 
         Vector3[] posicionesMezcladas = { pos1, pos4, pos9, pos8, pos3, pos2, pos6, pos7, pos5 };
         Vector3[] posicionesMezcladas2 = { pos2, pos1, pos9, pos8, pos3, pos4, pos7, pos6, pos5 };
+        Vector3[] posicionesMezcladas3 = { pos7, pos1, pos9, pos8, pos5, pos6, pos4, pos3, pos2 };
 
         List<Vector3[]> listas = new List<Vector3[]>();
 
         listas.Add(posicionesMezcladas);
         listas.Add(posicionesMezcladas2);
+        listas.Add(posicionesMezcladas3);
 
         int rand = Random.Range(0, listas.Count);
 
@@ -162,7 +164,6 @@ public class Puzzle1 : PuzzlePadre
         fichaEscondida.gameObject.SetActive(true);
         print("Puzzle resuelto");
         resuelto = true;
-       
         Completed();
         
     }

@@ -45,7 +45,7 @@ public class Teclado : MonoBehaviour
         {
 
             textoPantalla.color = Color.green;
-            textoPantalla.text = "Correcto";
+            textoPantalla.text = "Correct";
             puzzle3.GetComponent<Puzzle3>().PuzzleAcabado();
             Destroy(gameObject,1.0f);
         }

@@ -4,13 +4,14 @@ using UnityEngine;
 using TMPro;
 using StarterAssets;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class GameLoop : MonoBehaviour
 {
     [Header("References")]
     private GameObject playerRef; //La referencia al jugador
     private GameObject enemyRef; //la referencia al enemigo
-    private FirstPersonController firstPersonController; //La referencia al firstPersonController
+    //private FirstPersonController firstPersonController; //La referencia al firstPersonController
 
     [Header("Escape")]
     //El gameObject de la salida
@@ -28,12 +29,10 @@ public class GameLoop : MonoBehaviour
     int numPuzzles = 4;
 
     [Header("UI")]
-    //El texto de las vidas
-    public TMP_Text lifeUI;
     //El texto de los puzzles
     public TMP_Text puzzleUI;
     //El texto de la confimación visual
-    public TMP_Text visualUI;
+    public GameObject visualUI;
     //El canvas de todos los elementos a la vez de la UI ingame
     public GameObject canvasUI_Ingame;
     //El canvas del GameOver
@@ -44,6 +43,15 @@ public class GameLoop : MonoBehaviour
     public GameObject canvasMobileUI;
     //El canvas del menu de pausa
     public GameObject canvasPauseMenu;
+    //El ojo abierto
+    public Texture openEye;
+    //El ojo cerrado
+    public Texture closedEye;
+    //Los corazones que indican la vida
+    public GameObject corazon1;
+    public GameObject corazon2;
+    public GameObject corazon3;
+    public Texture brokenheart;
 
     private void Start()
     {
@@ -159,9 +167,18 @@ public class GameLoop : MonoBehaviour
     public void UpdateLivesUI()//Se le actualiza el texto con la variable vidas del jugador actualizadas
     {
         enemyRef.GetComponent<EnemyManager>().Rest();
-        if(playerRef.GetComponent<FirstPersonController>().lives > 0) //Si quedan vidas se actualiza la pantalla
+        int lives = playerRef.GetComponent<FirstPersonController>().lives;
+        if (lives > 0) //Si quedan vidas se actualiza la pantalla
         {
-            lifeUI.text = string.Format("Remaining Lives: {0}", playerRef.GetComponent<FirstPersonController>().lives);
+            switch (lives)
+            {
+                case 2:
+                    corazon3.GetComponent<RawImage>().texture = brokenheart;
+                    break;
+                case 1:
+                    corazon2.GetComponent<RawImage>().texture = brokenheart;
+                    break;
+            }
         }
         else //Si no quedan vidas
         {
@@ -173,11 +190,11 @@ public class GameLoop : MonoBehaviour
     {
         if (enemyRef.GetComponent<FieldOfView>().canSeePlayer)
         {
-            visualUI.text = "!";
+            visualUI.GetComponent<RawImage>().texture = openEye;
         }
         else
         {
-            visualUI.text = "O";
+            visualUI.GetComponent<RawImage>().texture = closedEye;
         }
     }
 
@@ -211,8 +228,15 @@ public class GameLoop : MonoBehaviour
     {
         Time.timeScale = 0;
         canvasUI_Ingame.SetActive(false);
+        canvasMobileUI.SetActive(false);
         canvasPauseMenu.SetActive(true);
         ActivateMouse();
+    }
+
+    public void ResumeGame()
+    {
+        DeactivateMouse();
+        playerRef.GetComponent<FirstPersonController>().OnControlsChanged();
     }
 
 }
