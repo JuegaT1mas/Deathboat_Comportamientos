@@ -132,6 +132,7 @@ public class GameLoop : MonoBehaviour
         //Ponemos el timeScale al 0 para que las cosas que dependan del tiempo no se actualicen
         Time.timeScale = 0;
         canvasGameOver.SetActive(true); //Activamos el canvas del GameOver
+        playerRef.GetComponent<FirstPersonController>().DeactivatePlayer();
     }
 
     public void GameOverVictory() //Función que pasa cuando ganas
@@ -140,6 +141,7 @@ public class GameLoop : MonoBehaviour
         //Ponemos el timeScale al 0 para que las cosas que dependan del tiempo no se actualicen
         Time.timeScale = 0;
         canvasGameOverVictory.SetActive(true);//Activamos el canvas del GameOverVictory
+        playerRef.GetComponent<FirstPersonController>().DeactivatePlayer();
     }
 
     public void ActivateEscape() //Activar la salida

@@ -414,5 +414,11 @@ namespace StarterAssets
         {
 			RotationSpeed = PlayerPrefs.GetFloat("Sensitivity");
         }
+
+		public void DeactivatePlayer()
+        {
+			_playerInput.actions.FindActionMap("Player").Disable();
+			_playerInput.actions.FindActionMap("Inactive").Enable();
+        }
 	}
 }
