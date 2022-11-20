@@ -12,7 +12,7 @@ public class Puzzle3 : PuzzlePadre
     {
         GameObject teclado = Instantiate(tecladoPrefab, posicion, Quaternion.identity);
         teclado.transform.parent = gameObject.transform;
-        GameObject nota = Instantiate(notaPrefab, new Vector3(-8.07999992f, -19.2999992f, -27.2113323f), Quaternion.identity);
+        GameObject nota = Instantiate(notaPrefab, new Vector3(6, -6, -22), Quaternion.identity);
         nota.transform.parent = gameObject.transform;
     }
 

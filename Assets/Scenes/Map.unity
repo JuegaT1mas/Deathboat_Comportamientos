@@ -29864,6 +29864,8 @@ MonoBehaviour:
     type: 3}
   brujulaPrefab: {fileID: 4123215934237953231, guid: 9a2e25bbc1b238844afaa920b6c82a81,
     type: 3}
+  notaPrefab: {fileID: 3671509549595477397, guid: bb02285ce32d94b4387227d8a3cb9f9e,
+    type: 3}
   estaGirando: 0
   botonPulsado: 0
   aciertos: 0
@@ -34408,6 +34410,8 @@ MonoBehaviour:
   bordePrefab: {fileID: 1632247733153410985, guid: e395eb1842444074782214088e452010,
     type: 3}
   fichaEscondidaImg: {fileID: 441588276, guid: d8b8b0d10fb5c6a48ac4c0d62c19d55b, type: 3}
+  notaPrefab: {fileID: 6683965472281124671, guid: 2cc49fbceb8770a4a880d0f7f258f237,
+    type: 3}
   fichaEscondida: {fileID: 0}
   posicionesIniciales: []
 --- !u!4 &722261320
@@ -48955,6 +48959,8 @@ MonoBehaviour:
   gameLoop: {fileID: 266421096}
   hasBeenCreated: 0
   tecladoPrefab: {fileID: 3199376398788109161, guid: 8015d9d731dc88a47a0f4f239e542610,
+    type: 3}
+  notaPrefab: {fileID: 8062675538400240990, guid: 4143967fc55cac348a6e78bcbe289428,
     type: 3}
 --- !u!4 &1421693369
 Transform:
