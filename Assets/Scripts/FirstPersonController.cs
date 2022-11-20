@@ -65,6 +65,7 @@ namespace StarterAssets
 		//vidas
 		[Header("Lives")]
 		public int lives = 3;
+		public AudioSource grunt; //El sonido que hace el jugador al perder una vida
 
 		[Header("References")]
 		public GameLoop gameLoop; //Referencia al gameloop
@@ -379,6 +380,7 @@ namespace StarterAssets
 			if (other.gameObject.tag == "DamageSource")
 			{
 				lives--;
+				grunt.Play();
 				gameLoop.UpdateLivesUI();
 			}
 		}

@@ -12,6 +12,7 @@ public class GameLoop : MonoBehaviour
     private GameObject playerRef; //La referencia al jugador
     private GameObject enemyRef; //la referencia al enemigo
     //private FirstPersonController firstPersonController; //La referencia al firstPersonController
+    public AudioSource discoveredSound;
 
     [Header("Escape")]
     //El gameObject de la salida
@@ -47,6 +48,8 @@ public class GameLoop : MonoBehaviour
     public Texture openEye;
     //El ojo cerrado
     public Texture closedEye;
+    //Booleano para controlar el cambio del ojo
+    private bool changedEye = false;
     //Los corazones que indican la vida
     public GameObject corazon1;
     public GameObject corazon2;
@@ -190,12 +193,26 @@ public class GameLoop : MonoBehaviour
     {
         if (enemyRef.GetComponent<FieldOfView>().canSeePlayer)
         {
-            visualUI.GetComponent<RawImage>().texture = openEye;
+            if (!changedEye)
+            {
+                ChangeTexture(openEye);
+                discoveredSound.Play();
+            }
+            changedEye = true;
         }
         else
         {
-            visualUI.GetComponent<RawImage>().texture = closedEye;
+            if (changedEye)
+            {
+                ChangeTexture(closedEye);
+            }
+            changedEye = false;
         }
+    }
+
+    private void ChangeTexture(Texture tex)
+    {
+        visualUI.GetComponent<RawImage>().texture = tex;
     }
 
     public void CheckDevice(PlayerInput playerInput) //Comprobación de los controles para activar el móvil

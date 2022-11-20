@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public AudioSource click;
     public void LoadScene(int scene) //Carga la escena indicada por el int (representa el orden de la escena en BuildSettings)
     {
         SceneManager.LoadScene(scene);
@@ -27,5 +28,10 @@ public class MainMenu : MonoBehaviour
     public void Resume()
     {
         Time.timeScale = 1;
+    }
+
+    public void ClickSound()
+    {
+        click.Play();
     }
 }
