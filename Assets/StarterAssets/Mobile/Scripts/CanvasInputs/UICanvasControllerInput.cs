@@ -41,9 +41,12 @@ namespace StarterAssets
         public void VirtualInteractInput(bool virtualInteractState)
         {
             starterAssetsInputs.InteractInput(virtualInteractState);
-            firstPersonController.OnInteract();
-            buttonsInteractAndExit[0].SetActive(false);
-            buttonsInteractAndExit[1].SetActive(true);
+            bool activated = firstPersonController.OnInteract();
+            if (activated)
+            {
+                buttonsInteractAndExit[0].SetActive(false);
+                buttonsInteractAndExit[1].SetActive(true);
+            }
         }
         public void VirtualExitInput()
         {

@@ -80,33 +80,43 @@ public class Puzzle1 : PuzzlePadre
         fichaEscondida.gameObject.SetActive(false);//Desactivamos la ficha escondida
 
         //Mezclamos las fichas para que salgan desordenadas
-        do
-        {
-            MezclarFichas();
-        } while (!isSolvable(puzzleMezclado));//mezcla el puzle hasta que salga un puzle resolvible
+
+        MezclarFichas();
+
 
     }
 
 
     void MezclarFichas()//Este metodo mezcla las fichas del puzle 
     {
-        puzzleMezclado = new int[3, 3] { { 0, 1, 2 }, { 3, 4, 5 }, { 6, 7, 8 } };//inicializamos las posiciones
-        int random;
-        for (int i = 0; i < fichas.Length; i++)//Para cada casilla del puzle, la mezclamos
-        {
-            random = Random.Range(0, fichas.Length);
-            Vector3 pos = fichas[i].transform.position;//guardamos la posicion de la ficha
-            fichas[i].transform.position = fichas[random].transform.position;//cambiamos la posicion de la ficha con otra ficha aleatoria
-            fichas[random].transform.position = pos;//cambiamos la ficha aleatoria a la posicion de la otra
+        Vector3 pos1 = new Vector3(1, -4, -22);
+        Vector3 pos2 = new Vector3(2, -4, -22);
+        Vector3 pos3 = new Vector3(3, -4, -22);
+        Vector3 pos4 = new Vector3(1, -5, -22);
+        Vector3 pos5 = new Vector3(2, -5, -22);
+        Vector3 pos6 = new Vector3(3, -5, -22);
+        Vector3 pos7 = new Vector3(1, -6, -22);
+        Vector3 pos8 = new Vector3(2, -6, -22);
+        Vector3 pos9 = new Vector3(3, -6, -22);
 
-            //rellenamos el puzzleMezclado con los indices de las piezas
-            int aux = puzzleMezclado[i % 3, i / 3];
-            puzzleMezclado[i % 3, i / 3] = puzzleMezclado[random % 3, random / 3];
-            puzzleMezclado[random % 3, random / 3] = aux;
+
+        Vector3[] posicionesMezcladas = { pos1, pos4, pos9, pos8, pos3, pos2, pos6, pos7, pos5 };
+        Vector3[] posicionesMezcladas2 = { pos2, pos1, pos9, pos8, pos3, pos4, pos7, pos6, pos5 };
+
+        List<Vector3[]> listas = new List<Vector3[]>();
+
+        listas.Add(posicionesMezcladas);
+        listas.Add(posicionesMezcladas2);
+
+        int rand = Random.Range(0, listas.Count);
+
+        for (int i = 0; i < fichas.Length; i++)
+        {
+            fichas[i].transform.position = listas[rand][i];
         }
     }
 
-
+    /* //Estos metodos no funcionan
     //https://www.geeksforgeeks.org/check-instance-8-puzzle-solvable/
     //Inicio metodos para comprobar si es resolvible
     static int getInvCount(int[] arr)
@@ -136,6 +146,7 @@ public class Puzzle1 : PuzzlePadre
         return (invCount % 2 == 0);
     }
     //Final metodos para comprobar si es resolvible
+    */
 
     public void EsGanador()//Se llama cada vez que una pieza se mueve
     {

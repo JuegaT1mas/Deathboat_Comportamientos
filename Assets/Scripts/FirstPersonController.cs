@@ -141,7 +141,7 @@ namespace StarterAssets
 		}
 
         //cambiar de mapa de acciones
-        public void OnInteract()
+        public bool OnInteract()
         {
 
             if (_mcSelected.rayCastActivo)
@@ -166,6 +166,7 @@ namespace StarterAssets
 							_mainCamera.SetActive(false);
 							camaraPuzzles.SetActive(true);
 						}
+						return true;
 					}
 					else
 					{
@@ -174,6 +175,7 @@ namespace StarterAssets
 				}
 				
 			}
+			return false;
         }
 
 		public void OnLeavePuzzle()
