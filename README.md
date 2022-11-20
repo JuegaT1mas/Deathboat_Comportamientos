@@ -227,7 +227,7 @@ La siniestra luz estaba acompañada por dos dorados orbes que analizaban cada un
 
 ![Controles en PC](GDDImages/teclado.png)
 ![Controles en PC](GDDImages/raton.png)
-![Controles en móvil](GDDImages/control_movil2.png)
+![Controles en móvil](GDDImages/control_movil2.jpg)
 
 ## Pantallas
 En cuanto a Pantallas, “Deathboat” tiene un flujo simple:
@@ -236,7 +236,7 @@ En cuanto a Pantallas, “Deathboat” tiene un flujo simple:
 
 El juego empieza en el menú Principal, y desde esta pantalla se puede acceder a la propia partida, al menú de opciones y a los créditos.
 
-![Menú Principa](GDDImages/menu_princ2.png)
+![Menú Principal](GDDImages/menu_princ2.png)
 
 En la pantalla de los créditos se muestran a los miembros del equipo de JuegaT1+, al igual que un enlace al Twitter del equipo. Desde este menú podemos regresar al menú de créditos.
 
@@ -252,7 +252,7 @@ Una vez se accede al juego y el jugador lo pausa, se accede al menú de pausa, d
 
 La pantalla que aparece una vez que te derrota el “Diablo Negro” o cuando escapamos es la de Game Over, en esta pantalla podemos volver a jugar o volver al menú principal.
 
-![Menú de Victoria](GDDImages/menud_vic.png)
+![Menú de Victoria](GDDImages/menud_vic.jpg)
 ![Menú de Derrota](GDDImages/menud_def.png)
 
 ## Modelo de Negocio
