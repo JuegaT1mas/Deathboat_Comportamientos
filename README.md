@@ -245,6 +245,8 @@ En la pantalla de los créditos se muestran a los miembros del equipo de JuegaT1
 En la pantalla de ajustes se pueden personalizar algunos ajustes, como resolución, gráficos, sensibilidad, … Desde este menú se puede volver siempre al menú principal, aunque si se accede a este desde el juego, nos permite volver al menú de pausa adicionalmente.
 
 ![Menú de Ajustes](GDDImages/menu_sett2.png)
+![Menú de Ajustes ingame](GDDImages/menu_sett2_in.png)
+
 
 Una vez se accede al juego y el jugador lo pausa, se accede al menú de pausa, desde el cual el jugador puede volver a la partida, acceder al menú de ajustes o volver al menú principal.
 
