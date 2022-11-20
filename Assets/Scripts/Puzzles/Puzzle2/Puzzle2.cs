@@ -7,7 +7,8 @@ public class Puzzle2 : PuzzlePadre
     public GameObject flechaPrefab;
     public GameObject textoPrefab;
     public GameObject brujulaPrefab;
-    
+    public GameObject notaPrefab;
+
 
     GameObject flecha;
     GameObject botonRight;
@@ -50,8 +51,9 @@ public class Puzzle2 : PuzzlePadre
     public override void IniciarPuzzle()
     {
         puzzle.SetActive(true);
-        //puzzle.transform.position = new Vector3(2.1f, 2.7f, 2.06f);
-        //transform.position = new Vector3(0, -7, -22); //Posición del puzzle puesta a mano
+        GameObject nota = Instantiate(notaPrefab, new Vector3(-2, -4, -22), Quaternion.identity);
+        nota.transform.parent = gameObject.transform;
+   
         crearBotones();
     }
 

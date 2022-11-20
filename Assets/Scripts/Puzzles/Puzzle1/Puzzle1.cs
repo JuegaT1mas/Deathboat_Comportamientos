@@ -10,6 +10,10 @@ public class Puzzle1 : PuzzlePadre
     public GameObject bordePrefab;
     public Sprite fichaEscondidaImg;//la ficha que falta en el puzle
 
+
+    public GameObject notaPrefab;
+    GameObject nota;
+
     int[,] puzzleMezclado;//La variable para comprobar que el puzle sea resolvible
     [HideInInspector]
     public GameObject fichaEscondida;//Separamos el gameObject de la ficha escondida para poder activarla y desactivarla
@@ -28,6 +32,10 @@ public class Puzzle1 : PuzzlePadre
         padreFichas = GameObject.Find("Fichas");
         padreBordes = GameObject.Find("Bordes");
         transform.position = new Vector3(0, -7, -22); //Posición del puzzle puesta a mano
+
+        nota = Instantiate(notaPrefab, new Vector3(-2.5f, -4, -22), Quaternion.identity);
+        nota.transform.parent = gameObject.transform;
+
         CrearFichas();
     }
 
@@ -162,9 +170,18 @@ public class Puzzle1 : PuzzlePadre
         }
 
         fichaEscondida.gameObject.SetActive(true);
-        print("Puzzle resuelto");
+        nota.gameObject.SetActive(false);
+        
+        Invoke("DesactivarPuzzle", 3.0f);
         resuelto = true;
         Completed();
         
+    }
+
+    public void DesactivarPuzzle()
+    {
+        gameObject.SetActive(false);
+     
+       
     }
 }
