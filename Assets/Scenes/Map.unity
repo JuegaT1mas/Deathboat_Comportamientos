@@ -4650,6 +4650,7 @@ MonoBehaviour:
   - {fileID: 1329205683}
   - {fileID: 1597109148}
   - {fileID: 50036385}
+  isPaused: 0
   puzzleUI: {fileID: 1131075566}
   visualUI: {fileID: 871294421}
   canvasUI_Ingame: {fileID: 898066825}
@@ -4885,7 +4886,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameLoop: {fileID: 266421096}
-  mainMenu: {fileID: 1239983866}
 --- !u!1 &266596829
 GameObject:
   m_ObjectHideFlags: 0
@@ -40678,7 +40678,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 1
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -64671,7 +64671,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 10
   m_CollisionDetection: 0
