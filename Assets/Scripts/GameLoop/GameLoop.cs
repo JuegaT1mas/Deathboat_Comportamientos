@@ -58,8 +58,15 @@ public class GameLoop : MonoBehaviour
     public GameObject corazon3;
     public Texture brokenheart;
 
+
+    [Header("Ajustes")]
+    //El script de los ajustes, para checkearlos al principio
+    public SettingsMenu settingsMenu;
+
     private void Start()
     {
+        settingsMenu.InitialValues();
+
         //Deshacer los cambios en caso de que terminemos una partida y le demos a jugar otra vez
         Time.timeScale = 1; //Reanudamos por si acaso el timeScale
         DeactivateMouse();

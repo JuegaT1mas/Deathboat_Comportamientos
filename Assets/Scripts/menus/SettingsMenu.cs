@@ -8,6 +8,8 @@ using StarterAssets;
 
 public class SettingsMenu : MonoBehaviour
 {
+    public FirstPersonController firstPersonController;
+
     public AudioMixer mainMixer; //Referencia al mezclado de audio general
 
     public Resolution[] resolutions; //Lista de las resoluciones disponibles en la pantalla del jugador
@@ -26,10 +28,8 @@ public class SettingsMenu : MonoBehaviour
     //El toggle del fullscreen
     public Toggle fullScreenToggle;
 
-    private void Start()
-    {
-        InitialValues();//Comprobamos los valores iniciales
-    }
+    //para ver si comprobamos el brillo
+    public bool inGame;
 
     public void addResolutions()
     {
@@ -93,6 +93,8 @@ public class SettingsMenu : MonoBehaviour
     public void SetBrightness(float val)
     {
         RenderSettings.ambientIntensity = val;
+        PlayerPrefs.SetInt("BrightnessModified", 1);
+        PlayerPrefs.SetFloat("Brightness", val);
     }
 
 
@@ -114,6 +116,7 @@ public class SettingsMenu : MonoBehaviour
         if (PlayerPrefs.HasKey("SensitivityModified") && PlayerPrefs.GetInt("SensitivityModified") == 1)
         {
             mouseSensitivitySlider.value = PlayerPrefs.GetFloat("Sensitivity"); //Asignamos el valor por defecto que tenga el jugador
+            firstPersonController.OnRotationChange();
         }
         else
         {
@@ -143,7 +146,15 @@ public class SettingsMenu : MonoBehaviour
 
     public void CheckBrightness()
     {
-        brightnessSlider.value = RenderSettings.ambientIntensity;
+        if (PlayerPrefs.HasKey("BrightnessModified") && PlayerPrefs.GetInt("BrightnessModified") == 1)
+        {
+            brightnessSlider.value = PlayerPrefs.GetFloat("Brightness"); //Asignamos el valor por defecto que tenga el jugador
+            SetBrightness(PlayerPrefs.GetFloat("Brightness"));
+        }
+        else
+        {
+            SetBrightness(1.5f);
+        }
     }
 
     #endregion
@@ -155,5 +166,9 @@ public class SettingsMenu : MonoBehaviour
         CheckSensitivity(); //Comprobamos la sensibilidad
         CheckFullScreen(); //Comprobamos la pantalla completa
         CheckQuality(); //Comprobamos los gráficos
+        if (inGame)
+        {
+            CheckBrightness();//Solo comprobamos el brillo en la pantalla del juego
+        }
     }
 }

@@ -4895,6 +4895,7 @@ MonoBehaviour:
   corazon2: {fileID: 1767592294}
   corazon3: {fileID: 1143538443}
   brokenheart: {fileID: 2800000, guid: 772f566f3906a6e44a67e55f81001d8b, type: 3}
+  settingsMenu: {fileID: 683609784}
 --- !u!4 &266421097
 Transform:
   m_ObjectHideFlags: 0
@@ -35655,13 +35656,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81e8923ecf6c6eb41b164dad6306f060, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  firstPersonController: {fileID: 1224112962}
   mainMixer: {fileID: 24100000, guid: c4448cfb5981bd2419531a6d6b03ddb1, type: 2}
   resolutionDropdown: {fileID: 2066604585}
   graphicsDropdown: {fileID: 605672382}
   mouseSensitivitySlider: {fileID: 1772333416}
-  brightnessSlider: {fileID: 0}
+  brightnessSlider: {fileID: 1263534626}
   volumeSlider: {fileID: 1884926777}
   fullScreenToggle: {fileID: 288564681}
+  inGame: 1
 --- !u!1 &688452373
 GameObject:
   m_ObjectHideFlags: 0
