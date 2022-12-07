@@ -62,8 +62,7 @@ public class GameLoop : MonoBehaviour
     {
         //Deshacer los cambios en caso de que terminemos una partida y le demos a jugar otra vez
         Time.timeScale = 1; //Reanudamos por si acaso el timeScale
-        Cursor.lockState = CursorLockMode.Locked; //Bloqueamos el cursor
-        Cursor.visible = false; //Lo hacemos invisible
+        DeactivateMouse();
 
 
         playerRef = GameObject.FindGameObjectWithTag("Player"); //Encontrar la referencia al jugador al empezar
