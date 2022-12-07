@@ -30,6 +30,8 @@ public class GameLoop : MonoBehaviour
     int numPuzzles = 4;
 
     [Header("UI")]
+    //Si está activado algún menú que pausa el juego
+    public bool isPaused = false;
     //El texto de los puzzles
     public TMP_Text puzzleUI;
     //El texto de la confimación visual
@@ -128,6 +130,8 @@ public class GameLoop : MonoBehaviour
 
     public void GameOver() //Función que pasa cuando pierdes
     {
+        isPaused = true; //Se indica que se para un menú
+
         ActivateMouse();
         //Ponemos el timeScale al 0 para que las cosas que dependan del tiempo no se actualicen
         Time.timeScale = 0;
@@ -137,6 +141,8 @@ public class GameLoop : MonoBehaviour
 
     public void GameOverVictory() //Función que pasa cuando ganas
     {
+        isPaused = true; //Se indica que se para un menú
+
         ActivateMouse();
         //Ponemos el timeScale al 0 para que las cosas que dependan del tiempo no se actualicen
         Time.timeScale = 0;
@@ -245,6 +251,8 @@ public class GameLoop : MonoBehaviour
 
     public void ActivatePauseMenu()
     {
+        isPaused = true; //Se indica que se para un menú
+
         Time.timeScale = 0;
         canvasUI_Ingame.SetActive(false);
         canvasMobileUI.SetActive(false);
@@ -254,6 +262,8 @@ public class GameLoop : MonoBehaviour
 
     public void ResumeGame()
     {
+        isPaused = false; //Se indica que se reanuda
+
         DeactivateMouse();
         playerRef.GetComponent<FirstPersonController>().OnControlsChanged();
     }

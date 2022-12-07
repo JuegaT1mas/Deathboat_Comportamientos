@@ -418,7 +418,7 @@ namespace StarterAssets
 		public void DeactivatePlayer()
         {
 			_playerInput.actions.FindActionMap("Player").Disable();
-			_playerInput.actions.FindActionMap("Inactive").Enable();
+			//_playerInput.actions.FindActionMap("Inactive").Enable();
         }
 	}
 }
