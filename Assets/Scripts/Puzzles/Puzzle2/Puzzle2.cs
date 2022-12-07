@@ -7,7 +7,7 @@ public class Puzzle2 : PuzzlePadre
     public GameObject flechaPrefab;
     public GameObject textoPrefab;
     public GameObject brujulaPrefab;
-    public GameObject notaPrefab;
+  
 
 
     GameObject flecha;
@@ -40,9 +40,9 @@ public class Puzzle2 : PuzzlePadre
         brujula.transform.parent = puzzle.transform;
       
 
-        flecha = GameObject.Find("FlechaPrefab");
+        flecha = GameObject.Find("Flecha");
         rbFlecha = flecha.GetComponent<Rigidbody2D>();
-        flecha.transform.parent = puzzle.transform;
+      
 
         flecha.SetActive(true);
         puzzle.SetActive(false);
@@ -51,8 +51,7 @@ public class Puzzle2 : PuzzlePadre
     public override void IniciarPuzzle()
     {
         puzzle.SetActive(true);
-        GameObject nota = Instantiate(notaPrefab, new Vector3(-2, -4, -22), Quaternion.identity);
-        nota.transform.parent = gameObject.transform;
+      
    
         crearBotones();
     }
@@ -60,20 +59,17 @@ public class Puzzle2 : PuzzlePadre
 
     void crearBotones()
     {
-        botonRight = GameObject.Find("BotonPrefabW");
-        botonUp = GameObject.Find("BotonPrefabN");
-        botonLeft =GameObject.Find("BotonPrefabE");
-        botonDown = GameObject.Find("BotonPrefabS");
+        botonRight = GameObject.Find("BotonW");
+        botonUp = GameObject.Find("BotonN");
+        botonLeft =GameObject.Find("BotonE");
+        botonDown = GameObject.Find("BotonS");
 
         botonRight.GetComponent<Boton>().id = 1;
         botonUp.GetComponent<Boton>().id = 2;
         botonLeft.GetComponent<Boton>().id = 3;
         botonDown.GetComponent<Boton>().id = 4;
 
-        botonRight.transform.parent = puzzle.transform;
-        botonUp.transform.parent = puzzle.transform;
-        botonLeft.transform.parent = puzzle.transform;
-        botonDown.transform.parent = puzzle.transform;
+    
     }
     // Update is called once per frame
     void Update()

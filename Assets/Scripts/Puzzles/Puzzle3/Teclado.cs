@@ -18,6 +18,7 @@ public class Teclado : MonoBehaviour
 
     public void TeclearNum(string num)
     {
+       
         if (textoPantalla.text.Length >= 4)//Comprobar que no escriba mas de 4 caracteres
         {
             return;
@@ -28,6 +29,7 @@ public class Teclado : MonoBehaviour
     public void BorrarPantalla()
     {
         textoPantalla.text = "";//se asigna una cadena vacía
+        textoPantalla.color = Color.white;
     }
 
     public void GenerarContraseña()
@@ -51,9 +53,10 @@ public class Teclado : MonoBehaviour
         }
         else
         {
-          
+            textoPantalla.color = Color.red;
             textoPantalla.text = "Error";
             Invoke("BorrarPantalla", 1.0f);
+            
         }
     }
 }
