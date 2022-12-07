@@ -759,13 +759,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81e8923ecf6c6eb41b164dad6306f060, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  firstPersonController: {fileID: 0}
   mainMixer: {fileID: 24100000, guid: c4448cfb5981bd2419531a6d6b03ddb1, type: 2}
   resolutionDropdown: {fileID: 648246642}
   graphicsDropdown: {fileID: 169684}
   mouseSensitivitySlider: {fileID: 1967285893}
   brightnessSlider: {fileID: 0}
   volumeSlider: {fileID: 1731541048}
-  fullScreenToggle: {fileID: 517483116}
+  fullScreenToggle: {fileID: 0}
+  inGame: 0
 --- !u!1 &180580268
 GameObject:
   m_ObjectHideFlags: 0
@@ -2238,7 +2240,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 517483114}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
+  m_Script: {fileID: 11500000, guid: bfe9218c703ad404280a4eb964742eb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -2275,20 +2277,8 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 141384186}
-        m_TargetAssemblyTypeName: SettingsMenu, Assembly-CSharp
-        m_MethodName: SetFullScreen
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  m_IsOn: 1
+      m_Calls: []
+  m_IsOn: 0
 --- !u!1 &545639164
 GameObject:
   m_ObjectHideFlags: 0
@@ -7518,7 +7508,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
-  mainMenu: {fileID: 0}
 --- !u!1 &1855678673
 GameObject:
   m_ObjectHideFlags: 0

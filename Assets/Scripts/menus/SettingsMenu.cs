@@ -31,6 +31,12 @@ public class SettingsMenu : MonoBehaviour
     //para ver si comprobamos el brillo
     public bool inGame;
 
+
+    private void OnEnable() //Comprobar que funciona
+    {
+        InitialValues();
+    }
+
     public void addResolutions()
     {
         List<string> options = new List<string>();//Creamos una lista de strings
