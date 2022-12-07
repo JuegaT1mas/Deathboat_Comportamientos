@@ -13,6 +13,7 @@ public class ApplicationFocus : MonoBehaviour
         {
             if (gameLoop.isPaused)
             {
+                Debug.Log("si");
                 gameLoop.ActivateMouse();
             }
         }
