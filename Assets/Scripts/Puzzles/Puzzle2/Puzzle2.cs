@@ -28,6 +28,7 @@ public class Puzzle2 : PuzzlePadre
     public int aciertos = 0;
 
     public int dirFlecha = 0;
+    int random;
 
     // Start is called before the first frame update
 
@@ -46,22 +47,22 @@ public class Puzzle2 : PuzzlePadre
 
         flecha.SetActive(true);
         puzzle.SetActive(false);
-        
+       
+
     }
     public override void IniciarPuzzle()
     {
         puzzle.SetActive(true);
-      
-   
         crearBotones();
+       
     }
 
 
     void crearBotones()
     {
-        botonRight = GameObject.Find("BotonW");
+        botonRight = GameObject.Find("BotonE");
         botonUp = GameObject.Find("BotonN");
-        botonLeft =GameObject.Find("BotonE");
+        botonLeft =GameObject.Find("BotonW");
         botonDown = GameObject.Find("BotonS");
 
         botonRight.GetComponent<Boton>().id = 1;
@@ -83,7 +84,7 @@ public class Puzzle2 : PuzzlePadre
 
             }
             else
-            {
+            {               
                 if (rbFlecha.angularVelocity <= 450)
                 {
                     Quaternion pos = rbFlecha.transform.rotation;
@@ -129,7 +130,7 @@ public class Puzzle2 : PuzzlePadre
     }
     void girarFlecha()
     {
-        rbFlecha.angularVelocity = 500f;
+        rbFlecha.angularVelocity = Random.Range(500, 600);
     }
 
     public void esGanador()

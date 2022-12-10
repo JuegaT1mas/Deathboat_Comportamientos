@@ -188,6 +188,7 @@ namespace StarterAssets
 			camaraPuzzles.SetActive(false);
 			print("OnLeavePuzzle executed");
 			_mcSelected.puzzleActual.GetComponent<InteractiveObject>().puzzle.SetActive(false);
+
 			
 		}
 

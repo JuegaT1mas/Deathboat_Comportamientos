@@ -12,7 +12,7 @@ public class Boton : MonoBehaviour
         puzzle = GameObject.Find("Puzzle2").GetComponent(typeof(Puzzle2)) as Puzzle2;
     }
 
-    private void OnMouseDown()
+    public void OnMouseDown()
     {
       
         if(id==puzzle.dirFlecha)
