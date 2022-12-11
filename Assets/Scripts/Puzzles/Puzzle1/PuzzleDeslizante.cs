@@ -36,12 +36,20 @@ public class PuzzleDeslizante : MonoBehaviour
         Vector3[] posicionesMezcladas = { pos5, pos4, pos2, pos3, pos7, pos6, pos1, pos8, pos9 };
         Vector3[] posicionesMezcladas2 = { pos7, pos4, pos6, pos5, pos3, pos8, pos2, pos9, pos1 };
         Vector3[] posicionesMezcladas3 = { pos9, pos8, pos7, pos6, pos5, pos4, pos3, pos2, pos1 };
+        Vector3[] posicionesMezcladas4 = { pos7, pos6, pos1, pos8, pos9, pos2, pos4, pos3, pos5 };
+        Vector3[] posicionesMezcladas5 = { pos2, pos6, pos4, pos9, pos5, pos7, pos8, pos1, pos3 };
+        Vector3[] posicionesMezcladas6 = { pos8, pos3, pos1, pos4, pos7, pos6, pos5, pos2, pos9 };
+        Vector3[] posicionesMezcladas7 = { pos5, pos6, pos2, pos4, pos7, pos8, pos9, pos3, pos1 };
 
         List<Vector3[]> listas = new List<Vector3[]>();
 
         listas.Add(posicionesMezcladas);
         listas.Add(posicionesMezcladas2);
         listas.Add(posicionesMezcladas3);
+        listas.Add(posicionesMezcladas4);
+        listas.Add(posicionesMezcladas5);
+        listas.Add(posicionesMezcladas6);
+        listas.Add(posicionesMezcladas7);
 
         int rand = Random.Range(0, listas.Count);
 
