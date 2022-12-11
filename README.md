@@ -208,6 +208,20 @@ Finalmente, tenemos los assets que añaden ambientación y que actúan como obst
 ![Lámpara de noche](GDDImages/lamp.png)
 ![Cama de camarote](GDDImages/bed.png)
 
+Para la versión Goldmaster del proyecto, se añadieron los siguientes Assets
+![Barco](GDDImages/boat.png)
+![Barco con la grua](GDDImages/boat2.png)
+![Estanterías](GDDImages/shelves.png)
+![Mesa bar](GDDImages/table_bar.png))
+![Mesa con libros](GDDImages/Table_books.png)
+![Mesa con silla](GDDImages/Table_chair.png)
+![Caja de herramientas](GDDImages/toolbox.png)
+![Textura sangre 1](GDDImages/textura_sangre1.png)
+![Textura sangre 2](GDDImages/textura_sangre2.png)
+![Textura sangre 3](GDDImages/textura_sangre3.png)
+![Textura sangre 4](GDDImages/textura_sangre4.png)
+![Textura sangre 5](GDDImages/textura_sangre5.png)
+
 ## Lore
 Todos conocemos las leyendas marinas de las que se hablan en los puertos de todo el mundo... Sirenas, tifones que llevan a otros mundos.... Nadie sabe si de verdad dichas historias son verdad o si son invención de algún marinero con ganas de ganarse a su audiencia.
 Pero toda historia oculta una parte de verdad, y todos lo saben en la ciudad de Santa Penélope, Venezuela. Cada navío que empieza su travesía en sus puertos hace el tradicional gesto de tirar algo por la borda como ofrenda a las aguas. Nadie sabe el por qué ni cuándo se originó esta costumbre, incluso algunos lo ven como un reclamo turístico de su antigua ciudad, pero nadie nunca sale sin al menos ofrecer su parte.
