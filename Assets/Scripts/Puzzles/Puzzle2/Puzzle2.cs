@@ -2,20 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Puzzle2 : PuzzlePadre
 {
-    public GameObject flechaPrefab;
+    
     public GameObject textoPrefab;
     public GameObject brujulaPrefab;
-  
-
-
+ 
     GameObject flecha;
     GameObject botonRight;
     GameObject botonUp;
     GameObject botonLeft;
     GameObject botonDown;
     GameObject brujula;
+    GameObject texto;
 
     Vector3 posicion = new Vector3(2, -4, -20);
     GameObject puzzle;
@@ -64,6 +64,7 @@ public class Puzzle2 : PuzzlePadre
         botonUp = GameObject.Find("BotonN");
         botonLeft =GameObject.Find("BotonW");
         botonDown = GameObject.Find("BotonS");
+       
 
         botonRight.GetComponent<Boton>().id = 1;
         botonUp.GetComponent<Boton>().id = 2;
@@ -124,8 +125,9 @@ public class Puzzle2 : PuzzlePadre
     {
         if (!botonPulsado)
         {
-            aciertos = 0;
 
+            aciertos = 0;
+            
         }
     }
     void girarFlecha()
@@ -139,16 +141,9 @@ public class Puzzle2 : PuzzlePadre
         {
             rbFlecha.angularVelocity = 0;
             puzzleAcabado = true;
-            GameObject texto = Instantiate(textoPrefab, posicion, Quaternion.identity);
 
-            texto.transform.parent = puzzle.transform;
 
-            botonRight.SetActive(false);
-            botonUp.SetActive(false);
-            botonLeft.SetActive(false);
-            botonDown.SetActive(false);
-            brujula.SetActive(false);
-            flecha.SetActive(false);
+            Invoke("ShowInstructions", 0.0f);
 
             resuelto = true;
             Completed();

@@ -17,8 +17,9 @@ public class Puzzle1 : PuzzlePadre
     public void PuzzleAcabado()
     {
         resuelto = true;
-        Invoke("ShowInstructions", 3.0f);
+       
         Completed();
+        Invoke("ShowInstructions", 1.5f);
     }
 }
 
