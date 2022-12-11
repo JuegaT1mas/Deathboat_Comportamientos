@@ -169,8 +169,8 @@ Cuando se inicia el juego, el jugador entra al menú principal, en esta breve se
 
 Una vez dentro de la partida un icono que llamará la atención y estará presente en todo momento es el icono del ojo, este icono indica que el ‘Diablo Negro’ está viendo al jugador cuando toma la forma de un ojo abierto:
 
-![Ojo cerrado, no está viendo al jugador](GDDImages/icon_eyeclosed.png)
-![Ojo abierto, está viendo al jugador](GDDImages/icon_eyeopen.png)
+![Ojo cerrado, no está viendo al jugador](GDDImages/icon_eyeclosed_remaster.png)
+![Ojo abierto, está viendo al jugador](GDDImages/icon_eyeopen_remaster.png)
 
 Junto al indicar de visión, a su izquierda, se encuentran las vidas que le quedan al jugador representadas con corazones rojos, pasan a negros cuando el jugador es atacado:
 
@@ -207,6 +207,22 @@ Finalmente, tenemos los assets que añaden ambientación y que actúan como obst
 ![Horno](GDDImages/oven.png)
 ![Lámpara de noche](GDDImages/lamp.png)
 ![Cama de camarote](GDDImages/bed.png)
+
+Para la versión Goldmaster del proyecto, se añadieron los siguientes Assets
+![Barco](GDDImages/boat.png)
+![Barco con la grua](GDDImages/boat2.png)
+![Estanterías](GDDImages/shelves1.png)
+![Mesa bar](GDDImages/table_bar.png))
+![Salvavidas](GDDImages/salvavidas.png)
+![Mesa con libros](GDDImages/Table_books.png)
+![Mesa con silla](GDDImages/Table_chair.png)
+![Caja de herramientas](GDDImages/toolbox.png)
+![Textura sangre 1](GDDImages/textura_sangre1.png)
+![Textura sangre 2](GDDImages/textura_sangre2.png)
+![Textura sangre 3](GDDImages/textura_sangre3.png)
+![Textura sangre 4](GDDImages/textura_sangre4.png)
+![Textura sangre 5](GDDImages/textura_sangre5.png)
+![Nota para salir del puzzle](GDDImages/notapressqtoexit.png)
 
 ## Lore
 Todos conocemos las leyendas marinas de las que se hablan en los puertos de todo el mundo... Sirenas, tifones que llevan a otros mundos.... Nadie sabe si de verdad dichas historias son verdad o si son invención de algún marinero con ganas de ganarse a su audiencia.
@@ -279,5 +295,8 @@ El plan de monetización para dos años tiene esto en cuenta, ya que una vez que
 * Versión 1.1.4    [ 2022/11/19 ]  Versión con animaciones del Diablo Negro
 * Versión 1.1.5    [ 2022/11/20 ]  Versión pre-Beta publicada en itch.io
 * Versión 1.2.0    [ 2022/11/20 ]  Versión Beta publicada en itch.io
+* Versión 1.2.1    [ 2022/12/03 ]  Corrección de errores
+* Versión 1.2.2    [ 2022/12/11 ]  Versión pre-Goldmaster publicada en itch.io
+* Versión 1.3.0    [ 2022/12/11 ]  Versión Goldmaster publicada en itch.io
 
 
