@@ -5443,7 +5443,7 @@ MonoBehaviour:
   canvasMobileUI: {fileID: 1693123121}
   canvasPauseMenu: {fileID: 233465424}
   openEye: {fileID: 2800000, guid: ac72aff2469972b4bb5e50cb7e8a4029, type: 3}
-  closedEye: {fileID: 2800000, guid: dc1fc94cf748b7042a7fb8e5d9af828c, type: 3}
+  closedEye: {fileID: 2800000, guid: 7eb13408d9f192d419c33acd702fd94e, type: 3}
   corazon1: {fileID: 148840598}
   corazon2: {fileID: 1767592294}
   corazon3: {fileID: 1143538443}
@@ -44681,7 +44681,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: dc1fc94cf748b7042a7fb8e5d9af828c, type: 3}
+  m_Texture: {fileID: 2800000, guid: 7eb13408d9f192d419c33acd702fd94e, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -54579,8 +54579,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.3321304, y: 8.636674, z: 3.112512}
-  m_Center: {x: 0.22380829, y: -0.27313185, z: 0.26416183}
+  m_Size: {x: 3.3321304, y: 12.9548855, z: 3.112512}
+  m_Center: {x: 0.22380829, y: 1.8859739, z: 0.26416183}
 --- !u!4 &1262860314
 Transform:
   m_ObjectHideFlags: 0
@@ -74796,7 +74796,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fov: {fileID: 5317266676083843617}
   chaseSpeed: 3
-  minimumDistance: 3
+  minimumDistance: 1
   points:
   - {fileID: 1797117382}
   - {fileID: 1186033652}

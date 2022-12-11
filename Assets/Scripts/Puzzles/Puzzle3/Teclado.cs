@@ -40,7 +40,7 @@ public class Teclado : MonoBehaviour
         num = numero.ToString();
 
         //que operacion hacer
-        int operacion = Random.Range(0, 1);
+        int operacion = Random.Range(0, 2);
 
         //lo que restar/sumar
         int numOperacion = Random.Range(1, 1000);

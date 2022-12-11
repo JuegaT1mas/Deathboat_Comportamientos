@@ -58,7 +58,7 @@ public class EnemyManager : MonoBehaviour
             LookAt();
             ChasePlayer();
         }
-        else if (!agent.pathPending && agent.remainingDistance < minimumDistance)
+        else if (!agent.pathPending && !agent.hasPath && agent.remainingDistance < minimumDistance)
         {
             if (checkForNear)
             {
