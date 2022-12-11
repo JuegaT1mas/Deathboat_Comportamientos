@@ -17,6 +17,10 @@ public class GameLoop : MonoBehaviour
     [Header("Escape")]
     //El gameObject de la salida
     public GameObject escape;
+    //El gameobject de la grua
+    public GameObject grua;
+    //El collider que bloquea la salida
+    public GameObject bloqueo;
 
     [Header("Puzzles")]
     //Las referencias a los puzzles
@@ -80,6 +84,7 @@ public class GameLoop : MonoBehaviour
         UpdateLivesUI(); //Actualiza el UI de las vidas
 
         settingsMenu.InitialValues();
+
     }
 
     private void Update()
@@ -161,7 +166,9 @@ public class GameLoop : MonoBehaviour
 
     public void ActivateEscape() //Activar la salida
     {
+        bloqueo.GetComponent<BoxCollider>().enabled = false;
         escape.gameObject.SetActive(true); //Activamos la salida
+        grua.GetComponent<MeshCollider>().enabled = true;
         puzzleUI.text = "Escape boat unlocked\n¡Find it!"; //Cambiamos el texto en pantalla
         //Cambiar música
     }
