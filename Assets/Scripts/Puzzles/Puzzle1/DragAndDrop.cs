@@ -7,7 +7,8 @@ public class DragAndDrop : MonoBehaviour
     Sensores sensores;
     public PuzzleDeslizante puzzle;
     public GameObject fichaOculta;
-
+    public int id;
+    public int idPos;
     void Awake()
     {
         sensores = GetComponentInChildren(typeof(Sensores)) as Sensores;
@@ -19,9 +20,13 @@ public class DragAndDrop : MonoBehaviour
     {
         if (!sensores.ocupadoRight|| !sensores.ocupadoLeft|| !sensores.ocupadoDown|| !sensores.ocupadoUp)
         {
-            Vector3 aux = fichaOculta.transform.position;
+            int auxPosId = fichaOculta.GetComponent<DragAndDrop>().idPos;
+            fichaOculta.GetComponent<DragAndDrop>().idPos = gameObject.GetComponent<DragAndDrop>().idPos;
+            gameObject.GetComponent<DragAndDrop>().idPos = auxPosId;
+
+            Vector3 auxPos = fichaOculta.transform.position;
             fichaOculta.transform.position = gameObject.transform.position;
-            gameObject.transform.position = aux;
+            gameObject.transform.position = auxPos;
             puzzle.EsGanador();
 
         }
