@@ -169,8 +169,8 @@ Cuando se inicia el juego, el jugador entra al menú principal, en esta breve se
 
 Una vez dentro de la partida un icono que llamará la atención y estará presente en todo momento es el icono del ojo, este icono indica que el ‘Diablo Negro’ está viendo al jugador cuando toma la forma de un ojo abierto:
 
-![Ojo cerrado, no está viendo al jugador](GDDImages/icon_eyeclosed.png)
-![Ojo abierto, está viendo al jugador](GDDImages/icon_eyeopen.png)
+![Ojo cerrado, no está viendo al jugador](GDDImages/icon_eyeclosed_remaster.png)
+![Ojo abierto, está viendo al jugador](GDDImages/icon_eyeopen_remaster.png)
 
 Junto al indicar de visión, a su izquierda, se encuentran las vidas que le quedan al jugador representadas con corazones rojos, pasan a negros cuando el jugador es atacado:
 
@@ -296,5 +296,6 @@ El plan de monetización para dos años tiene esto en cuenta, ya que una vez que
 * Versión 1.2.0    [ 2022/11/20 ]  Versión Beta publicada en itch.io
 * Versión 1.2.1    [ 2022/12/03 ]  Corrección de errores
 * Versión 1.2.2    [ 2022/12/11 ]  Versión pre-Goldmaster publicada en itch.io
+* Versión 1.3.0    [ 2022/12/11 ]  Versión Goldmaster publicada en itch.io
 
 
