@@ -62,6 +62,8 @@ public class GameLoop : MonoBehaviour
     [Header("Ajustes")]
     //El script de los ajustes, para checkearlos al principio
     public SettingsMenu settingsMenu;
+    //Bool para checkear la primera vez
+    private bool checkSettings = false;
 
     private void Start()
     {
@@ -76,6 +78,8 @@ public class GameLoop : MonoBehaviour
         GeneratePuzzles(); //Genera en el mapa los puzzles
         UpdatePuzzleUI(); //Actualiza el UI de los puzzles
         UpdateLivesUI(); //Actualiza el UI de las vidas
+
+        settingsMenu.InitialValues();
     }
 
     private void Update()
