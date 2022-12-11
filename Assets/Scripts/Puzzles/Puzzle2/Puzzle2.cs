@@ -2,20 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Puzzle2 : PuzzlePadre
 {
-    public GameObject flechaPrefab;
+    
     public GameObject textoPrefab;
     public GameObject brujulaPrefab;
-    public GameObject notaPrefab;
-
-
+ 
     GameObject flecha;
     GameObject botonRight;
     GameObject botonUp;
     GameObject botonLeft;
     GameObject botonDown;
     GameObject brujula;
+    GameObject texto;
 
     Vector3 posicion = new Vector3(2, -4, -20);
     GameObject puzzle;
@@ -28,6 +28,7 @@ public class Puzzle2 : PuzzlePadre
     public int aciertos = 0;
 
     public int dirFlecha = 0;
+    int random;
 
     // Start is called before the first frame update
 
@@ -40,40 +41,37 @@ public class Puzzle2 : PuzzlePadre
         brujula.transform.parent = puzzle.transform;
       
 
-        flecha = GameObject.Find("FlechaPrefab");
+        flecha = GameObject.Find("Flecha");
         rbFlecha = flecha.GetComponent<Rigidbody2D>();
-        flecha.transform.parent = puzzle.transform;
+      
 
         flecha.SetActive(true);
         puzzle.SetActive(false);
-        
+       
+
     }
     public override void IniciarPuzzle()
     {
         puzzle.SetActive(true);
-        GameObject nota = Instantiate(notaPrefab, new Vector3(-2, -4, -22), Quaternion.identity);
-        nota.transform.parent = gameObject.transform;
-   
         crearBotones();
+       
     }
 
 
     void crearBotones()
     {
-        botonRight = GameObject.Find("BotonPrefabW");
-        botonUp = GameObject.Find("BotonPrefabN");
-        botonLeft =GameObject.Find("BotonPrefabE");
-        botonDown = GameObject.Find("BotonPrefabS");
+        botonRight = GameObject.Find("BotonE");
+        botonUp = GameObject.Find("BotonN");
+        botonLeft =GameObject.Find("BotonW");
+        botonDown = GameObject.Find("BotonS");
+       
 
         botonRight.GetComponent<Boton>().id = 1;
         botonUp.GetComponent<Boton>().id = 2;
         botonLeft.GetComponent<Boton>().id = 3;
         botonDown.GetComponent<Boton>().id = 4;
 
-        botonRight.transform.parent = puzzle.transform;
-        botonUp.transform.parent = puzzle.transform;
-        botonLeft.transform.parent = puzzle.transform;
-        botonDown.transform.parent = puzzle.transform;
+    
     }
     // Update is called once per frame
     void Update()
@@ -87,7 +85,7 @@ public class Puzzle2 : PuzzlePadre
 
             }
             else
-            {
+            {               
                 if (rbFlecha.angularVelocity <= 450)
                 {
                     Quaternion pos = rbFlecha.transform.rotation;
@@ -127,13 +125,14 @@ public class Puzzle2 : PuzzlePadre
     {
         if (!botonPulsado)
         {
-            aciertos = 0;
 
+            aciertos = 0;
+            
         }
     }
     void girarFlecha()
     {
-        rbFlecha.angularVelocity = 500f;
+        rbFlecha.angularVelocity = Random.Range(500, 600);
     }
 
     public void esGanador()
@@ -142,16 +141,9 @@ public class Puzzle2 : PuzzlePadre
         {
             rbFlecha.angularVelocity = 0;
             puzzleAcabado = true;
-            GameObject texto = Instantiate(textoPrefab, posicion, Quaternion.identity);
 
-            texto.transform.parent = puzzle.transform;
 
-            botonRight.SetActive(false);
-            botonUp.SetActive(false);
-            botonLeft.SetActive(false);
-            botonDown.SetActive(false);
-            brujula.SetActive(false);
-            flecha.SetActive(false);
+            Invoke("ShowInstructions", 0.0f);
 
             resuelto = true;
             Completed();
