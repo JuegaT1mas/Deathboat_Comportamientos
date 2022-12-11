@@ -27,7 +27,5 @@ public class PuzzlePadre : MonoBehaviour
     {
         gameObject.SetActive(false);
         prefabFin = Instantiate(prefabFinPuzzle,new Vector3(0, 0, 0), Quaternion.identity);
-       
-
     }
 }

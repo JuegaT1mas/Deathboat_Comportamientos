@@ -16,10 +16,10 @@ public class Puzzle1 : PuzzlePadre
 
     public void PuzzleAcabado()
     {
+        Invoke("ShowInstructions", 0f);
         resuelto = true;
        
         Completed();
-        Invoke("ShowInstructions", 1.5f);
     }
 }
 

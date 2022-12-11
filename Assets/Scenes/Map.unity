@@ -31473,14 +31473,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resuelto: 0
   gameLoop: {fileID: 266421096}
-  hasBeenCreated: 0
-  flechaPrefab: {fileID: 5075856780431362830, guid: e26d73ece67a0f14492bbf7d260ca5de,
+  prefabFinPuzzle: {fileID: 3175713553379450547, guid: 0a2b057a446fbac4dadd4582033089fc,
     type: 3}
+  prefabFin: {fileID: 0}
+  hasBeenCreated: 0
   textoPrefab: {fileID: 4292045920007037802, guid: 587a7278003bfa94c97994a182ccc401,
     type: 3}
   brujulaPrefab: {fileID: 4123215934237953231, guid: 9a2e25bbc1b238844afaa920b6c82a81,
-    type: 3}
-  notaPrefab: {fileID: 3671509549595477397, guid: bb02285ce32d94b4387227d8a3cb9f9e,
     type: 3}
   estaGirando: 0
   botonPulsado: 0
@@ -36179,26 +36178,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resuelto: 0
   gameLoop: {fileID: 266421096}
+  prefabFinPuzzle: {fileID: 3175713553379450547, guid: 0a2b057a446fbac4dadd4582033089fc,
+    type: 3}
+  prefabFin: {fileID: 0}
   hasBeenCreated: 0
-  fichaImg:
-  - {fileID: 441588276, guid: d8b8b0d10fb5c6a48ac4c0d62c19d55b, type: 3}
-  - {fileID: 443406389, guid: d8b8b0d10fb5c6a48ac4c0d62c19d55b, type: 3}
-  - {fileID: 181175849, guid: d8b8b0d10fb5c6a48ac4c0d62c19d55b, type: 3}
-  - {fileID: 2066096728, guid: d8b8b0d10fb5c6a48ac4c0d62c19d55b, type: 3}
-  - {fileID: 352825399, guid: d8b8b0d10fb5c6a48ac4c0d62c19d55b, type: 3}
-  - {fileID: 2134246475, guid: d8b8b0d10fb5c6a48ac4c0d62c19d55b, type: 3}
-  - {fileID: -1867718375, guid: d8b8b0d10fb5c6a48ac4c0d62c19d55b, type: 3}
-  - {fileID: -851163100, guid: d8b8b0d10fb5c6a48ac4c0d62c19d55b, type: 3}
-  - {fileID: 532840021, guid: d8b8b0d10fb5c6a48ac4c0d62c19d55b, type: 3}
-  fichaPrefab: {fileID: 4033020743494130816, guid: a1cdc160cf7fb9f4e937626ab2378972,
+  puzzleDeslizantePrefab: {fileID: 7165276172506265764, guid: 835f7ad9c1e84404c8899edb15059658,
     type: 3}
-  bordePrefab: {fileID: 1632247733153410985, guid: e395eb1842444074782214088e452010,
-    type: 3}
-  fichaEscondidaImg: {fileID: 441588276, guid: d8b8b0d10fb5c6a48ac4c0d62c19d55b, type: 3}
-  notaPrefab: {fileID: 6683965472281124671, guid: 2cc49fbceb8770a4a880d0f7f258f237,
-    type: 3}
-  fichaEscondida: {fileID: 0}
-  posicionesIniciales: []
 --- !u!4 &722261320
 Transform:
   m_ObjectHideFlags: 0
@@ -51545,10 +51530,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resuelto: 0
   gameLoop: {fileID: 266421096}
+  prefabFinPuzzle: {fileID: 3175713553379450547, guid: 0a2b057a446fbac4dadd4582033089fc,
+    type: 3}
+  prefabFin: {fileID: 0}
   hasBeenCreated: 0
   tecladoPrefab: {fileID: 3199376398788109161, guid: 8015d9d731dc88a47a0f4f239e542610,
-    type: 3}
-  notaPrefab: {fileID: 8062675538400240990, guid: 4143967fc55cac348a6e78bcbe289428,
     type: 3}
 --- !u!4 &1421693369
 Transform:
