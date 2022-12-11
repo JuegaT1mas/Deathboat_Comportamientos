@@ -9,6 +9,7 @@ TagManager:
   - Objeto Interactivo
   - DamageSource
   - Enemy
+  - MainMenu
   layers:
   - Default
   - TransparentFX

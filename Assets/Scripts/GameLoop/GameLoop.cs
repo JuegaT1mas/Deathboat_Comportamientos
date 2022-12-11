@@ -17,6 +17,10 @@ public class GameLoop : MonoBehaviour
     [Header("Escape")]
     //El gameObject de la salida
     public GameObject escape;
+    //El gameobject de la grua
+    public GameObject grua;
+    //El collider que bloquea la salida
+    public GameObject bloqueo;
 
     [Header("Puzzles")]
     //Las referencias a los puzzles
@@ -30,6 +34,8 @@ public class GameLoop : MonoBehaviour
     int numPuzzles = 4;
 
     [Header("UI")]
+    //Si está activado algún menú que pausa el juego
+    public bool isPaused = false;
     //El texto de los puzzles
     public TMP_Text puzzleUI;
     //El texto de la confimación visual
@@ -56,12 +62,19 @@ public class GameLoop : MonoBehaviour
     public GameObject corazon3;
     public Texture brokenheart;
 
+
+    [Header("Ajustes")]
+    //El script de los ajustes, para checkearlos al principio
+    public SettingsMenu settingsMenu;
+    //Bool para checkear la primera vez
+    private bool checkSettings = false;
+
     private void Start()
     {
+
         //Deshacer los cambios en caso de que terminemos una partida y le demos a jugar otra vez
         Time.timeScale = 1; //Reanudamos por si acaso el timeScale
-        Cursor.lockState = CursorLockMode.Locked; //Bloqueamos el cursor
-        Cursor.visible = false; //Lo hacemos invisible
+        DeactivateMouse();
 
 
         playerRef = GameObject.FindGameObjectWithTag("Player"); //Encontrar la referencia al jugador al empezar
@@ -69,6 +82,9 @@ public class GameLoop : MonoBehaviour
         GeneratePuzzles(); //Genera en el mapa los puzzles
         UpdatePuzzleUI(); //Actualiza el UI de los puzzles
         UpdateLivesUI(); //Actualiza el UI de las vidas
+
+        settingsMenu.InitialValues();
+
     }
 
     private void Update()
@@ -128,6 +144,8 @@ public class GameLoop : MonoBehaviour
 
     public void GameOver() //Función que pasa cuando pierdes
     {
+        isPaused = true; //Se indica que se para un menú
+
         ActivateMouse();
         //Ponemos el timeScale al 0 para que las cosas que dependan del tiempo no se actualicen
         Time.timeScale = 0;
@@ -137,6 +155,8 @@ public class GameLoop : MonoBehaviour
 
     public void GameOverVictory() //Función que pasa cuando ganas
     {
+        isPaused = true; //Se indica que se para un menú
+
         ActivateMouse();
         //Ponemos el timeScale al 0 para que las cosas que dependan del tiempo no se actualicen
         Time.timeScale = 0;
@@ -146,7 +166,9 @@ public class GameLoop : MonoBehaviour
 
     public void ActivateEscape() //Activar la salida
     {
+        bloqueo.GetComponent<BoxCollider>().enabled = false;
         escape.gameObject.SetActive(true); //Activamos la salida
+        grua.GetComponent<MeshCollider>().enabled = true;
         puzzleUI.text = "Escape boat unlocked\n¡Find it!"; //Cambiamos el texto en pantalla
         //Cambiar música
     }
@@ -245,6 +267,8 @@ public class GameLoop : MonoBehaviour
 
     public void ActivatePauseMenu()
     {
+        isPaused = true; //Se indica que se para un menú
+
         Time.timeScale = 0;
         canvasUI_Ingame.SetActive(false);
         canvasMobileUI.SetActive(false);
@@ -254,6 +278,8 @@ public class GameLoop : MonoBehaviour
 
     public void ResumeGame()
     {
+        isPaused = false; //Se indica que se reanuda
+
         DeactivateMouse();
         playerRef.GetComponent<FirstPersonController>().OnControlsChanged();
     }

@@ -18,7 +18,8 @@ public class Selected : MonoBehaviour
     private bool estaCerca;//variable que comprueba el raycast
     [HideInInspector]
     public RaycastHit hit;
- 
+    Color aux;
+
 
     //public bool puzzleActivado = false;
 
@@ -58,7 +59,8 @@ public class Selected : MonoBehaviour
 
     void SelectedObject(Transform transform)//Metodo para cambiar el color del gameobject cuando detecte un raycast
     {
-        transform.GetComponent<MeshRenderer>().material.color = Color.green;//cuando el rayo impacte con el objeto se cambiará el color del objeto
+        aux = transform.GetComponent<MeshRenderer>().material.color;
+        transform.GetComponent<MeshRenderer>().material.color = Color.white;//cuando el rayo impacte con el objeto se cambiará el color del objeto
         ultimoReconocido = transform.gameObject;
 
     }
@@ -72,7 +74,7 @@ public class Selected : MonoBehaviour
     {
         if (ultimoReconocido)
         {
-            ultimoReconocido.GetComponent<Renderer>().material.color = Color.white;
+            ultimoReconocido.GetComponent<Renderer>().material.color = aux;
             ultimoReconocido = null;
         }
     }

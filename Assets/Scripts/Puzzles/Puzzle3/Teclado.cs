@@ -8,6 +8,7 @@ public class Teclado : MonoBehaviour
     public TextMeshProUGUI textoPantalla;//Referencia al TextMesh de la pantalla
     public TextMeshProUGUI textoNota;//Referencia al TextMesh de la nota
 
+    public string num;
   
     // Start is called before the first frame update
     void Start()
@@ -18,6 +19,7 @@ public class Teclado : MonoBehaviour
 
     public void TeclearNum(string num)
     {
+       
         if (textoPantalla.text.Length >= 4)//Comprobar que no escriba mas de 4 caracteres
         {
             return;
@@ -28,32 +30,54 @@ public class Teclado : MonoBehaviour
     public void BorrarPantalla()
     {
         textoPantalla.text = "";//se asigna una cadena vacía
+        textoPantalla.color = Color.white;
     }
 
     public void GenerarContraseña()
     {
-        for (int i = 0; i < 4; i++)
+        int numero = Random.Range(1000, 9999);
+
+        num = numero.ToString();
+
+        //que operacion hacer
+        int operacion = Random.Range(0, 2);
+
+        //lo que restar/sumar
+        int numOperacion = Random.Range(1, 1000);
+        
+
+        if(operacion == 0)
         {
-            int random = Random.Range(0, 9);
-            textoNota.text += random;
+            float res = numero + numOperacion;
+            textoNota.text = "" + res + " - " + numOperacion;
+        }
+        else
+        {
+            float res = numero - numOperacion;
+            textoNota.text = "" + res + " + " + numOperacion;
         }
     }
-
+    void DesactivarTodo()
+    {
+        gameObject.SetActive(false);
+    }
     public void CheckContraseña()
     {
-        if (textoPantalla.text.Equals(textoNota.text))
+        if (textoPantalla.text.Equals(num))
         {
 
             textoPantalla.color = Color.green;
             textoPantalla.text = "Correct";
+            Invoke("DesactivarTodo", 1.5f);
             puzzle3.GetComponent<Puzzle3>().PuzzleAcabado();
-            Destroy(gameObject,1.0f);
+           
         }
         else
         {
-          
+            textoPantalla.color = Color.red;
             textoPantalla.text = "Error";
             Invoke("BorrarPantalla", 1.0f);
+            
         }
     }
 }
