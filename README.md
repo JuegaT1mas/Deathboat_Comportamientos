@@ -211,7 +211,7 @@ Finalmente, tenemos los assets que añaden ambientación y que actúan como obst
 Para la versión Goldmaster del proyecto, se añadieron los siguientes Assets
 ![Barco](GDDImages/boat.png)
 ![Barco con la grua](GDDImages/boat2.png)
-![Estanterías](GDDImages/shelves.png)
+![Estanterías](GDDImages/shelves1.png)
 ![Mesa bar](GDDImages/table_bar.png))
 ![Mesa con libros](GDDImages/Table_books.png)
 ![Mesa con silla](GDDImages/Table_chair.png)
