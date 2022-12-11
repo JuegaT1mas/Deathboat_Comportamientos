@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 
 public class Puzzle2 : PuzzlePadre
 {
@@ -15,7 +15,7 @@ public class Puzzle2 : PuzzlePadre
     GameObject botonLeft;
     GameObject botonDown;
     GameObject brujula;
-    GameObject texto;
+    TextMeshProUGUI textoNota;
 
     Vector3 posicion = new Vector3(2, -4, -20);
     GameObject puzzle;
@@ -39,12 +39,12 @@ public class Puzzle2 : PuzzlePadre
      
 
         brujula.transform.parent = puzzle.transform;
-      
 
+        textoNota = brujula.GetComponentInChildren<TextMeshProUGUI>();
         flecha = GameObject.Find("Flecha");
         rbFlecha = flecha.GetComponent<Rigidbody2D>();
-      
 
+        
         flecha.SetActive(true);
         puzzle.SetActive(false);
        
@@ -76,6 +76,8 @@ public class Puzzle2 : PuzzlePadre
     // Update is called once per frame
     void Update()
     {
+      
+      
         if (!puzzleAcabado)
         {
             if (!estaGirando)
@@ -123,11 +125,19 @@ public class Puzzle2 : PuzzlePadre
 
     void ReinicioPuzzle()
     {
+        if (aciertos == 0)
+        {
+            textoNota.text = "Too slow!";
+        }
+        else
+        {
+            textoNota.text = aciertos + " / 4";
+        }
         if (!botonPulsado)
         {
-
-            aciertos = 0;
             
+            aciertos = 0;
+           
         }
     }
     void girarFlecha()
@@ -142,12 +152,17 @@ public class Puzzle2 : PuzzlePadre
             rbFlecha.angularVelocity = 0;
             puzzleAcabado = true;
 
-            brujula.SetActive(false);
-            Invoke("ShowInstructions", 0.0f);
+            Invoke("Desactivar", 1.0f);
+            Invoke("ShowInstructions", 1.0f);
 
             resuelto = true;
             Completed();
            
         }
+    }
+
+    public void Desactivar()
+    {
+        brujula.SetActive(false);
     }
 }

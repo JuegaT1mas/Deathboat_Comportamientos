@@ -10,7 +10,7 @@ public class PuzzlePadre : MonoBehaviour
     public bool resuelto = false;
     public GameLoop gameLoop; //Referencia al ejemplo
     public GameObject prefabFinPuzzle;
-    public GameObject prefabFin;
+    GameObject prefabFin;
     public bool hasBeenCreated = false; //Indica si el puzzle ha sido creado ya
     //public GameLoop gameLoop;
     public virtual void IniciarPuzzle()
