@@ -167,7 +167,7 @@ public class SettingsMenu : MonoBehaviour
 
     public void InitialValues()
     {
-        CheckResolutions(); //Comprobamos las resoluciones
+        //CheckResolutions(); //Comprobamos las resoluciones
         CheckVolume(); //Comprobamos el volumen
         CheckSensitivity(); //Comprobamos la sensibilidad
         CheckFullScreen(); //Comprobamos la pantalla completa
