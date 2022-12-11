@@ -40,7 +40,10 @@ public class Teclado : MonoBehaviour
             textoNota.text += random;
         }
     }
-
+    void DesactivarTodo()
+    {
+        gameObject.SetActive(false);
+    }
     public void CheckContraseña()
     {
         if (textoPantalla.text.Equals(textoNota.text))
@@ -48,6 +51,7 @@ public class Teclado : MonoBehaviour
 
             textoPantalla.color = Color.green;
             textoPantalla.text = "Correct";
+            Invoke("DesactivarTodo", 1.5f);
             puzzle3.GetComponent<Puzzle3>().PuzzleAcabado();
            
         }
