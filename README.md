@@ -213,6 +213,7 @@ Para la versión Goldmaster del proyecto, se añadieron los siguientes Assets
 ![Barco con la grua](GDDImages/boat2.png)
 ![Estanterías](GDDImages/shelves1.png)
 ![Mesa bar](GDDImages/table_bar.png))
+![Salvavidas](GDDImages/salvavidas.png)
 ![Mesa con libros](GDDImages/Table_books.png)
 ![Mesa con silla](GDDImages/Table_chair.png)
 ![Caja de herramientas](GDDImages/toolbox.png)
