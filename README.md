@@ -222,6 +222,7 @@ Para la versión Goldmaster del proyecto, se añadieron los siguientes Assets
 ![Textura sangre 3](GDDImages/textura_sangre3.png)
 ![Textura sangre 4](GDDImages/textura_sangre4.png)
 ![Textura sangre 5](GDDImages/textura_sangre5.png)
+![Nota para salir del puzzle](GDDImages/notapressqtoexit.png)
 
 ## Lore
 Todos conocemos las leyendas marinas de las que se hablan en los puertos de todo el mundo... Sirenas, tifones que llevan a otros mundos.... Nadie sabe si de verdad dichas historias son verdad o si son invención de algún marinero con ganas de ganarse a su audiencia.
