@@ -293,5 +293,7 @@ El plan de monetización para dos años tiene esto en cuenta, ya que una vez que
 * Versión 1.1.4    [ 2022/11/19 ]  Versión con animaciones del Diablo Negro
 * Versión 1.1.5    [ 2022/11/20 ]  Versión pre-Beta publicada en itch.io
 * Versión 1.2.0    [ 2022/11/20 ]  Versión Beta publicada en itch.io
+* Versión 1.2.1    [ 2022/12/03 ]  Corrección de errores
+* Versión 1.2.2    [ 2022/12/11 ]  Versión pre-Goldmaster publicada en itch.io
 
 
