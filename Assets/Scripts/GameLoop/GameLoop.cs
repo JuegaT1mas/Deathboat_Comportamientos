@@ -65,7 +65,6 @@ public class GameLoop : MonoBehaviour
 
     private void Start()
     {
-        settingsMenu.InitialValues();
 
         //Deshacer los cambios en caso de que terminemos una partida y le demos a jugar otra vez
         Time.timeScale = 1; //Reanudamos por si acaso el timeScale
