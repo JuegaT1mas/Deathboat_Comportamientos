@@ -11,7 +11,7 @@ public class PuzzleDeslizante : MonoBehaviour
 
     private void Start()
     {
-        puzzle1= GameObject.Find("Puzzle1");
+        puzzle1 = GameObject.Find("Puzzle1");
         for (int i = 0; i < fichas.Count; i++)
         {
             posicionesIniciales.Add(fichas[i].transform.position);
@@ -63,8 +63,12 @@ public class PuzzleDeslizante : MonoBehaviour
         fichaEscondida.gameObject.SetActive(true);
         print("Puzzle resuelto");
 
-
+        Invoke("DesactivarTodo", 1.5f);
         puzzle1.GetComponent<Puzzle1>().PuzzleAcabado();
+    }
+
+    void DesactivarTodo() {
+        gameObject.SetActive(false);
     }
 
 }

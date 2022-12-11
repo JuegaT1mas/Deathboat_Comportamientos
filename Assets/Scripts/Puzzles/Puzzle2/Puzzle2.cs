@@ -142,7 +142,7 @@ public class Puzzle2 : PuzzlePadre
             rbFlecha.angularVelocity = 0;
             puzzleAcabado = true;
 
-
+            brujula.SetActive(false);
             Invoke("ShowInstructions", 0.0f);
 
             resuelto = true;
