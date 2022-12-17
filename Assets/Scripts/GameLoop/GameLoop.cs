@@ -118,6 +118,8 @@ public class GameLoop : MonoBehaviour
 
     public void PuzzleCompleted()//No se si es mas efectivo dividir esto en 2 metodos o no (de momento lo divido)
     {
+        enemyRef.GetComponent<EnemyManager>().puzzleCompletado = true; //Avisamos al bicho que se ha completado un puzzle
+
         bool terminado = true;
         for (int i = 0; i < finalPuzzles.Length; i++)
         {
