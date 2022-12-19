@@ -1,28 +1,39 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System.Threading;
 public class Gritar : BaseState
 {
     private MovimientoSM _sm;
+    private float tiempoAEsperar=3f;
+    private float tiempo = 0;
     public Gritar(MovimientoSM stateMachine) : base("Gritar", stateMachine)
     {
-        _sm = (MovimientoSM)stateMachine;
+        _sm = stateMachine;
     }
 
     public override void Enter()
     {
         base.Enter();
-        //Esperar 3 segundos
+        _sm.gritoMinion.Play();
     }
 
     public override void UpdateLogic()
     {
         base.UpdateLogic();
+             
+  
+        if (tiempo < tiempoAEsperar)
+        {
+            tiempo += Time.deltaTime;
+        }
+        else
+        {
+            CheckAvisado();
+            stateMachine.ChangeState(_sm.avisarState);
+        }
+       
 
-        CheckAvisado();
-        //Gritar;
-        stateMachine.ChangeState(_sm.avisarState);
     }
 
     public void CheckAvisado()

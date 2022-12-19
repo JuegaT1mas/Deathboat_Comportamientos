@@ -32,6 +32,10 @@ public class MovimientoSM : StateMachine
     public float minimumDistance;
     public bool prueba = false;
 
+    [Header("Gritar State")]
+    public AudioSource gritoMinion;
+
+
 
     private void Awake()
     {
