@@ -29,7 +29,7 @@ public class Destruirse : BaseState
         base.Exit();
 
 
-        _sm.avisado = false;
+        _sm.diablo.avisado = false;
         _sm.gameObject.SetActive(false);
     }
 }

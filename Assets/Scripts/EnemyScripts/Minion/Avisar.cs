@@ -21,7 +21,7 @@ public class Avisar : BaseState
         base.UpdateLogic();
 
         CheckAvisado();
-        _sm.avisado = true;
+        _sm.diablo.avisado = true;
         stateMachine.ChangeState(_sm.destruirState);
         //Hacer algo hasta que, pase lo que tiene que pasar para cambiar de estado.
         //if(pasa algo)
@@ -30,7 +30,7 @@ public class Avisar : BaseState
 
     public void CheckAvisado()
     {
-        if (_sm.avisado)
+        if (_sm.diablo.avisado)
         {
             stateMachine.ChangeState(_sm.destruirState);
         }

@@ -47,6 +47,7 @@ public class EnemyManager : MonoBehaviour
     public bool puzzleCompletado = false;
     public float timeSincePlayerDetection = 0f; //Tiempo desde que no se vió al jugador
     public int hearingRadius = 4; //El rango en el que te oye
+    public bool avisado = false; //Booleano para ser avisado por los minions
 
 
     private float MinionInvocationTime = 30f;
@@ -105,9 +106,16 @@ public class EnemyManager : MonoBehaviour
             {
                 ChasePlayer(); //Que vaya hacia la posición del jugador
             }
-        }else if (puzzleCompletado)//Check Avisado o Puzzle Completo
+        }else if (puzzleCompletado || avisado)//Check Avisado o Puzzle Completo
         {
-            puzzleCompletado = false; //Lo volvemos a desactivar
+            if (puzzleCompletado)
+            {
+                puzzleCompletado = false; //Lo volvemos a desactivar
+            }
+            if (avisado)
+            {
+                avisado = false;
+            }
             UpdatePlayerPosition();
             ChasePlayer();
 

@@ -22,16 +22,15 @@ public class MovimientoSM : StateMachine
     [Header("ID Minions")]
     public int id;
 
-  
+    [Header("Referencias")]
+    public EnemyManager diablo; //Referencia al monstruo
+
     [Header("Buscar State Minion 1")]
     public FieldOfView fov; //El script del cono de visión
     public Transform[] points; //Los puntos del mapa donde va a patrullar el minion
     public NavMeshAgent agent; //El NavMesh del minion
     public float minimumDistance;
     public bool prueba = false;
-
-    [Header("Variables")]
-    public bool avisado = false; //Booleano para ser avisado
 
 
     private void Awake()
@@ -55,7 +54,7 @@ public class MovimientoSM : StateMachine
 
     public void SerAvisado()
     {
-        avisado = true;
+        diablo.avisado = true;
     }
 
 }

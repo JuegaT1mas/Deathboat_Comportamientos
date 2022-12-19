@@ -96,7 +96,7 @@ public class Buscar : BaseState
 
     public void CheckAvisado()
     {
-        if (_sm.avisado)
+        if (_sm.diablo.avisado)
         {
             stateMachine.ChangeState(_sm.destruirState);
         }
