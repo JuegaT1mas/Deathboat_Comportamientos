@@ -17,7 +17,7 @@ public class EnemyManager : MonoBehaviour
     private StarterAssetsInputs start; //La referencia a los starter assetsInputs
     private FirstPersonController first; //La referencia al firstpersonController
     //public float rotateSpeed;
-
+    public GameObject[] minions; //Los minions a invocar
 
 
     [Header("Navigation")]
@@ -129,7 +129,7 @@ public class EnemyManager : MonoBehaviour
         else if (timeSincePlayerDetection >= MinionInvocationTime)//Check Invocar Diablos
         {
             timeSincePlayerDetection = 0f;
-            //InvocarDiablos();
+            InvokeMinions();
         }
         else //Patrullar
         {
@@ -303,8 +303,28 @@ public class EnemyManager : MonoBehaviour
         cubo.SetActive(true);
     }
 
+    private IEnumerator WaitForMinions()
+    {
+        this.enabled = false;
+        yield return new WaitUntil(CanContinueAvisado);
+        this.enabled = true;
+    }
+
+    private bool CanContinueAvisado() => avisado;
+
     public void Rest()
     {
         StartCoroutine(RestRoutine());
+    }
+
+    public void InvokeMinions()
+    {
+        foreach (GameObject g in minions)
+        {
+            g.transform.position = transform.position;
+            g.SetActive(true);
+        }
+        agent.ResetPath();
+        StartCoroutine(WaitForMinions());
     }
 }
