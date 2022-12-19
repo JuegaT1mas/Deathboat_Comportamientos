@@ -14,20 +14,14 @@ public class Inicial : BaseState
     public override void Enter()
     {
         base.Enter();
-        _sm.gameObject.SetActive(true);
+        //_sm.gameObject.SetActive(true);
        
     }
 
     public override void UpdateLogic()
     {
         base.UpdateLogic();
-
         
-        //if(el bicho lleva mas de 2 minutos sin ver al jugador)
-        //stateMachine.ChangeState(_sm.Buscar);
-        if (_sm.prueba)
-        {
-            stateMachine.ChangeState(_sm.buscarState);
-        }
+        stateMachine.ChangeState(_sm.buscarState);
     }
 }

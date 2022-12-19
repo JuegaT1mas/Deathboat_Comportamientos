@@ -13,15 +13,23 @@ public class Destruirse : BaseState
     public override void Enter()
     {
         base.Enter();
-
     }
 
     public override void UpdateLogic()
     {
         base.UpdateLogic();
-
+        stateMachine.ChangeState(_sm.inicialState);
         //Hacer algo hasta que, pase lo que tiene que pasar para cambiar de estado.
         //if(pasa algo)
         //stateMachine.ChangeState(((MovimientoSM)stateMachine).nombredelsiguienteState)
+    }
+
+    public override void Exit()
+    {
+        base.Exit();
+
+
+        _sm.avisado = false;
+        _sm.gameObject.SetActive(false);
     }
 }

@@ -13,15 +13,23 @@ public class Gritar : BaseState
     public override void Enter()
     {
         base.Enter();
-
+        //Esperar 3 segundos
     }
 
     public override void UpdateLogic()
     {
         base.UpdateLogic();
 
-        //Hacer algo hasta que, pase lo que tiene que pasar para cambiar de estado.
-        //if(pasa algo)
-        //stateMachine.ChangeState(((MovimientoSM)stateMachine).nombredelsiguienteState)
+        CheckAvisado();
+        //Gritar;
+        stateMachine.ChangeState(_sm.avisarState);
+    }
+
+    public void CheckAvisado()
+    {
+        if (_sm.avisado)
+        {
+            stateMachine.ChangeState(_sm.destruirState);
+        }
     }
 }

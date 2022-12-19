@@ -23,6 +23,9 @@ public class Buscar : BaseState
     public override void UpdateLogic()
     {        
         base.UpdateLogic();
+
+        CheckAvisado();//Mirar si otro ha detectado el jugador antes
+
         playerDetected = _sm.fov.canSeePlayer;
 
         if (playerDetected) //Si se puede ver al jugador
@@ -89,6 +92,14 @@ public class Buscar : BaseState
             }
         }
         destPoint = index;
+    }
+
+    public void CheckAvisado()
+    {
+        if (_sm.avisado)
+        {
+            stateMachine.ChangeState(_sm.destruirState);
+        }
     }
 
     public void PhysicsMinion1()

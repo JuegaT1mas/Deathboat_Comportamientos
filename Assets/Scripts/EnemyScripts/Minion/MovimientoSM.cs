@@ -30,6 +30,8 @@ public class MovimientoSM : StateMachine
     public float minimumDistance;
     public bool prueba = false;
 
+    [Header("Variables")]
+    public bool avisado = false; //Booleano para ser avisado
 
 
     private void Awake()
@@ -49,6 +51,11 @@ public class MovimientoSM : StateMachine
     protected override BaseState GetInitialState()
     {
         return inicialState;
+    }
+
+    public void SerAvisado()
+    {
+        avisado = true;
     }
 
 }

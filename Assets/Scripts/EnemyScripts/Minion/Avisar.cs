@@ -20,8 +20,19 @@ public class Avisar : BaseState
     {
         base.UpdateLogic();
 
+        CheckAvisado();
+        _sm.avisado = true;
+        stateMachine.ChangeState(_sm.destruirState);
         //Hacer algo hasta que, pase lo que tiene que pasar para cambiar de estado.
         //if(pasa algo)
         //stateMachine.ChangeState(((MovimientoSM)stateMachine).nombredelsiguienteState)
+    }
+
+    public void CheckAvisado()
+    {
+        if (_sm.avisado)
+        {
+            stateMachine.ChangeState(_sm.destruirState);
+        }
     }
 }
