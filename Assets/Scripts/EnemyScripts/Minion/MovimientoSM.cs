@@ -16,14 +16,21 @@ public class MovimientoSM : StateMachine
     public Avisar avisarState;
     [HideInInspector]
     public Destruirse destruirState;
+    [HideInInspector]
+    public Vector3 lastPlayerPosition;
 
-    [Header("Buscar State")]
-    public Rigidbody rbMinion;
+    [Header("ID Minions")]
+    public int id;
+
+  
+    [Header("Buscar State Minion 1")]
     public FieldOfView fov; //El script del cono de visión
     public Transform[] points; //Los puntos del mapa donde va a patrullar el minion
     public NavMeshAgent agent; //El NavMesh del minion
     public float minimumDistance;
     public bool prueba = false;
+
+
 
     private void Awake()
     {

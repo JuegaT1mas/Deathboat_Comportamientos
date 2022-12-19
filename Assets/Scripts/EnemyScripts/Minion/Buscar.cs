@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Buscar : BaseState
 {
     private MovimientoSM _sm;
-    private int destPoint = 0; //Un integer para navegar el array de puntos
-    private Vector3 lastPlayerPosition; //La última posición del jugador
+    private int destPoint = 0; //Un integer para navegar el array de punto
     private bool playerDetected = false; //Si el jugador esta detectado
     private bool checkForNear = false;
     
@@ -28,7 +28,7 @@ public class Buscar : BaseState
         if (playerDetected) //Si se puede ver al jugador
         {
             checkForNear = true;
-            lastPlayerPosition = _sm.fov.playerRef.transform.position; //Actualizamos la posición  
+            _sm.lastPlayerPosition = _sm.fov.playerRef.transform.position; //Actualizamos la posición  
             stateMachine.ChangeState(_sm.gritarState);
         }
         
@@ -55,7 +55,7 @@ public class Buscar : BaseState
 
     public override void Exit()
     {
-        _sm.gameObject.GetComponent<Rigidbody>().velocity = new Vector3(0,0,0);
+        _sm.gameObject.GetComponent<NavMeshAgent>().speed = 0f;
     }
 
     private void GotoNextPoint()
