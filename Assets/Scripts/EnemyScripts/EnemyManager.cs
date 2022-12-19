@@ -310,7 +310,14 @@ public class EnemyManager : MonoBehaviour
         this.enabled = true;
     }
 
-    private bool CanContinueAvisado() => avisado;
+    private bool CanContinueAvisado() {
+        if (puzzleCompletado)
+        {
+            DeactivateMinions();
+            return puzzleCompletado;
+        }
+        return avisado;
+    } 
 
     public void Rest()
     {
@@ -326,5 +333,14 @@ public class EnemyManager : MonoBehaviour
         }
         agent.ResetPath();
         StartCoroutine(WaitForMinions());
+    }
+
+    public void DeactivateMinions()
+    {
+        foreach(GameObject g in minions)
+        {
+            MovimientoSM ms = g.GetComponent<MovimientoSM>();
+            ms.ChangeState(ms.destruirState);
+        }
     }
 }

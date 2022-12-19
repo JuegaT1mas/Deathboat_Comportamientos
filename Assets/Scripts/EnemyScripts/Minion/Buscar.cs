@@ -28,16 +28,19 @@ public class Buscar : BaseState
 
         playerDetected = _sm.fov.canSeePlayer;
 
-        if (playerDetected) //Si se puede ver al jugador
+        switch (_sm.id)
         {
-            checkForNear = true;
-            _sm.lastPlayerPosition = _sm.fov.playerRef.transform.position; //Actualizamos la posición  
-            stateMachine.ChangeState(_sm.gritarState);
+            case 4:
+                break;
+            default:
+                if (playerDetected) //Si se puede ver al jugador
+                {
+                    checkForNear = true;
+                    _sm.lastPlayerPosition = _sm.fov.playerRef.transform.position; //Actualizamos la posición  
+                    stateMachine.ChangeState(_sm.gritarState);
+                }
+                break;
         }
-        
-        //Hacer algo hasta que, pase lo que tiene que pasar para cambiar de estado.
-        //if(pasa algo)
-        //stateMachine.ChangeState(((MovimientoSM)stateMachine).nombredelsiguienteState)
     }
 
     public override void UpdatePhysics()
