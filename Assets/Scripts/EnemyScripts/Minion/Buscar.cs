@@ -40,15 +40,19 @@ public class Buscar : BaseState
     public override void UpdatePhysics()
     {
         base.UpdatePhysics();
-        if (!_sm.agent.pathPending && !_sm.agent.hasPath && _sm.agent.remainingDistance < _sm.minimumDistance)
+        switch (_sm.id)
         {
-            if (checkForNear)
-            {
-                NearestPoint();
-                checkForNear = false;
-            }
-            //Si no tiene un camino pendiente y esta cerca del punto
-            GotoNextPoint(); //Ir al siguiente punto
+            case 1:
+                PhysicsMinion1();
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+            case 5:
+                break;
         }
 
     }
@@ -87,7 +91,18 @@ public class Buscar : BaseState
         destPoint = index;
     }
 
-    
-
+    public void PhysicsMinion1()
+    {
+        if (!_sm.agent.pathPending && !_sm.agent.hasPath && _sm.agent.remainingDistance < _sm.minimumDistance)
+        {
+            if (checkForNear)
+            {
+                NearestPoint();
+                checkForNear = false;
+            }
+            //Si no tiene un camino pendiente y esta cerca del punto
+            GotoNextPoint(); //Ir al siguiente punto
+        }
+    }
 
 }
