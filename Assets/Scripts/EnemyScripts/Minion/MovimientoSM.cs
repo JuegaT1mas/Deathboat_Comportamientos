@@ -31,6 +31,9 @@ public class MovimientoSM : StateMachine
     public FieldOfView fov; //El script del cono de visión
     public Transform[] points; //Los puntos del mapa donde va a patrullar el minion
 
+    [Header("Buscar State Minion 3")]
+    public Transform[] pointsPuzzles;
+    public GameObject prefabMuebleFantasma;
 
     public float minimumDistance;
 
@@ -59,6 +62,11 @@ public class MovimientoSM : StateMachine
     public void SerAvisado()
     {
         diablo.avisado = true;
+    }
+
+    public void InstanciarPuzzle(GameObject prefabMuebleFantasma, Vector3 position, Quaternion qua)
+    {
+        Instantiate(prefabMuebleFantasma, position, qua);
     }
 
 }

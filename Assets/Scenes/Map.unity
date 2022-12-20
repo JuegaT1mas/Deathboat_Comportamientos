@@ -1310,7 +1310,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 85515597}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.097356796, z: 0.3822236}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1395,27 +1395,17 @@ MonoBehaviour:
   playerRef: {fileID: 701974608}
   agent: {fileID: 85515600}
   fov: {fileID: 85515601}
-  points:
-  - {fileID: 1797117382}
-  - {fileID: 1186033652}
-  - {fileID: 422916189}
-  - {fileID: 490625628}
-  - {fileID: 55160174}
-  - {fileID: 1924377482}
-  - {fileID: 1504662963}
-  - {fileID: 191115794}
-  - {fileID: 561187154}
-  - {fileID: 1998024862}
-  - {fileID: 1586030759}
-  - {fileID: 179568718}
-  - {fileID: 652872723}
-  - {fileID: 1732500030}
-  - {fileID: 322026636}
-  - {fileID: 2057056099}
-  - {fileID: 2118609124}
-  - {fileID: 1512519283}
-  - {fileID: 63995774}
-  - {fileID: 1145724965}
+  points: []
+  pointsPuzzles:
+  - {fileID: 1393394848}
+  - {fileID: 995508582}
+  - {fileID: 472687150}
+  - {fileID: 16380844}
+  - {fileID: 1329205683}
+  - {fileID: 1597109148}
+  - {fileID: 50036385}
+  prefabMuebleFantasma: {fileID: 5573454209415537093, guid: 3e7d9dc30536699439efa2bad79e1fc0,
+    type: 3}
   minimumDistance: 1
   dis: {fileID: 0}
   gritoMinion: {fileID: 85515607}
@@ -61256,6 +61246,8 @@ MonoBehaviour:
   - {fileID: 1512519283}
   - {fileID: 63995774}
   - {fileID: 1145724965}
+  pointsPuzzles: []
+  prefabMuebleFantasma: {fileID: 0}
   minimumDistance: 1
   dis: {fileID: 0}
   gritoMinion: {fileID: 1589405800}
@@ -65086,6 +65078,8 @@ MonoBehaviour:
   - {fileID: 1512519283}
   - {fileID: 63995774}
   - {fileID: 1145724965}
+  pointsPuzzles: []
+  prefabMuebleFantasma: {fileID: 0}
   minimumDistance: 1
   dis: {fileID: 0}
   gritoMinion: {fileID: 1715892870}
@@ -66349,6 +66343,8 @@ MonoBehaviour:
   agent: {fileID: 1769719440}
   fov: {fileID: 0}
   points: []
+  pointsPuzzles: []
+  prefabMuebleFantasma: {fileID: 0}
   minimumDistance: 1.5
   dis: {fileID: 1769719448}
   gritoMinion: {fileID: 1769719447}
@@ -74195,6 +74191,8 @@ MonoBehaviour:
   - {fileID: 1512519283}
   - {fileID: 63995774}
   - {fileID: 1145724965}
+  pointsPuzzles: []
+  prefabMuebleFantasma: {fileID: 0}
   minimumDistance: 1
   dis: {fileID: 0}
   gritoMinion: {fileID: 3469287836626171457}

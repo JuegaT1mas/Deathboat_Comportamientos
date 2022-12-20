@@ -17,7 +17,15 @@ public class Buscar : BaseState
     public override void Enter()
     {
         base.Enter();
-        //Como empieece
+        switch (_sm.id)
+        {
+            case 3:
+                GotoNextPuzzle();
+                break;
+            default:
+          
+                break;
+        }
     }
 
     public override void UpdateLogic()
@@ -54,6 +62,7 @@ public class Buscar : BaseState
                 PhysicsMinion2();
                 break;
             case 3:
+                PhysicsMinion3();
                 break;
             case 4:
                 PhysicsMinion4();
@@ -129,6 +138,34 @@ public class Buscar : BaseState
             //Si no tiene un camino pendiente y esta cerca del punto
             GotoNextPoint(); //Ir al siguiente punto
         }
+    }
+
+    public void PhysicsMinion3()//Se comporta igual que el enemigo grande
+    {
+        if (!_sm.agent.pathPending && !_sm.agent.hasPath && _sm.agent.remainingDistance < _sm.minimumDistance)
+        {
+            int indice = 6;
+            if (destPoint != 0)
+            {
+                indice = destPoint - 1;
+            }
+            _sm.InstanciarPuzzle(_sm.prefabMuebleFantasma, _sm.pointsPuzzles[indice].transform.position, Quaternion.identity);
+            //Si no tiene un camino pendiente y esta cerca del punto
+            GotoNextPuzzle(); //Ir al siguiente punto
+        }
+    }
+
+    public void GotoNextPuzzle()
+    {
+        // Si no hay puntos a los que ir no haz nada
+        if (_sm.pointsPuzzles.Length == 0)
+            return;
+
+        // Hacer que el enemigo vaya hacia el siguiente punto
+        _sm.agent.destination = _sm.pointsPuzzles[destPoint].position;
+
+        // Pasar al siguiente punto, si es necesario volver a empezar desde el primer punto
+        destPoint = (destPoint + 1) % _sm.pointsPuzzles.Length;
     }
 
     public void PhysicsMinion4()//Se acerca al jugador y le apaga las luces a su alrededor
