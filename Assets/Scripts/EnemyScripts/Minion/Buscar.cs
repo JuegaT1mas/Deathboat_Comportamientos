@@ -139,6 +139,27 @@ public class Buscar : BaseState
 
     public void PhysicsMinion5()
     {
+        if (!_sm.agent.pathPending && !_sm.agent.hasPath && _sm.agent.remainingDistance < _sm.minimumDistance)
+        {
+            //Si no tiene un camino pendiente y esta cerca del punto
+            GotoRandomPoint(); //Ir al siguiente punto
+        }
+    }
+
+    private void GotoRandomPoint()
+    {
+        bool pathValido = false;
+        Vector3 destino = new Vector3(0,0,0);
+        while (!pathValido)
+        {
+            float x = Random.Range(-54, 38);
+            float y = Random.Range(-54, 38);
+            float z = Random.Range(-3, 20);
+            destino = new Vector3(x, y, z);
+
+            pathValido = NavMesh.CalculatePath(_sm.transform.position, destino, NavMesh.AllAreas,new NavMeshPath());
+        }
+        _sm.agent.destination = destino;
     }
 
     public void PhysicsMinion2()//Sabe donde esta el jugador pero se mueve muy lento
