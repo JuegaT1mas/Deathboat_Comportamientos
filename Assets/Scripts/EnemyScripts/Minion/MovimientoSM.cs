@@ -24,13 +24,18 @@ public class MovimientoSM : StateMachine
 
     [Header("Referencias")]
     public EnemyManager diablo; //Referencia al monstruo
+    public GameObject playerRef; //La referencia al jugador
+    public NavMeshAgent agent; //El NavMesh del minion
 
     [Header("Buscar State Minion 1")]
     public FieldOfView fov; //El script del cono de visión
     public Transform[] points; //Los puntos del mapa donde va a patrullar el minion
-    public NavMeshAgent agent; //El NavMesh del minion
+
+
     public float minimumDistance;
-    public bool prueba = false;
+
+    [Header("Buscar State Minion 4")]
+    public DisableShadows dis; //Para que el minion 4 apague las luces
 
     [Header("Gritar State")]
     public AudioSource gritoMinion;
@@ -44,13 +49,8 @@ public class MovimientoSM : StateMachine
         gritarState = new Gritar(this);
         avisarState = new Avisar(this);
         destruirState = new Destruirse(this);
-        Invoke("Prueba", 5.0f);
     }
 
-    private void Prueba()
-    {
-        prueba = true;
-    }
     protected override BaseState GetInitialState()
     {
         return inicialState;

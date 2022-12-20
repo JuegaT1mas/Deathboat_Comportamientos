@@ -56,7 +56,6 @@ public class EnemyManager : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         attackTimer = initialTimer; //Igualamos el tiempo
-        GotoNextPoint(); //Ir al siguiente punto
     }
 
     private void Start()

@@ -26,17 +26,16 @@ public class Buscar : BaseState
 
         CheckAvisado();//Mirar si otro ha detectado el jugador antes
 
-        playerDetected = _sm.fov.canSeePlayer;
-
         switch (_sm.id)
         {
             case 4:
                 break;
             default:
+                playerDetected = _sm.fov.canSeePlayer;
                 if (playerDetected) //Si se puede ver al jugador
                 {
                     checkForNear = true;
-                    _sm.lastPlayerPosition = _sm.fov.playerRef.transform.position; //Actualizamos la posición  
+                    UpdatePlayerPosition(); //Actualizamos la posición  
                     stateMachine.ChangeState(_sm.gritarState);
                 }
                 break;
@@ -56,6 +55,7 @@ public class Buscar : BaseState
             case 3:
                 break;
             case 4:
+                PhysicsMinion4();
                 break;
             case 5:
                 break;
@@ -97,12 +97,22 @@ public class Buscar : BaseState
         destPoint = index;
     }
 
+    private void UpdatePlayerPosition()
+    {
+        _sm.lastPlayerPosition = _sm.playerRef.transform.position; //Actualizamos la posición  
+    }
+
     public void CheckAvisado()
     {
         if (_sm.diablo.avisado)
         {
             stateMachine.ChangeState(_sm.destruirState);
         }
+    }
+
+    private void ChasePlayer()
+    {
+        _sm.agent.SetDestination(_sm.lastPlayerPosition); //Le decimos  donde esta el jugador y que vaya a esa posición
     }
 
     public void PhysicsMinion1()
@@ -117,6 +127,12 @@ public class Buscar : BaseState
             //Si no tiene un camino pendiente y esta cerca del punto
             GotoNextPoint(); //Ir al siguiente punto
         }
+    }
+
+    public void PhysicsMinion4()
+    {
+        UpdatePlayerPosition();
+        ChasePlayer();
     }
 
 }

@@ -7,19 +7,19 @@ public class DisableShadows : MonoBehaviour
 
     public GameObject[] luces; //lista de las luces
 
-    // Start is called before the first frame update
-    // Update is called once per frame
+    public float distanciaApagarLuces;
+
     void Update()
     {
         for (int i = 0; i < luces.Length; i++)
         {
-             if(Mathf.Abs(luces[i].transform.position.y - transform.position.y) > 3.5)
+            if (Vector3.Distance(luces[i].transform.position,transform.position) < distanciaApagarLuces)
             {
-                luces[i].GetComponentInChildren<Light>().shadows = LightShadows.None;
+                luces[i].gameObject.SetActive(false);
             }
             else
             {
-                luces[i].GetComponentInChildren<Light>().shadows = LightShadows.Hard;
+                luces[i].gameObject.SetActive(true);
             }
         }
     }
