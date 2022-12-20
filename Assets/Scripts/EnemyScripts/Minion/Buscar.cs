@@ -20,7 +20,7 @@ public class Buscar : BaseState
         switch (_sm.id)
         {
             case 3:
-                GotoNextPuzzle();
+                GotoNextPuzzle(); //El diablillo 3 tiene que empezar a moverse por comando para no crear un puzzle falso al spawnear
                 break;
             default:
           
@@ -36,7 +36,7 @@ public class Buscar : BaseState
 
         switch (_sm.id)
         {
-            case 4:
+            case 4: //El 4 es el único que no tiene que detectar al jugador
                 break;
             default:
                 playerDetected = _sm.fov.canSeePlayer;
@@ -76,7 +76,52 @@ public class Buscar : BaseState
 
     public override void Exit()
     {
-        _sm.gameObject.GetComponent<NavMeshAgent>().speed = 0f;
+        switch (_sm.id)
+        {
+            case 4:
+                _sm.dis.EncenderTodo();
+                break;
+            default:
+                break;
+        }
+    }
+
+    #region Metodos Generales
+
+    private void UpdatePlayerPosition()
+    {
+        _sm.lastPlayerPosition = _sm.playerRef.transform.position; //Actualizamos la posición  
+    }
+
+    public void CheckAvisado()
+    {
+        if (_sm.diablo.avisado)
+        {
+            stateMachine.ChangeState(_sm.destruirState);
+        }
+    }
+
+    private void ChasePlayer()
+    {
+        _sm.agent.SetDestination(_sm.lastPlayerPosition); //Le decimos  donde esta el jugador y que vaya a esa posición
+    }
+
+    #endregion
+
+    #region Diablillo 1
+
+    public void PhysicsMinion1()//Se comporta igual que el enemigo grande
+    {
+        if (!_sm.agent.pathPending && !_sm.agent.hasPath && _sm.agent.remainingDistance < _sm.minimumDistance)
+        {
+            if (checkForNear)
+            {
+                NearestPoint();
+                checkForNear = false;
+            }
+            //Si no tiene un camino pendiente y esta cerca del punto
+            GotoNextPoint(); //Ir al siguiente punto
+        }
     }
 
     private void GotoNextPoint()
@@ -108,37 +153,19 @@ public class Buscar : BaseState
         destPoint = index;
     }
 
-    private void UpdatePlayerPosition()
+    #endregion
+
+    #region Diablillo 2
+
+    public void PhysicsMinion2()//Sabe donde esta el jugador pero se mueve muy lento
     {
-        _sm.lastPlayerPosition = _sm.playerRef.transform.position; //Actualizamos la posición  
+        UpdatePlayerPosition();
+        ChasePlayer();
     }
 
-    public void CheckAvisado()
-    {
-        if (_sm.diablo.avisado)
-        {
-            stateMachine.ChangeState(_sm.destruirState);
-        }
-    }
+    #endregion
 
-    private void ChasePlayer()
-    {
-        _sm.agent.SetDestination(_sm.lastPlayerPosition); //Le decimos  donde esta el jugador y que vaya a esa posición
-    }
-
-    public void PhysicsMinion1()//Se comporta igual que el enemigo grande
-    {
-        if (!_sm.agent.pathPending && !_sm.agent.hasPath && _sm.agent.remainingDistance < _sm.minimumDistance)
-        {
-            if (checkForNear)
-            {
-                NearestPoint();
-                checkForNear = false;
-            }
-            //Si no tiene un camino pendiente y esta cerca del punto
-            GotoNextPoint(); //Ir al siguiente punto
-        }
-    }
+    #region Diablillo 3
 
     public void PhysicsMinion3()//Se comporta igual que el enemigo grande
     {
@@ -168,11 +195,21 @@ public class Buscar : BaseState
         destPoint = (destPoint + 1) % _sm.pointsPuzzles.Length;
     }
 
-    public void PhysicsMinion4()//Se acerca al jugador y le apaga las luces a su alrededor
+    #endregion
+
+    #region Diablillo 4
+
+    //Se acerca al jugador y le apaga las luces a su alrededor
+    //El script que apaga las luces está en el propio minion del editor
+    public void PhysicsMinion4()
     {
         UpdatePlayerPosition();
         ChasePlayer();
     }
+
+    #endregion
+
+    #region Diablillo 5
 
     public void PhysicsMinion5()
     {
@@ -186,7 +223,7 @@ public class Buscar : BaseState
     private void GotoRandomPoint()
     {
         bool pathValido = false;
-        Vector3 destino = new Vector3(0,0,0);
+        Vector3 destino = new Vector3(0, 0, 0);
         while (!pathValido)
         {
             float x = Random.Range(-54, 38);
@@ -194,15 +231,11 @@ public class Buscar : BaseState
             float z = Random.Range(-3, 20);
             destino = new Vector3(x, y, z);
 
-            pathValido = NavMesh.CalculatePath(_sm.transform.position, destino, NavMesh.AllAreas,new NavMeshPath());
+            pathValido = NavMesh.CalculatePath(_sm.transform.position, destino, NavMesh.AllAreas, new NavMeshPath());
         }
         _sm.agent.destination = destino;
     }
 
-    public void PhysicsMinion2()//Sabe donde esta el jugador pero se mueve muy lento
-    {
-        UpdatePlayerPosition();
-        ChasePlayer();
-    }
+    #endregion
 
 }

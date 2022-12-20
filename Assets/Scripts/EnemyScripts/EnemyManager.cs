@@ -32,7 +32,6 @@ public class EnemyManager : MonoBehaviour
     public bool cooling; //Si esta descansando después de un ataque
     public float initialTimer; //El tiempo inicial
     public float attackDistanceMelee; //La distancia a partir de la cual te ataca a melee
-    public float attackDistanceRange; //La distancia a partir de la cual te ataca a rango
 
     [Header("Rest")]
     public float restTime; //El tiempo que espera después de haber propinado un golpe al jugador
@@ -42,7 +41,7 @@ public class EnemyManager : MonoBehaviour
     public bool playerDetected = false; //Si el jugador esta detectado
     public bool seenFromAfar = false; //Si el jugador ha sido visto a lo lejos
     public bool playerHeard = false; //Si el jugador ha sido oído
-    private bool checkForNear = false;
+    private bool checkForNear = false; //Para que el monstruo compruebe los puntos cercanos si pierde de vista al jugador
     private Vector3 lastPlayerPosition; //La última posición del jugador
     public bool puzzleCompletado = false;
     public float timeSincePlayerDetection = 0f; //Tiempo desde que no se vió al jugador
@@ -87,19 +86,10 @@ public class EnemyManager : MonoBehaviour
             timeSincePlayerDetection = 0f; //Al detectar al jugador reseteamos el tiempo
 
             float distanceToPlayer = Vector3.Distance(transform.position, lastPlayerPosition);
-            
-            //Gritar (no hay animación de momento)
 
-            if (distanceToPlayer <= attackDistanceRange)//Check Jugador en Rango Distancia
+            if(distanceToPlayer <= attackDistanceMelee)//Check en Rango de Ataque Melee
             {
-                if(distanceToPlayer <= attackDistanceMelee)//Check en Rango de Ataque Melee
-                {
-                    MeleeAttack();
-                }
-                else
-                {
-                    //RangeAttack();
-                }
+                MeleeAttack();
             }
             else
             {
@@ -292,7 +282,7 @@ public class EnemyManager : MonoBehaviour
         cooling = true; //Pone en cooldown el ataque
     }
 
-    private IEnumerator RestRoutine()
+    private IEnumerator RestRoutine()//El monstruo descansa tras haber acertado el golpe
     {
         cubo.SetActive(false);
         this.enabled = false;
@@ -302,7 +292,7 @@ public class EnemyManager : MonoBehaviour
         cubo.SetActive(true);
     }
 
-    private IEnumerator WaitForMinions()
+    private IEnumerator WaitForMinions() //Espera después de invocar a los minions
     {
         this.enabled = false;
         yield return new WaitUntil(CanContinueAvisado);
@@ -310,10 +300,15 @@ public class EnemyManager : MonoBehaviour
     }
 
     private bool CanContinueAvisado() {
+        UpdateData();
         if (puzzleCompletado)
         {
             DeactivateMinions();
             return puzzleCompletado;
+        }else if (playerDetected)
+        {
+            DeactivateMinions();
+            return playerDetected;
         }
         return avisado;
     } 

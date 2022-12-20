@@ -23,4 +23,12 @@ public class DisableShadows : MonoBehaviour
             }
         }
     }
+
+    public void EncenderTodo()
+    {
+        for (int i = 0; i < luces.Length; i++)
+        {
+            luces[i].gameObject.SetActive(true);
+        }
+    }
 }
