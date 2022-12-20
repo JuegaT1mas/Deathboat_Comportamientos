@@ -51,6 +51,7 @@ public class Buscar : BaseState
                 PhysicsMinion1();
                 break;
             case 2:
+                PhysicsMinion2();
                 break;
             case 3:
                 break;
@@ -58,6 +59,7 @@ public class Buscar : BaseState
                 PhysicsMinion4();
                 break;
             case 5:
+                PhysicsMinion5();
                 break;
         }
 
@@ -115,7 +117,7 @@ public class Buscar : BaseState
         _sm.agent.SetDestination(_sm.lastPlayerPosition); //Le decimos  donde esta el jugador y que vaya a esa posición
     }
 
-    public void PhysicsMinion1()
+    public void PhysicsMinion1()//Se comporta igual que el enemigo grande
     {
         if (!_sm.agent.pathPending && !_sm.agent.hasPath && _sm.agent.remainingDistance < _sm.minimumDistance)
         {
@@ -129,7 +131,17 @@ public class Buscar : BaseState
         }
     }
 
-    public void PhysicsMinion4()
+    public void PhysicsMinion4()//Se acerca al jugador y le apaga las luces a su alrededor
+    {
+        UpdatePlayerPosition();
+        ChasePlayer();
+    }
+
+    public void PhysicsMinion5()
+    {
+    }
+
+    public void PhysicsMinion2()//Sabe donde esta el jugador pero se mueve muy lento
     {
         UpdatePlayerPosition();
         ChasePlayer();
