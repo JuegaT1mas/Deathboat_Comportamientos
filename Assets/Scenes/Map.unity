@@ -1392,7 +1392,7 @@ MonoBehaviour:
   lastPlayerPosition: {x: 0, y: 0, z: 0}
   id: 3
   diablo: {fileID: 5317266676083843610}
-  playerRef: {fileID: 0}
+  playerRef: {fileID: 701974608}
   agent: {fileID: 85515600}
   fov: {fileID: 85515601}
   points:
@@ -61253,7 +61253,7 @@ MonoBehaviour:
   lastPlayerPosition: {x: 0, y: 0, z: 0}
   id: 5
   diablo: {fileID: 5317266676083843610}
-  playerRef: {fileID: 0}
+  playerRef: {fileID: 701974608}
   agent: {fileID: 1589405793}
   fov: {fileID: 1589405794}
   points:
@@ -65104,7 +65104,7 @@ MonoBehaviour:
   lastPlayerPosition: {x: 0, y: 0, z: 0}
   id: 2
   diablo: {fileID: 5317266676083843610}
-  playerRef: {fileID: 0}
+  playerRef: {fileID: 701974608}
   agent: {fileID: 1715892863}
   fov: {fileID: 1715892864}
   points:
@@ -74234,7 +74234,7 @@ MonoBehaviour:
   lastPlayerPosition: {x: 0, y: 0, z: 0}
   id: 1
   diablo: {fileID: 5317266676083843610}
-  playerRef: {fileID: 0}
+  playerRef: {fileID: 701974608}
   agent: {fileID: 2102037252}
   fov: {fileID: 2102037251}
   points:
